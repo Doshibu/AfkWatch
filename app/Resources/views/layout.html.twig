@@ -155,81 +155,81 @@
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav>
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">Accueil</a></li>
+							<li class="active"><a href="{{ path('doshibu_aw_home') }}">Accueil</a></li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Genres <b class="caret"></b></a>
+								<a href="{{ path('doshibu_aw_genre') }}" class="dropdown-toggle" data-toggle="dropdown">Genres <b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-3">
 									<li>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
-											<li><a href="genres.html">Action</a></li>
-											<li><a href="genres.html">Biography</a></li>
-											<li><a href="genres.html">Crime</a></li>
-											<li><a href="genres.html">Family</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Action</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Biography</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Crime</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Family</a></li>
 											<li><a href="horror.html">Horror</a></li>
-											<li><a href="genres.html">Romance</a></li>
-											<li><a href="genres.html">Sports</a></li>
-											<li><a href="genres.html">War</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Romance</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Sports</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">War</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
-											<li><a href="genres.html">Adventure</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Adventure</a></li>
 											<li><a href="comedy.html">Comedy</a></li>
-											<li><a href="genres.html">Documentary</a></li>
-											<li><a href="genres.html">Fantasy</a></li>
-											<li><a href="genres.html">Thriller</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Documentary</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Fantasy</a></li>
+											<li><a href="g{{ path('doshibu_aw_genre') }}">Thriller</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
-											<li><a href="genres.html">Animation</a></li>
-											<li><a href="genres.html">Costume</a></li>
-											<li><a href="genres.html">Drama</a></li>
-											<li><a href="genres.html">History</a></li>
-											<li><a href="genres.html">Musical</a></li>
-											<li><a href="genres.html">Psychological</a></li>
+											<li><a href="{{ path('doshibu_aw_genre') }}">Animation</a></li>
+											<li><a href="{{ path('doshibu_aw_genre') }}">Costume</a></li>
+											<li><a href="{{ path('doshibu_aw_genre') }}">Drama</a></li>
+											<li><a href="{{ path('doshibu_aw_genre') }}">History</a></li>
+											<li><a href="{{ path('doshibu_aw_genre') }}">Musical</a></li>
+											<li><a href="{{ path('doshibu_aw_genre') }}">Psychological</a></li>
 										</ul>
 									</div>
 									<div class="clearfix"></div>
 									</li>
 								</ul>
 							</li>
-							<li><a href="series.html">tv - series</a></li>
-							<li><a href="news.html">news</a></li>
+							<li><a href="{{ path('doshibu_aw_series') }}">tv - series</a></li>
+							<li><a href="{{ path('doshibu_aw_news') }}">news</a></li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pays <b class="caret"></b></a>
+								<a href="{{ path('doshibu_aw_pays') }}" class="dropdown-toggle" data-toggle="dropdown">Pays <b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-3">
 									<li>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<li><a href="genres.html">Asia</a></li>
-												<li><a href="genres.html">France</a></li>
-												<li><a href="genres.html">Taiwan</a></li>
-												<li><a href="genres.html">United States</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">Asia</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">France</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">Taiwan</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">United States</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<li><a href="genres.html">China</a></li>
-												<li><a href="genres.html">HongCong</a></li>
-												<li><a href="genres.html">Japan</a></li>
-												<li><a href="genres.html">Thailand</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">China</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">HongCong</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">Japan</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">Thailand</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
-												<li><a href="genres.html">Euro</a></li>
-												<li><a href="genres.html">India</a></li>
-												<li><a href="genres.html">Korea</a></li>
-												<li><a href="genres.html">United Kingdom</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">Euro</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">India</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">Korea</a></li>
+												<li><a href="{{ path('doshibu_aw_pays') }}">United Kingdom</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
 									</li>
 								</ul>
 							</li>
-							<li><a href="list.html">A - z list</a></li>
+							<li><a href="{{ path('doshibu_aw_list') }}">A - z list</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -274,25 +274,22 @@
 			<div class="col-md-7 w3ls_footer_grid1_right">
 				<ul>
 					<li>
-						<a href="genres.html">Genres</a>
+						<a href="{{ path('doshibu_aw_genre') }}">Genres</a>
 					</li>
 					<li>
-						<a href="faq.html">FAQ</a>
+						<a href="{{ path('doshibu_aw_faq') }}">FAQ</a>
 					</li>
 					<li>
-						<a href="horror.html">Action</a>
+						<a href="{{ path('doshibu_aw_genre') }}">Action</a>
 					</li>
 					<li>
-						<a href="genres.html">Aventure</a>
+						<a href="{{ path('doshibu_aw_genre') }}">Aventure</a>
 					</li>
 					<li>
-						<a href="comedy.html">Comédie</a>
+						<a href="{{ path('doshibu_aw_genre') }}">Comédie</a>
 					</li>
 					<li>
-						<a href="icons.html">Icons</a>
-					</li>
-					<li>
-						<a href="contact.html">Contact Us</a>
+						<a href="{{ path('doshibu_aw_contact') }}">Contact Us</a>
 					</li>
 				</ul>
 			</div>

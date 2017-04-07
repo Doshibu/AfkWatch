@@ -7,6 +7,7 @@ doshibu_aw_genre:
     path :   /genre/{id}
     defaults: 
         _controller : DoshibuAfkWatchBundle:Movie:genre
+        id: 1
     requirements:
         id: \d+
 
@@ -26,6 +27,7 @@ doshibu_aw_pays:
     path :   /pays/{id}
     defaults:
         _controller : DoshibuAfkWatchBundle:Movie:pays
+        id: 1
     requirements:
         id: \d+
 
