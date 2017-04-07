@@ -3,6 +3,13 @@ doshibu_aw_home:
     defaults:
         _controller: DoshibuAfkWatchBundle:Movie:index
 
+doshibu_aw_single:
+    path :   /single/{id}
+    defaults: 
+        _controller : DoshibuAfkWatchBundle:Movie:single
+    requirements:
+        id: \d+
+
 doshibu_aw_genre:
     path :   /genre/{id}
     defaults: 
@@ -20,6 +27,13 @@ doshibu_aw_news:
     path :   /news
     defaults:
         _controller : DoshibuAfkWatchBundle:Movie:news
+    requirements:
+        id: \d+
+
+doshibu_aw_news_single:
+    path :   /news-single/{id}
+    defaults: 
+        _controller : DoshibuAfkWatchBundle:Movie:newsSingle
     requirements:
         id: \d+
 

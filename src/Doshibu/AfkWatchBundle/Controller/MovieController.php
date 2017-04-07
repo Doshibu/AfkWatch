@@ -15,6 +15,11 @@ class MovieController extends Controller
 		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig');
 	}
 
+	public function singleAction(Request $request)
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig');
+	}
+
 	public function genreAction(Request $request)
 	{
 		return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig');
@@ -28,6 +33,11 @@ class MovieController extends Controller
 	public function newsAction(Request $request)
 	{
 		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig');
+	}
+
+	public function newsSingleAction(Request $request)
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig');
 	}
 
 	public function paysAction(Request $request)
