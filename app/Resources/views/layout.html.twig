@@ -13,56 +13,66 @@
 		function hideURLbar(){ window.scrollTo(0,1); 
 		} 
 	</script>
-	<!-- //for-mobile-apps -->
-	<link rel="stylesheet" href="{{ asset('streaming/css/bootstrap.css') }}" type="text/css" media="all" />
-	<link rel="stylesheet" href="{{ asset('streaming/css/style.css') }}" type="text/css" media="all" />
-	<link rel="stylesheet" href="{{ asset('streaming/css/contactstyle.css') }}" type="text/css" media="all" />
-	<link rel="stylesheet" href="{{ asset('streaming/css/faqstyle.css') }}" type="text/css" media="all" />
-	<link rel="stylesheet" href="{{ asset('streaming/css/single.css') }}" type='text/css' />
-	<link rel="stylesheet" href="{{ asset('streaming/css/medile.css') }}" type='text/css' />
+	{% block head_stylesheets %}
+		<!-- //for-mobile-apps -->
+		<link rel="stylesheet" href="{{ asset('streaming/css/bootstrap.css') }}" type="text/css" media="all" />
+		<link rel="stylesheet" href="{{ asset('streaming/css/style.css') }}" type="text/css" media="all" />
+		<link rel="stylesheet" href="{{ asset('streaming/css/contactstyle.css') }}" type="text/css" media="all" />
+		<link rel="stylesheet" href="{{ asset('streaming/css/faqstyle.css') }}" type="text/css" media="all" />
+		<link rel="stylesheet" href="{{ asset('streaming/css/single.css') }}" type='text/css' />
+		<link rel="stylesheet" href="{{ asset('streaming/css/medile.css') }}" type='text/css' />
 
-	<!-- banner-slider -->
-	<link rel="stylesheet" href="{{ asset('streaming/css/jquery.slidey.min.css') }}" type="text/css">
-	<!-- //banner-slider -->
-	<!-- pop-up -->
-	<link rel="stylesheet" href="{{ asset('streaming/css/popuo-box.css') }}" type="text/css" media="all" />
-	<!-- //pop-up -->
-	<!-- font-awesome icons -->
-	<link rel="stylesheet" href="{{ asset('streaming/css/font-awesome.min.css') }}" type="text/css"/>
-	<!-- //font-awesome icons -->
-	<!-- js -->
-	<script type="text/javascript" src="{{ asset('streaming/js/jquery-2.1.4.min.js') }}"></script>
-	<!-- //js -->
-	<!-- banner-bottom-plugin -->
-	<link rel="stylesheet" href="{{ asset('streaming/css/owl.carousel.css') }}" type="text/css" media="all">
-	<script src="{{ asset('streaming/js/owl.carousel.js') }}"></script>
-	<script>
-		$(document).ready(function() { 
-			$("#owl-demo").owlCarousel({
-		  		autoPlay: 3000, //Set AutoPlay to 3 seconds
-		  		items : 5,
-		  		itemsDesktop : [640,4],
-		  		itemsDesktopSmall : [414,3]
+		<!-- banner-slider -->
+		<link rel="stylesheet" href="{{ asset('streaming/css/jquery.slidey.min.css') }}" type="text/css">
+		<!-- //banner-slider -->
+		
+		<!-- pop-up -->
+		<link rel="stylesheet" href="{{ asset('streaming/css/popuo-box.css') }}" type="text/css" media="all" />
+		<!-- //pop-up -->
+		
+		<!-- font-awesome icons -->
+		<link rel="stylesheet" href="{{ asset('streaming/css/font-awesome.min.css') }}" type="text/css"/>
+		<!-- //font-awesome icons -->
+		
+		<!-- js -->
+		<script type="text/javascript" src="{{ asset('streaming/js/jquery-2.1.4.min.js') }}"></script>
+		<!-- //js -->
+		
+		<!-- banner-bottom-plugin -->
+		<link rel="stylesheet" href="{{ asset('streaming/css/owl.carousel.css') }}" type="text/css" media="all">
+		
+		<!-- //banner-bottom-plugin -->
+		<link rel="stylesheet" href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' type='text/css'>
+	{% endblock %}
+	
+	{% block head_scripts %}
+		<script src="{{ asset('streaming/js/owl.carousel.js') }}"></script>
+		<script>
+			$(document).ready(function() { 
+				$("#owl-demo").owlCarousel({
+					autoPlay: 3000, //Set AutoPlay to 3 seconds
+					items : 5,
+					itemsDesktop : [640,4],
+					itemsDesktopSmall : [414,3]
+				});
+			}); 
+		</script> 
+		<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="{{ asset('streaming/js/move-top.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('streaming/js/easing.js') }}"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
 			});
-		}); 
-	</script> 
-	<!-- //banner-bottom-plugin -->
-	<link rel="stylesheet" href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' type='text/css'>
-	<!-- start-smoth-scrolling -->
-	<script type="text/javascript" src="{{ asset('streaming/js/move-top.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('streaming/js/easing.js') }}"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
-		});
-	</script>
-	<!-- start-smoth-scrolling -->
+		</script>
+		<!-- start-smoth-scrolling -->
+	{% endblock %}
 </head>
 <body>
-<!-- header -->
+	<!-- header -->
 	<div class="header">
 		<div class="container">
 			<div class="w3layouts_logo">
@@ -83,8 +93,8 @@
 			<div class="clearfix"> </div>
 		</div>
 	</div>
-<!-- //header -->
-<!-- bootstrap-pop-up -->
+	<!-- //header -->
+	<!-- bootstrap-pop-up -->
 	<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -96,28 +106,28 @@
 					<div class="modal-body">
 						<div class="w3_login_module">
 							<div class="module form-module">
-							  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
-								<div class="tooltip">Click Me</div>
-							  </div>
-							  <div class="form">
-								<h3>Login to your account</h3>
-								<form action="#" method="post">
-								  <input type="text" name="Username" placeholder="Username" required="">
-								  <input type="password" name="Password" placeholder="Password" required="">
-								  <input type="submit" value="Login">
-								</form>
-							  </div>
-							  <div class="form">
-								<h3>Create an account</h3>
-								<form action="#" method="post">
-								  <input type="text" name="Username" placeholder="Username" required="">
-								  <input type="password" name="Password" placeholder="Password" required="">
-								  <input type="email" name="Email" placeholder="Email Address" required="">
-								  <input type="text" name="Phone" placeholder="Phone Number" required="">
-								  <input type="submit" value="Register">
-								</form>
-							  </div>
-							  <div class="cta"><a href="#">Forgot your password?</a></div>
+								<div class="toggle"><i class="fa fa-times fa-pencil"></i>
+									<div class="tooltip">Click Me</div>
+								</div>
+								<div class="form">
+									<h3>Login to your account</h3>
+									<form action="#" method="post">
+										<input type="text" name="Username" placeholder="Username" required="">
+										<input type="password" name="Password" placeholder="Password" required="">
+										<input type="submit" value="Login">
+									</form>
+								</div>
+								<div class="form">
+									<h3>Create an account</h3>
+									<form action="#" method="post">
+										<input type="text" name="Username" placeholder="Username" required="">
+										<input type="password" name="Password" placeholder="Password" required="">
+										<input type="email" name="Email" placeholder="Email Address" required="">
+										<input type="text" name="Phone" placeholder="Phone Number" required="">
+										<input type="submit" value="Register">
+									</form>
+								</div>
+								<div class="cta"><a href="#">Forgot your password?</a></div>
 							</div>
 						</div>
 					</div>
@@ -127,19 +137,20 @@
 	</div>
 	<script>
 		$('.toggle').click(function(){
-		  // Switches the Icon
-		  $(this).children('i').toggleClass('fa-pencil');
-		  // Switches the forms  
-		  $('.form').animate({
-			height: "toggle",
-			'padding-top': 'toggle',
-			'padding-bottom': 'toggle',
-			opacity: "toggle"
-		  }, "slow");
+		  	// Switches the Icon
+		  	$(this).children('i').toggleClass('fa-pencil');
+		  	
+		  	// Switches the forms  
+		  	$('.form').animate({
+			  	height: "toggle",
+			  	'padding-top': 'toggle',
+			  	'padding-bottom': 'toggle',
+			  	opacity: "toggle"
+		  	}, "slow");
 		});
 	</script>
-<!-- //bootstrap-pop-up -->
-<!-- nav -->
+	<!-- //bootstrap-pop-up -->
+	<!-- nav -->
 	<div class="movies_nav">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -160,38 +171,38 @@
 								<a href="{{ path('doshibu_aw_genre') }}" class="dropdown-toggle" data-toggle="dropdown">Genres <b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-3">
 									<li>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Action</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Biography</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Crime</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Family</a></li>
-											<li><a href="horror.html">Horror</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Romance</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Sports</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">War</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Adventure</a></li>
-											<li><a href="comedy.html">Comedy</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Documentary</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Fantasy</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Thriller</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-4">
-										<ul class="multi-column-dropdown">
-											<li><a href="{{ path('doshibu_aw_genre') }}">Animation</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">Costume</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">Drama</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">History</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">Musical</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">Psychological</a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Action</a></li>
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Biography</a></li>
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Crime</a></li>
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Family</a></li>
+												<li><a href="horror.html">Horror</a></li>
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Romance</a></li>
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Sports</a></li>
+												<li><a href="g{{ path('doshibu_aw_genre') }}">War</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Adventure</a></li>
+												<li><a href="comedy.html">Comedy</a></li>
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Documentary</a></li>
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Fantasy</a></li>
+												<li><a href="g{{ path('doshibu_aw_genre') }}">Thriller</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><a href="{{ path('doshibu_aw_genre') }}">Animation</a></li>
+												<li><a href="{{ path('doshibu_aw_genre') }}">Costume</a></li>
+												<li><a href="{{ path('doshibu_aw_genre') }}">Drama</a></li>
+												<li><a href="{{ path('doshibu_aw_genre') }}">History</a></li>
+												<li><a href="{{ path('doshibu_aw_genre') }}">Musical</a></li>
+												<li><a href="{{ path('doshibu_aw_genre') }}">Psychological</a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
 									</li>
 								</ul>
 							</li>
@@ -237,102 +248,102 @@
 		</div>
 	</div>
 
-<div class="general_social_icons">
-	<nav class="social">
-		<ul>
-			<li class="w3_twitter"><a href="#">Twitter <i class="fa fa-twitter"></i></a></li>
-			<li class="w3_facebook"><a href="#">Facebook <i class="fa fa-facebook"></i></a></li>
-			<li class="w3_dribbble"><a href="#">Dribbble <i class="fa fa-dribbble"></i></a></li>
-			<li class="w3_g_plus"><a href="#">Google+ <i class="fa fa-google-plus"></i></a></li>				  
-		</ul>
-  </nav>
-</div>
+	<div class="general_social_icons">
+		<nav class="social">
+			<ul>
+				<li class="w3_twitter"><a href="#">Twitter <i class="fa fa-twitter"></i></a></li>
+				<li class="w3_facebook"><a href="#">Facebook <i class="fa fa-facebook"></i></a></li>
+				<li class="w3_dribbble"><a href="#">Dribbble <i class="fa fa-dribbble"></i></a></li>
+				<li class="w3_g_plus"><a href="#">Google+ <i class="fa fa-google-plus"></i></a></li>				  
+			</ul>
+		</nav>
+	</div>
 
-{% block body %} {% endblock %}
+	{% block body %} {% endblock %}
 
-<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="w3ls_footer_grid">
-				<div class="col-md-6 w3ls_footer_grid_left">
-					<div class="w3ls_footer_grid_left1">
-						<h2>Restez informé !</h2>
-						<div class="w3ls_footer_grid_left1_pos">
-							<form action="#" method="post">
-								<input type="email" name="email" placeholder="Votre email ..." required="">
-								<input type="submit" value="Envoyer">
-							</form>
+		<!-- footer -->
+		<div class="footer">
+			<div class="container">
+				<div class="w3ls_footer_grid">
+					<div class="col-md-6 w3ls_footer_grid_left">
+						<div class="w3ls_footer_grid_left1">
+							<h2>Restez informé !</h2>
+							<div class="w3ls_footer_grid_left1_pos">
+								<form action="#" method="post">
+									<input type="email" name="email" placeholder="Votre email ..." required="">
+									<input type="submit" value="Envoyer">
+								</form>
+							</div>
 						</div>
 					</div>
+					<div class="col-md-6 w3ls_footer_grid_right">
+						<a href="index.html"><h2>One<span>Movies</span></h2></a>
+					</div>
+					<div class="clearfix"> </div>
 				</div>
-				<div class="col-md-6 w3ls_footer_grid_right">
-					<a href="index.html"><h2>One<span>Movies</span></h2></a>
+				<div class="col-md-5 w3ls_footer_grid1_left">
+					<p>&copy; 2016 One Movies. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				</div>
+				<div class="col-md-7 w3ls_footer_grid1_right">
+					<ul>
+						<li>
+							<a href="{{ path('doshibu_aw_genre') }}">Genres</a>
+						</li>
+						<li>
+							<a href="{{ path('doshibu_aw_faq') }}">FAQ</a>
+						</li>
+						<li>
+							<a href="{{ path('doshibu_aw_genre') }}">Action</a>
+						</li>
+						<li>
+							<a href="{{ path('doshibu_aw_genre') }}">Aventure</a>
+						</li>
+						<li>
+							<a href="{{ path('doshibu_aw_genre') }}">Comédie</a>
+						</li>
+						<li>
+							<a href="{{ path('doshibu_aw_contact') }}">Contact Us</a>
+						</li>
+					</ul>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-			<div class="col-md-5 w3ls_footer_grid1_left">
-				<p>&copy; 2016 One Movies. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-			</div>
-			<div class="col-md-7 w3ls_footer_grid1_right">
-				<ul>
-					<li>
-						<a href="{{ path('doshibu_aw_genre') }}">Genres</a>
-					</li>
-					<li>
-						<a href="{{ path('doshibu_aw_faq') }}">FAQ</a>
-					</li>
-					<li>
-						<a href="{{ path('doshibu_aw_genre') }}">Action</a>
-					</li>
-					<li>
-						<a href="{{ path('doshibu_aw_genre') }}">Aventure</a>
-					</li>
-					<li>
-						<a href="{{ path('doshibu_aw_genre') }}">Comédie</a>
-					</li>
-					<li>
-						<a href="{{ path('doshibu_aw_contact') }}">Contact Us</a>
-					</li>
-				</ul>
-			</div>
-			<div class="clearfix"> </div>
 		</div>
-	</div>
-<!-- //footer -->
+		<!-- //footer -->
 
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script>
-$(document).ready(function(){
-    $(".dropdown").hover(            
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
-            $(this).toggleClass('open');        
-        },
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
-            $(this).toggleClass('open');       
-        }
-    );
-});
-</script>
-<!-- //Bootstrap Core JavaScript -->
-<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-<!-- //here ends scrolling icon -->
-</body>
+		{% block bodyEnd_scripts %}
+			<!-- Bootstrap Core JavaScript -->
+			<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+			<script>
+				$(document).ready(function(){
+					$(".dropdown").hover(            
+						function() {
+							$('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+							$(this).toggleClass('open');        
+						},
+						function() {
+							$('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+							$(this).toggleClass('open');       
+						}
+						);
+				});
+			</script>
+			<!-- //Bootstrap Core JavaScript -->
+			<!-- here stars scrolling icon -->
+			<script type="text/javascript">
+				$(document).ready(function() {
+				/*
+					var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+					};
+					*/
+					$().UItoTop({ easingType: 'easeOutQuart' });						
+				});
+			</script>
+			<!-- //here ends scrolling icon -->
+		{% endblock %}
+	</body>
 </html>
