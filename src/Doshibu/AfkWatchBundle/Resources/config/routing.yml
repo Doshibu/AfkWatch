@@ -1,0 +1,30 @@
+doshibu_aw_home_:
+    path :   /
+    defaults:
+        _controller: DoshibuAfkWatchBundle:Movie:index
+
+doshibu_aw_view:
+    path :   /movie/{id}
+    defaults: 
+        _controller : DoshibuAfkWatchBundle:Movie:view
+    requirements:
+        id: \d+
+
+doshibu_aw_add:
+    path :   /add
+    defaults:
+        _controller : DoshibuAfkWatchBundle:Movie:add
+
+doshibu_aw_edit:
+    path :   /edit/{id}
+    defaults:
+        _controller : DoshibuAfkWatchBundle:Movie:edit
+    requirements:
+        id: \d+
+
+doshibu_aw_delete:
+    path :   /delete/{id}
+    defaults:
+        _controller : DoshibuAfkWatchBundle:Movie:delete
+    requirements:
+        id: \d+
