@@ -1,0 +1,4 @@
+services:
+#    doshibu_afk_watch.example:
+#        class: Doshibu\AfkWatchBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
