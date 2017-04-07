@@ -1,3 +1,7 @@
 doshibu_aw:
     resource: "@DoshibuAfkWatchBundle/Resources/config/routing.yml"
     prefix:   /platform
+
+#doshibu_aw_admin:
+#    resource: "@DoshibuAdminBundle/Resources/config/routing.yml"
+#    prefix:   /admin

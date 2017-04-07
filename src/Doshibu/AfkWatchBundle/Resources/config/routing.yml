@@ -1,30 +1,47 @@
-doshibu_aw_home_:
+doshibu_aw_home:
     path :   /
     defaults:
         _controller: DoshibuAfkWatchBundle:Movie:index
 
-doshibu_aw_view:
-    path :   /movie/{id}
+doshibu_aw_genre:
+    path :   /genre/{id}
     defaults: 
-        _controller : DoshibuAfkWatchBundle:Movie:view
+        _controller : DoshibuAfkWatchBundle:Movie:genre
     requirements:
         id: \d+
 
-doshibu_aw_add:
-    path :   /add
+doshibu_aw_series:
+    path :   /series
     defaults:
-        _controller : DoshibuAfkWatchBundle:Movie:add
+        _controller : DoshibuAfkWatchBundle:Movie:series
 
-doshibu_aw_edit:
-    path :   /edit/{id}
+doshibu_aw_news:
+    path :   /news
     defaults:
-        _controller : DoshibuAfkWatchBundle:Movie:edit
+        _controller : DoshibuAfkWatchBundle:Movie:news
     requirements:
         id: \d+
 
-doshibu_aw_delete:
-    path :   /delete/{id}
+doshibu_aw_pays:
+    path :   /pays/{id}
     defaults:
-        _controller : DoshibuAfkWatchBundle:Movie:delete
+        _controller : DoshibuAfkWatchBundle:Movie:pays
     requirements:
         id: \d+
+
+doshibu_aw_list:
+    path :   /list
+    defaults:
+        _controller : DoshibuAfkWatchBundle:Movie:list
+    requirements:
+        id: \d+
+
+doshibu_aw_faq:
+    path :   /faq
+    defaults:
+        _controller : DoshibuAfkWatchBundle:Movie:faq
+
+doshibu_aw_contact:
+    path :   /contact
+    defaults:
+        _controller : DoshibuAfkWatchBundle:Movie:contact

@@ -15,23 +15,38 @@ class MovieController extends Controller
 		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig');
 	}
 
-	public function viewAction(Request $request)
+	public function genreAction(Request $request)
 	{
-
+		return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig');
 	}
 
-	public function addAction(Request $request)
+	public function seriesAction(Request $request)
 	{
-
+		return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig');
 	}
 
-	public function editAction(Request $request)
+	public function newsAction(Request $request)
 	{
-
+		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig');
 	}
 
-	public function deleteAction(Request $request)
+	public function paysAction(Request $request)
 	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig');
+	}
 
+	public function listAction(Request $request)
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig');
+	}
+
+	public function faqAction(Request $request)
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig');
+	}
+
+	public function contactAction(Request $request)
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig');
 	}
 }
