@@ -17,7 +17,7 @@ class LoadGenre implements FixtureInterface
 			'Aventure',
 			'Animation',
 			'Biographie',
-			'Comédie',
+			'Comedie',
 			'Costume',
 			'Crime',
 			'Documentaire',

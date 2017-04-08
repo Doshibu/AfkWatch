@@ -23,21 +23,21 @@
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
 											{% for genre in listGenre[0] %}
-												<li><a href="{{ path('doshibu_aw_genre', {'id': genre.id}) }} }}">{{ genre.name }}</a></li>
+												<li><a href="{{ path('doshibu_aw_genre', {'name': genre.name}) }}">{{ genre.name }}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
 											{% for genre in listGenre[1] %}
-												<li><a href="{{ path('doshibu_aw_genre', {'id': genre.id}) }} }}">{{ genre.name }}</a></li>
+												<li><a href="{{ path('doshibu_aw_genre', {'name': genre.name}) }}">{{ genre.name }}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
 											{% for genre in listGenre[2] %}
-												<li><a href="{{ path('doshibu_aw_genre', {'id': genre.id}) }} }}">{{ genre.name }}</a></li>
+												<li><a href="{{ path('doshibu_aw_genre', {'name': genre.name}) }}">{{ genre.name }}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
@@ -54,21 +54,21 @@
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
 											{% for pays in listPays[0] %}
-												<li><a href="{{ path('doshibu_aw_pays', {'id': pays.id}) }} }}">{{ pays.name }}</a></li>
+												<li><a href="{{ path('doshibu_aw_pays', {'name': pays.name}) }}">{{ pays.name }}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
 											{% for pays in listPays[1] %}
-												<li><a href="{{ path('doshibu_aw_pays', {'id': pays.id}) }} }}">{{ pays.name }}</a></li>
+												<li><a href="{{ path('doshibu_aw_pays', {'name': pays.name}) }}">{{ pays.name }}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
 											{% for pays in listPays[2] %}
-												<li><a href="{{ path('doshibu_aw_pays', {'id': pays.id}) }} }}">{{ pays.name }}</a></li>
+												<li><a href="{{ path('doshibu_aw_pays', {'name': pays.name}) }}">{{ pays.name }}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
