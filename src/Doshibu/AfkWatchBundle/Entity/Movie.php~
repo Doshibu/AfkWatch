@@ -52,7 +52,12 @@ class Movie
     /**
     * @ORM\OneToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Image", cascade={"persist"})
     */
-    private $image;
+    private $imageLarge;
+
+    /**
+    * @ORM\OneToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Image", cascade={"persist"})
+    */
+    private $imageSmall;
 
     /**
     * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Genre", cascade={"persist"})
@@ -101,5 +106,231 @@ class Movie
     public function getName()
     {
         return $this->name;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Movie
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set filmMaker
+     *
+     * @param string $filmMaker
+     * @return Movie
+     */
+    public function setFilmMaker($filmMaker)
+    {
+        $this->filmMaker = $filmMaker;
+
+        return $this;
+    }
+
+    /**
+     * Get filmMaker
+     *
+     * @return string 
+     */
+    public function getFilmMaker()
+    {
+        return $this->filmMaker;
+    }
+
+    /**
+     * Set rating
+     *
+     * @param integer $rating
+     * @return Movie
+     */
+    public function setRating($rating)
+    {
+        $this->rating = $rating;
+
+        return $this;
+    }
+
+    /**
+     * Get rating
+     *
+     * @return integer 
+     */
+    public function getRating()
+    {
+        return $this->rating;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     * @return Movie
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Set image
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Image $image
+     * @return Movie
+     */
+    public function setImage(\Doshibu\AfkWatchBundle\Entity\Image $image = null)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return \Doshibu\AfkWatchBundle\Entity\Image 
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Add genders
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Genre $genders
+     * @return Movie
+     */
+    public function addGender(\Doshibu\AfkWatchBundle\Entity\Genre $genders)
+    {
+        $this->genders[] = $genders;
+
+        return $this;
+    }
+
+    /**
+     * Remove genders
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Genre $genders
+     */
+    public function removeGender(\Doshibu\AfkWatchBundle\Entity\Genre $genders)
+    {
+        $this->genders->removeElement($genders);
+    }
+
+    /**
+     * Get genders
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getGenders()
+    {
+        return $this->genders;
+    }
+
+    /**
+     * Set country
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Pays $country
+     * @return Movie
+     */
+    public function setCountry(\Doshibu\AfkWatchBundle\Entity\Pays $country = null)
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return \Doshibu\AfkWatchBundle\Entity\Pays 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set imageLarge
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageLarge
+     *
+     * @return Movie
+     */
+    public function setImageLarge(\Doshibu\AfkWatchBundle\Entity\Image $imageLarge = null)
+    {
+        $this->imageLarge = $imageLarge;
+
+        return $this;
+    }
+
+    /**
+     * Get imageLarge
+     *
+     * @return \Doshibu\AfkWatchBundle\Entity\Image
+     */
+    public function getImageLarge()
+    {
+        return $this->imageLarge;
+    }
+
+    /**
+     * Set imageSmall
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageSmall
+     *
+     * @return Movie
+     */
+    public function setImageSmall(\Doshibu\AfkWatchBundle\Entity\Image $imageSmall = null)
+    {
+        $this->imageSmall = $imageSmall;
+
+        return $this;
+    }
+
+    /**
+     * Get imageSmall
+     *
+     * @return \Doshibu\AfkWatchBundle\Entity\Image
+     */
+    public function getImageSmall()
+    {
+        return $this->imageSmall;
     }
 }

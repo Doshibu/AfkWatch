@@ -30,6 +30,7 @@ class LoadGenre implements FixtureInterface
 			'Musique',
 			'Psychologique',
 			'Romance',
+			'Science Fiction',
 			'Sports',
 			'Guerre'
 			);

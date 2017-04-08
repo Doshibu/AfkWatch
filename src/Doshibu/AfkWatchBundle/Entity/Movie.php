@@ -3,6 +3,7 @@
 namespace Doshibu\AfkWatchBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Movie
@@ -50,9 +51,25 @@ class Movie
     private $rating;
 
     /**
+    * @Gedmo\Slug(fields={"name"})
+    * @ORM\Column(length=128, unique=true)
+    */
+    private $slug;
+
+    /**
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+    /**
     * @ORM\OneToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Image", cascade={"persist"})
     */
-    private $image;
+    private $imageLarge;
+
+    /**
+    * @ORM\OneToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Image", cascade={"persist"})
+    */
+    private $imageSmall;
 
     /**
     * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Genre", cascade={"persist"})
@@ -66,9 +83,12 @@ class Movie
     private $country;
 
     /**
-     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     * Constructor
      */
-    private $updatedAt;
+    public function __construct()
+    {
+        $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -101,13 +121,6 @@ class Movie
     public function getName()
     {
         return $this->name;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -203,26 +216,51 @@ class Movie
     }
 
     /**
-     * Set image
+     * Set imageLarge
      *
-     * @param \Doshibu\AfkWatchBundle\Entity\Image $image
+     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageLarge
+     *
      * @return Movie
      */
-    public function setImage(\Doshibu\AfkWatchBundle\Entity\Image $image = null)
+    public function setImageLarge(\Doshibu\AfkWatchBundle\Entity\Image $imageLarge = null)
     {
-        $this->image = $image;
+        $this->imageLarge = $imageLarge;
 
         return $this;
     }
 
     /**
-     * Get image
+     * Get imageLarge
      *
-     * @return \Doshibu\AfkWatchBundle\Entity\Image 
+     * @return \Doshibu\AfkWatchBundle\Entity\Image
      */
-    public function getImage()
+    public function getImageLarge()
     {
-        return $this->image;
+        return $this->imageLarge;
+    }
+
+    /**
+     * Set imageSmall
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageSmall
+     *
+     * @return Movie
+     */
+    public function setImageSmall(\Doshibu\AfkWatchBundle\Entity\Image $imageSmall = null)
+    {
+        $this->imageSmall = $imageSmall;
+
+        return $this;
+    }
+
+    /**
+     * Get imageSmall
+     *
+     * @return \Doshibu\AfkWatchBundle\Entity\Image
+     */
+    public function getImageSmall()
+    {
+        return $this->imageSmall;
     }
 
     /**
@@ -279,5 +317,13 @@ class Movie
     public function getCountry()
     {
         return $this->country;
+    }
+
+    /**
+    * @ORM\PreUpdate
+    */
+    public function updateDate()
+    {
+        $this->setUpdatedAt(new \DateTime());
     }
 }

@@ -19,7 +19,13 @@ class MovieController extends Controller
 {
 	public function indexAction(Request $request)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig');
+		$em = $this->getDoctrine()->getManager();
+		$listMovie = $em->getRepository('DoshibuAfkWatchBundle:Movie')
+						->findAll();
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', array(
+			'listMovie' => $listMovie
+		));
 	}
 
 	public function singleAction(Request $request)
