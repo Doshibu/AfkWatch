@@ -99,35 +99,36 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					Sign In & Sign Up
+					Inscription & Connexion
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
 				</div>
 				<section>
 					<div class="modal-body">
 						<div class="w3_login_module">
 							<div class="module form-module">
-								<div class="toggle"><i class="fa fa-times fa-pencil"></i>
-									<div class="tooltip">Click Me</div>
+								<div class="toggle">
+									<i class="fa fa-times fa-pencil"></i>
+									<div class="tooltip">Nouveau</div>
 								</div>
 								<div class="form">
-									<h3>Login to your account</h3>
+									<h3>Connexion à votre compte</h3>
 									<form action="#" method="post">
-										<input type="text" name="Username" placeholder="Username" required="">
-										<input type="password" name="Password" placeholder="Password" required="">
+										<input type="text" name="Username" placeholder="Pseudo" required="">
+										<input type="password" name="Password" placeholder="Mot de passe" required="">
 										<input type="submit" value="Login">
 									</form>
 								</div>
 								<div class="form">
-									<h3>Create an account</h3>
+									<h3>Rejoignez nous</h3>
 									<form action="#" method="post">
-										<input type="text" name="Username" placeholder="Username" required="">
-										<input type="password" name="Password" placeholder="Password" required="">
-										<input type="email" name="Email" placeholder="Email Address" required="">
-										<input type="text" name="Phone" placeholder="Phone Number" required="">
+										<input type="text" name="Username" placeholder="Pseudo" required="">
+										<input type="password" name="Password" placeholder="Mot de passe" required="">
+										<input type="email" name="Email" placeholder="Adresse Email" required="">
+										<input type="text" name="Phone" placeholder="Téléphone" required="">
 										<input type="submit" value="Register">
 									</form>
 								</div>
-								<div class="cta"><a href="#">Forgot your password?</a></div>
+								<div class="cta"><a href="#">Mot de passe perdu ?</a></div>
 							</div>
 						</div>
 					</div>
@@ -137,8 +138,15 @@
 	</div>
 	<script>
 		$('.toggle').click(function(){
-		  	// Switches the Icon
+		  	// Switches the Icon & Tooltip Text
 		  	$(this).children('i').toggleClass('fa-pencil');
+		  	if( $(this).children('i').hasClass('fa-pencil') ) {
+		  		$(this).children('div').text('Nouveau');
+		  	} else {
+		  		$(this).children('div').text('Membre');
+		  	}
+		  	
+
 		  	
 		  	// Switches the forms  
 		  	$('.form').animate({
@@ -218,7 +226,7 @@
 
 		{% block bodyEnd_scripts %}
 			<!-- Bootstrap Core JavaScript -->
-			<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+			<script src="{{ asset('streaming/js/bootstrap.min.js') }}"></script>
 			<script>
 				$(document).ready(function(){
 					$(".dropdown").hover(            
