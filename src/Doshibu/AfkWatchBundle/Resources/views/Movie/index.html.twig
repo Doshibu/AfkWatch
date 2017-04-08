@@ -35,7 +35,7 @@
 						<div class="item">
 							<div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
 								<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
-									<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" />
+									<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
@@ -69,676 +69,144 @@
 	<!-- //banner-bottom -->
 	<!-- general -->
 	<div class="general">
-		<h4 class="latest-text w3_latest_text">Featured Movies</h4>
+		<h4 class="latest-text w3_latest_text">Films d'actualité</h4>
 		<div class="container">
 			<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 				<ul id="myTab" class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Featured</a></li>
-					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Top viewed</a></li>
-					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Top Rating</a></li>
-					<li role="presentation"><a href="#imdb" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">Recently Added</a></li>
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Ajout Récent</a></li>
+					<li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Populaire</a></li>
+					<li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Mieux notés</a></li>
+					<li role="presentation"><a href="#imdb" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">Plus vus</a></li>
 				</ul>
 				<div id="myTabContent" class="tab-content">
 					<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
 						<div class="w3_agile_featured_movies">
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m15.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">God’s Compass</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											</ul>
+							{% for movie in listMovie[:8] %}
+								<div class="col-md-2 w3l-movie-gride-agile">
+									<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+										<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
+										<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+									</a>
+									<div class="mid-1 agileits_w3layouts_mid_1_home">
+										<div class="w3l-movie-text">
+											<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m2.jpg') }}" title="album-name" class="img-responsive" alt=" "  />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">Bad Moms</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
+										<div class="mid-2 agile_mid_2_home">
+											<p>2016</p>
+											<div class="block-stars">
+												<ul class="w3l-ratings">
+													<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+													<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+													<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+													<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+													<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+												</ul>
+											</div>
+											<div class="clearfix"></div>
 										</div>
-										<div class="clearfix"></div>
+									</div>
+									<div class="ribben">
+										<p>NEW</p>
 									</div>
 								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m5.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">Jason Bourne</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m16.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">Rezort</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m17.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">Peter</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m18.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">ISRA 88</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m1.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">War Dogs</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m14.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">The Other Side</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m19.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">Civil War</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m20.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">The Secret Life of Pets</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m21.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">The Jungle Book</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
-							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="single.html" class="hvr-shutter-out-horizontal">
-									<img src="{{ asset('streaming/images/m22.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-								</a>
-								<div class="mid-1 agileits_w3layouts_mid_1_home">
-									<div class="w3l-movie-text">
-										<h6><a href="single.html">Assassin's Creed 3</a></h6>							
-									</div>
-									<div class="mid-2 agile_mid_2_home">
-										<p>2016</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="ribben">
-									<p>NEW</p>
-								</div>
-							</div>
+							{% endfor %}
 							<div class="clearfix"> </div>
 						</div>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m22.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Assassin's Creed 3</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
+						{% for movie in listMovie[5:5] %}
+							<div class="col-md-2 w3l-movie-gride-agile">
+								<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+									<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
+									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+								</a>
+								<div class="mid-1 agileits_w3layouts_mid_1_home">
+									<div class="w3l-movie-text">
+										<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m2.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Bad Moms</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
+									<div class="mid-2 agile_mid_2_home">
+										<p>2016</p>
+										<div class="block-stars">
+											<ul class="w3l-ratings">
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
 									</div>
-									<div class="clearfix"></div>
+								</div>
+								<div class="ribben">
+									<p>NEW</p>
 								</div>
 							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m9.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Central Intelligence</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
+						{% endfor %}
 						<div class="clearfix"> </div>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="rating" aria-labelledby="rating-tab">
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m7.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Light B/t Oceans</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
+						{% for movie in listMovie[4:4] %}
+							<div class="col-md-2 w3l-movie-gride-agile">
+								<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+									<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
+									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+								</a>
+								<div class="mid-1 agileits_w3layouts_mid_1_home">
+									<div class="w3l-movie-text">
+										<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m11.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">X-Men</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
+									<div class="mid-2 agile_mid_2_home">
+										<p>2016</p>
+										<div class="block-stars">
+											<ul class="w3l-ratings">
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
 									</div>
-									<div class="clearfix"></div>
+								</div>
+								<div class="ribben">
+									<p>NEW</p>
 								</div>
 							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m8.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">The BFG</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m17.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Peter</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
+						{% endfor %}
 						<div class="clearfix"> </div>
 					</div>
 					<div role="tabpanel" class="tab-pane fade" id="imdb" aria-labelledby="imdb-tab">
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m22.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Assassin's Creed 3</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
+						{% for movie in listMovie[1:7] %}
+							<div class="col-md-2 w3l-movie-gride-agile">
+								<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+									<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;"/>
+									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+								</a>
+								<div class="mid-1 agileits_w3layouts_mid_1_home">
+									<div class="w3l-movie-text">
+										<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m2.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Bad Moms</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
+									<div class="mid-2 agile_mid_2_home">
+										<p>2016</p>
+										<div class="block-stars">
+											<ul class="w3l-ratings">
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
 									</div>
-									<div class="clearfix"></div>
+								</div>
+								<div class="ribben">
+									<p>NEW</p>
 								</div>
 							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m9.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Central Intelligence</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m10.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Don't Think Twice</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
-						<div class="col-md-2 w3l-movie-gride-agile">
-							<a href="single.html" class="hvr-shutter-out-horizontal">
-								<img src="{{ asset('streaming/images/m23.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-								<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-							</a>
-							<div class="mid-1 agileits_w3layouts_mid_1_home">
-								<div class="w3l-movie-text">
-									<h6><a href="single.html">Dead Island 2</a></h6>							
-								</div>
-								<div class="mid-2 agile_mid_2_home">
-									<p>2016</p>
-									<div class="block-stars">
-										<ul class="w3l-ratings">
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-							<div class="ribben">
-								<p>NEW</p>
-							</div>
-						</div>
+						{% endfor %}
 						<div class="clearfix"> </div>
 					</div>
 				</div>
@@ -748,7 +216,7 @@
 	<!-- //general -->
 	<!-- Latest-tv-series -->
 	<div class="Latest-tv-series">
-		<h4 class="latest-text w3_latest_text w3_home_popular">Most Popular Movies</h4>
+		<h4 class="latest-text w3_latest_text w3_home_popular">Parmis les films les plus populaires</h4>
 		<div class="container">
 			<section class="slider">
 				<div class="flexslider">
@@ -757,23 +225,38 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="{{ asset('streaming/images/h1-1.jpg') }}" alt=" " class="img-responsive" />
+										<img src="{{ listMovie[9].imageLarge.url }}" alt="{{ listMovie[9].imageSmall.alt }}" class="img-responsive" style="width: 640px; height: 351px;"/>
 										<a class="w3_play_icon" href="#small-dialog">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
-									<p class="fexi_header">the conjuring 2</p>
-									<p class="fexi_header_para"><span class="conjuring_w3">Story Line<label>:</label></span> 720p,Bluray HD Free Movie Downloads, Watch Free Movies Online with high speed Free Movie Streaming | MyDownloadTube Lorraine and Ed Warren go to north London to help a single...</p>
-									<p class="fexi_header_para"><span>Date of Release<label>:</label></span> Jun 10, 2016 </p>
+									<p class="fexi_header">{{ listMovie[9].name }}</p>
 									<p class="fexi_header_para">
-										<span>Genres<label>:</label> </span>
-										<a href="genres.html">Drama</a> | 
-										<a href="genres.html">Adventure</a> | 
-										<a href="genres.html">Family</a>								
+										<span class="conjuring_w3">Description
+											<label>:</label>
+										</span>&nbsp;
+										{{ listMovie[9].description }}
 									</p>
-									<p class="fexi_header_para fexi_header_para1"><span>Star Rating<label>:</label></span>
+									<p class="fexi_header_para">
+										<span>Date de sortie
+											<label>:</label>
+										</span>&nbsp;
+										Jun 10, 2016
+									</p>
+									<p class="fexi_header_para">
+										<span>Genres
+											<label>:</label> 
+										</span>&nbsp;
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+									</p>
+									<p class="fexi_header_para fexi_header_para1">
+										<span>Note
+											<label>:</label>
+										</span>
 										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
 										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
 										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
@@ -783,168 +266,35 @@
 								</div>
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m22.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Assassin's Creed 3</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
+									{% for movie in listMovie[0:5] %}									
+										<div class="col-md-2 w3l-movie-gride-agile">
+											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
+												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+											</a>
+											<div class="mid-1 agileits_w3layouts_mid_1_home">
+												<div class="w3l-movie-text">
+													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m2.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Bad Moms</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
+												<div class="mid-2 agile_mid_2_home">
+													<p>2016</p>
+													<div class="block-stars">
+														<ul class="w3l-ratings">
+															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+														</ul>
+													</div>
+													<div class="clearfix"></div>
 												</div>
-												<div class="clearfix"></div>
+											</div>
+											<div class="ribben">
+												<p>NEW</p>
 											</div>
 										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m9.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Central Intelligence</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m7.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Light B/t Oceans</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m11.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">X-Men</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m17.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Peter</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
+									{% endfor %}
 									<div class="clearfix"> </div>
 								</div>
 							</div>
@@ -953,194 +303,76 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										
-										<img src="{{ asset('streaming/images/h2-1.jpg') }}" alt=" " class="img-responsive" />
-										<a class="w3_play_icon1" href="#small-dialog1">
+										<img src="{{ listMovie[5].imageLarge.url }}" alt="{{ listMovie[5].imageSmall.alt }}" class="img-responsive" style="width: 640px; height: 351px;"/>
+										<a class="w3_play_icon" href="#small-dialog">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
-									<p class="fexi_header">a haunting in cawdor</p>
-									<p class="fexi_header_para"><span class="conjuring_w3">Story Line<label>:</label></span> Vivian Miller, sent to a rehabilitation programme for young offenders, where a theatre camp is used as an alternative to jail time. After she views tape ...</p>
-									<p class="fexi_header_para"><span>Date of Release<label>:</label></span> Oct 09, 2015 </p>
+									<p class="fexi_header">{{ listMovie[5].name }}</p>
 									<p class="fexi_header_para">
-										<span>Genres<label>:</label> </span>
-										<a href="genres.html">Thriller</a> |  
-										<a href="genres.html">Horror</a>								
+										<span class="conjuring_w3">Description
+											<label>:</label>
+										</span>&nbsp;
+										{{ listMovie[5].description }}
 									</p>
-									<p class="fexi_header_para fexi_header_para1"><span>Star Rating<label>:</label></span>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+									<p class="fexi_header_para">
+										<span>Date de sortie
+											<label>:</label>
+										</span>&nbsp;
+										Jun 10, 2016
+									</p>
+									<p class="fexi_header_para">
+										<span>Genres
+											<label>:</label> 
+										</span>&nbsp;
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+									</p>
+									<p class="fexi_header_para fexi_header_para1">
+										<span>Note
+											<label>:</label>
+										</span>
 										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
 										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
 										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
 										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
 									</p>
 								</div>
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m2.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Bad Moms</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
+									{% for movie in listMovie[2:5] %}									
+										<div class="col-md-2 w3l-movie-gride-agile">
+											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
+												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+											</a>
+											<div class="mid-1 agileits_w3layouts_mid_1_home">
+												<div class="w3l-movie-text">
+													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m9.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Central Intelligence</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
+												<div class="mid-2 agile_mid_2_home">
+													<p>2016</p>
+													<div class="block-stars">
+														<ul class="w3l-ratings">
+															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+														</ul>
+													</div>
+													<div class="clearfix"></div>
 												</div>
-												<div class="clearfix"></div>
+											</div>
+											<div class="ribben">
+												<p>NEW</p>
 											</div>
 										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m7.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Light B/t Oceans</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m11.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">X-Men</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m17.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Peter</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m21.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">The Jungle Book</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
+									{% endfor %}
 									<div class="clearfix"> </div>
 								</div>
 							</div>
@@ -1149,194 +381,232 @@
 							<div class="agile_tv_series_grid">
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										
-										<img src="{{ asset('streaming/images/h3-1.jpg') }}" alt=" " class="img-responsive" />
-										<a class="w3_play_icon2" href="#small-dialog2">
+										<img src="{{ listMovie[6].imageLarge.url }}" alt="{{ listMovie[6].imageSmall.alt }}" class="img-responsive" style="width: 640px; height: 351px;"/>
+										<a class="w3_play_icon" href="#small-dialog">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
-									<p class="fexi_header">civil war captain America</p>
-									<p class="fexi_header_para"><span class="conjuring_w3">Story Line<label>:</label></span> After the Avengers leaves some&nbsp;collateral damage, political pressure mounts to install a system of accountability.&nbsp;The new status quo deeply divides ...</p>
-									<p class="fexi_header_para"><span>Date of Release<label>:</label></span> May 06, 2016 </p>
+									<p class="fexi_header">{{ listMovie[6].name }}</p>
 									<p class="fexi_header_para">
-										<span>Genres<label>:</label> </span>
-										<a href="genres.html">Action</a> | 
-										<a href="genres.html">Adventure</a>								
+										<span class="conjuring_w3">Description
+											<label>:</label>
+										</span>&nbsp;
+										{{ listMovie[6].description }}
 									</p>
-									<p class="fexi_header_para fexi_header_para1"><span>Star Rating<label>:</label></span>
+									<p class="fexi_header_para">
+										<span>Date de sortie
+											<label>:</label>
+										</span>&nbsp;
+										Jun 10, 2016
+									</p>
+									<p class="fexi_header_para">
+										<span>Genres
+											<label>:</label> 
+										</span>&nbsp;
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+									</p>
+									<p class="fexi_header_para fexi_header_para1">
+										<span>Note
+											<label>:</label>
+										</span>
 										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
 										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
 										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
 										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
 									</p>
 								</div>
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m2.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Bad Moms</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
+									{% for movie in listMovie[4:5] %}									
+										<div class="col-md-2 w3l-movie-gride-agile">
+											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
+												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+											</a>
+											<div class="mid-1 agileits_w3layouts_mid_1_home">
+												<div class="w3l-movie-text">
+													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m9.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Central Intelligence</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
+												<div class="mid-2 agile_mid_2_home">
+													<p>2016</p>
+													<div class="block-stars">
+														<ul class="w3l-ratings">
+															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+														</ul>
+													</div>
+													<div class="clearfix"></div>
 												</div>
-												<div class="clearfix"></div>
+											</div>
+											<div class="ribben">
+												<p>NEW</p>
 											</div>
 										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m7.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+									{% endfor %}
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="agile_tv_series_grid">
+								<div class="col-md-6 agile_tv_series_grid_left">
+									<div class="w3ls_market_video_grid1">
+										<img src="{{ listMovie[7].imageLarge.url }}" alt="{{ listMovie[7].imageSmall.alt }}" class="img-responsive" style="width: 640px; height: 351px;"/>
+										<a class="w3_play_icon" href="#small-dialog">
+											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Light B/t Oceans</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
 									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m11.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+								</div>
+								<div class="col-md-6 agile_tv_series_grid_right">
+									<p class="fexi_header">{{ listMovie[7].name }}</p>
+									<p class="fexi_header_para">
+										<span class="conjuring_w3">Description
+											<label>:</label>
+										</span>&nbsp;
+										{{ listMovie[7].description }}
+									</p>
+									<p class="fexi_header_para">
+										<span>Date de sortie
+											<label>:</label>
+										</span>&nbsp;
+										Jun 10, 2016
+									</p>
+									<p class="fexi_header_para">
+										<span>Genres
+											<label>:</label> 
+										</span>&nbsp;
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+									</p>
+									<p class="fexi_header_para fexi_header_para1">
+										<span>Note
+											<label>:</label>
+										</span>
+										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+								<div class="agileinfo_flexislider_grids">
+									{% for movie in listMovie[3:5] %}									
+										<div class="col-md-2 w3l-movie-gride-agile">
+											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
+												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+											</a>
+											<div class="mid-1 agileits_w3layouts_mid_1_home">
+												<div class="w3l-movie-text">
+													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+												</div>
+												<div class="mid-2 agile_mid_2_home">
+													<p>2016</p>
+													<div class="block-stars">
+														<ul class="w3l-ratings">
+															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+														</ul>
+													</div>
+													<div class="clearfix"></div>
+												</div>
+											</div>
+											<div class="ribben">
+												<p>NEW</p>
+											</div>
+										</div>
+									{% endfor %}
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="agile_tv_series_grid">
+								<div class="col-md-6 agile_tv_series_grid_left">
+									<div class="w3ls_market_video_grid1">
+										<img src="{{ listMovie[8].imageLarge.url }}" alt="{{ listMovie[8].imageSmall.alt }}" class="img-responsive" style="width: 640px; height: 351px;"/>
+										<a class="w3_play_icon" href="#small-dialog">
+											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">X-Men</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
 									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m17.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">Peter</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
+								</div>
+								<div class="col-md-6 agile_tv_series_grid_right">
+									<p class="fexi_header">{{ listMovie[8].name }}</p>
+									<p class="fexi_header_para">
+										<span class="conjuring_w3">Description
+											<label>:</label>
+										</span>&nbsp;
+										{{ listMovie[8].description }}
+									</p>
+									<p class="fexi_header_para">
+										<span>Date de sortie
+											<label>:</label>
+										</span>&nbsp;
+										Jun 10, 2016
+									</p>
+									<p class="fexi_header_para">
+										<span>Genres
+											<label>:</label> 
+										</span>&nbsp;
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
+										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+									</p>
+									<p class="fexi_header_para fexi_header_para1">
+										<span>Note
+											<label>:</label>
+										</span>
+										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+									</p>
+								</div>
+								<div class="clearfix"> </div>
+								<div class="agileinfo_flexislider_grids">
+									{% for movie in listMovie[0:5] %}									
+										<div class="col-md-2 w3l-movie-gride-agile">
+											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
+												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+											</a>
+											<div class="mid-1 agileits_w3layouts_mid_1_home">
+												<div class="w3l-movie-text">
+													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 												</div>
-												<div class="clearfix"></div>
-											</div>
-										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
-									<div class="col-md-2 w3l-movie-gride-agile">
-										<a href="single.html" class="hvr-shutter-out-horizontal">
-											<img src="{{ asset('streaming/images/m20.jpg') }}" title="album-name" class="img-responsive" alt=" " />
-											<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
-										</a>
-										<div class="mid-1 agileits_w3layouts_mid_1_home">
-											<div class="w3l-movie-text">
-												<h6><a href="single.html">The Secret Life of Pets</a></h6>							
-											</div>
-											<div class="mid-2 agile_mid_2_home">
-												<p>2016</p>
-												<div class="block-stars">
-													<ul class="w3l-ratings">
-														<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-														<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-													</ul>
+												<div class="mid-2 agile_mid_2_home">
+													<p>2016</p>
+													<div class="block-stars">
+														<ul class="w3l-ratings">
+															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+														</ul>
+													</div>
+													<div class="clearfix"></div>
 												</div>
-												<div class="clearfix"></div>
+											</div>
+											<div class="ribben">
+												<p>NEW</p>
 											</div>
 										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
-									</div>
+									{% endfor %}
 									<div class="clearfix"> </div>
 								</div>
 							</div>
