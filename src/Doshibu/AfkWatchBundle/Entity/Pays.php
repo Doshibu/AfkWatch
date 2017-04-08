@@ -3,6 +3,7 @@
 namespace Doshibu\AfkWatchBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Pays
@@ -29,9 +30,23 @@ class Pays
     private $name;
 
     /**
+    * @Gedmo\Slug(fields={"name"})
+    * @ORM\Column(length=128, unique=true)
+    */
+    private $slug;
+
+    /**
     * @ORM\OneToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", mappedBy="country")
     */
     private $movies;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->movies = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -65,13 +80,6 @@ class Pays
     {
         return $this->name;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->movies = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Add movies
@@ -104,5 +112,29 @@ class Pays
     public function getMovies()
     {
         return $this->movies;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Pays
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }

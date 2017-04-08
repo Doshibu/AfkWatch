@@ -3,6 +3,7 @@
 namespace Doshibu\AfkWatchBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Genre
@@ -29,9 +30,23 @@ class Genre
     private $name;
 
     /**
+    * @Gedmo\Slug(fields={"name"})
+    * @ORM\Column(length=128, unique=true)
+    */
+    private $slug;
+
+    /**
     * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", cascade={"persist"})
     */
     private $movies;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->movies = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -65,13 +80,6 @@ class Genre
     {
         return $this->name;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->movies = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Add movies
@@ -104,5 +112,29 @@ class Genre
     public function getMovies()
     {
         return $this->movies;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Genre
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }

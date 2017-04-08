@@ -20,4 +20,13 @@ class PaysRepository extends EntityRepository
 			->getQuery()
 			->getResult(Query::HYDRATE_ARRAY);
 	}
+
+	/*public function findOneBy($id)
+	{
+		return $this->createQueryBuilder('a')
+			->where('a.id = :id')
+			->setParameter('id', $id)
+			->getQuery()
+			->getResult();
+	}*/
 }

@@ -106,6 +106,6 @@ class MovieController extends Controller
 		return $this->render('DoshibuAfkWatchBundle:Movie:mainMenu.html.twig', array(
 			'listGenre' => $listGenre,
 			'listPays' 	=> $listPays
-			));
+		));
 	}
 }

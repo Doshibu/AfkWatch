@@ -12,12 +12,10 @@ doshibu_aw_single:
         id: \d+
 
 doshibu_aw_genre:
-    path :   /genre/{name}
+    path :   /genre/{slug}
     defaults: 
         _controller : DoshibuAfkWatchBundle:Movie:genre
-        name: Action
-    requirements:
-        name: "[^/]+"
+        slug: action
 
 doshibu_aw_series:
     path :   /series
@@ -40,12 +38,10 @@ doshibu_aw_news_single:
         id: \d+
 
 doshibu_aw_pays:
-    path :   /pays/{name}
+    path :   /pays/{slug}
     defaults:
         _controller : DoshibuAfkWatchBundle:Movie:pays
-        name: France
-    requirements:
-        name: "[^/]+"
+        slug: france
 
 doshibu_aw_list:
     path :   /list

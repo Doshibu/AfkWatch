@@ -3,6 +3,7 @@
 namespace Doshibu\AfkWatchBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Genre
@@ -27,6 +28,12 @@ class Genre
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
+
+    /**
+    * @Gedmo\Slug(fields={"name"})
+    * @ORM\Column(length=128, unique=true)
+    */
+    private $slug;
 
     /**
     * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", cascade={"persist"})
@@ -64,5 +71,45 @@ class Genre
     public function getName()
     {
         return $this->name;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->movies = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add movies
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Movie $movies
+     * @return Genre
+     */
+    public function addMovie(\Doshibu\AfkWatchBundle\Entity\Movie $movies)
+    {
+        $this->movies[] = $movies;
+
+        return $this;
+    }
+
+    /**
+     * Remove movies
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Movie $movies
+     */
+    public function removeMovie(\Doshibu\AfkWatchBundle\Entity\Movie $movies)
+    {
+        $this->movies->removeElement($movies);
+    }
+
+    /**
+     * Get movies
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getMovies()
+    {
+        return $this->movies;
     }
 }
