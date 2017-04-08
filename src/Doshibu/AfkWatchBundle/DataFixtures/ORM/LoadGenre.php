@@ -23,7 +23,7 @@ class LoadGenre implements FixtureInterface
 			'Documentaire',
 			'Drame',
 			'Famille',
-			'Fantaisie',
+			'Fantastique',
 			'Histoire',
 			'Horreur',
 			'Thriller',
