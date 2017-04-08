@@ -29,7 +29,7 @@ class Pays
     private $name;
 
     /**
-    * @ORM\OneToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", mappedBy="advert")
+    * @ORM\OneToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", mappedBy="country")
     */
     private $movies;
 

@@ -29,7 +29,7 @@ class Pays
     private $name;
 
     /**
-    * @ORM\OneToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", mappedBy="advert")
+    * @ORM\OneToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", mappedBy="country")
     */
     private $movies;
 
@@ -64,5 +64,45 @@ class Pays
     public function getName()
     {
         return $this->name;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->movies = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add movies
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Movie $movies
+     * @return Pays
+     */
+    public function addMovie(\Doshibu\AfkWatchBundle\Entity\Movie $movies)
+    {
+        $this->movies[] = $movies;
+
+        return $this;
+    }
+
+    /**
+     * Remove movies
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Movie $movies
+     */
+    public function removeMovie(\Doshibu\AfkWatchBundle\Entity\Movie $movies)
+    {
+        $this->movies->removeElement($movies);
+    }
+
+    /**
+     * Get movies
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getMovies()
+    {
+        return $this->movies;
     }
 }
