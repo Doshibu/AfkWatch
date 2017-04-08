@@ -1,4 +1,5 @@
 <!-- nav -->
+
 <div class="movies_nav">
 	<div class="container">
 		<nav class="navbar navbar-default">
@@ -21,33 +22,23 @@
 								<li>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Action</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Biography</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Crime</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Family</a></li>
-											<li><a href="horror.html">Horror</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Romance</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Sports</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">War</a></li>
+											{% for genre in listGenre[0] %}
+												<li><a href="{{ path('doshibu_aw_genre', {'id': genre.id}) }} }}">{{ genre.name }}</a></li>
+											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Adventure</a></li>
-											<li><a href="comedy.html">Comedy</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Documentary</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Fantasy</a></li>
-											<li><a href="g{{ path('doshibu_aw_genre') }}">Thriller</a></li>
+											{% for genre in listGenre[1] %}
+												<li><a href="{{ path('doshibu_aw_genre', {'id': genre.id}) }} }}">{{ genre.name }}</a></li>
+											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
-											<li><a href="{{ path('doshibu_aw_genre') }}">Animation</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">Costume</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">Drama</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">History</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">Musical</a></li>
-											<li><a href="{{ path('doshibu_aw_genre') }}">Psychological</a></li>
+											{% for genre in listGenre[2] %}
+												<li><a href="{{ path('doshibu_aw_genre', {'id': genre.id}) }} }}">{{ genre.name }}</a></li>
+											{% endfor %}
 										</ul>
 									</div>
 									<div class="clearfix"></div>
@@ -62,26 +53,23 @@
 								<li>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
-											<li><a href="{{ path('doshibu_aw_pays') }}">Asia</a></li>
-											<li><a href="{{ path('doshibu_aw_pays') }}">France</a></li>
-											<li><a href="{{ path('doshibu_aw_pays') }}">Taiwan</a></li>
-											<li><a href="{{ path('doshibu_aw_pays') }}">United States</a></li>
+											{% for pays in listPays[0] %}
+												<li><a href="{{ path('doshibu_aw_pays', {'id': pays.id}) }} }}">{{ pays.name }}</a></li>
+											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
-											<li><a href="{{ path('doshibu_aw_pays') }}">China</a></li>
-											<li><a href="{{ path('doshibu_aw_pays') }}">HongCong</a></li>
-											<li><a href="{{ path('doshibu_aw_pays') }}">Japan</a></li>
-											<li><a href="{{ path('doshibu_aw_pays') }}">Thailand</a></li>
+											{% for pays in listPays[1] %}
+												<li><a href="{{ path('doshibu_aw_pays', {'id': pays.id}) }} }}">{{ pays.name }}</a></li>
+											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
-											<li><a href="{{ path('doshibu_aw_pays') }}">Euro</a></li>
-											<li><a href="{{ path('doshibu_aw_pays') }}">India</a></li>
-											<li><a href="{{ path('doshibu_aw_pays') }}">Korea</a></li>
-											<li><a href="{{ path('doshibu_aw_pays') }}">United Kingdom</a></li>
+											{% for pays in listPays[2] %}
+												<li><a href="{{ path('doshibu_aw_pays', {'id': pays.id}) }} }}">{{ pays.name }}</a></li>
+											{% endfor %}
 										</ul>
 									</div>
 									<div class="clearfix"></div>

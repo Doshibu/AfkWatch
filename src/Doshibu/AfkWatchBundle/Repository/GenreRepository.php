@@ -3,6 +3,7 @@
 namespace Doshibu\AfkWatchBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query;
 
 /**
  * GenreRepository
@@ -12,4 +13,11 @@ use Doctrine\ORM\EntityRepository;
  */
 class GenreRepository extends EntityRepository
 {
+	public function findAllAsArray()
+	{
+		return $this
+			->createQueryBuilder('a')
+			->getQuery()
+			->getResult(Query::HYDRATE_ARRAY);
+	}
 }
