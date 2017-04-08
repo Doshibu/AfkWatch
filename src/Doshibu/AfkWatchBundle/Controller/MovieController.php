@@ -59,4 +59,9 @@ class MovieController extends Controller
 	{
 		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig');
 	}
+
+	public function mainMenuAction()
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:mainMenu.html.twig');
+	}
 }
