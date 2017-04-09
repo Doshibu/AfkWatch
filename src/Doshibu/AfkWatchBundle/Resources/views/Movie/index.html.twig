@@ -651,31 +651,22 @@
 	<!-- pop-up-box -->  
 	<script src="{{ asset('streaming/js/jquery.magnific-popup.js') }}" type="text/javascript"></script>
 	<!--//pop-up-box -->
-	<div id="small-dialog{{ listMovie[9].id }}" class="mfp-hide">
-		<iframe src="{{ listMovie[9].urlTrailer }}" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listMovie[9].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listMovie[9].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="small-dialog{{ listMovie[5].id }}" class="mfp-hide">
-		<iframe src="{{ listMovie[5].urlTrailer }}" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listMovie[5].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listMovie[5].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="small-dialog{{ listMovie[6].id }}" class="mfp-hide">
-		<iframe src="{{ listMovie[6].urlTrailer }}" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listMovie[6].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listMovie[6].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="small-dialog{{ listMovie[7].id }}" class="mfp-hide">
-		<iframe src="{{ listMovie[7].urlTrailer }}" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listMovie[7].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listMovie[7].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="small-dialog{{ listMovie[8].id }}" class="mfp-hide">
-		<iframe src="{{ listMovie[8].urlTrailer }}" width="560" height="315"  frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listMovie[8].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listMovie[8].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
 
-	{#<div id="small-dialog" class="mfp-hide">
-		<iframe src="https://www.youtube.com/embed/51lo2dpaZ_g"></iframe>
-	</div>
-	<div id="small-dialog1" class="mfp-hide">
-		<iframe src="https://player.vimeo.com/video/148284736"></iframe>
-	</div>
-	<div id="small-dialog2" class="mfp-hide">
-		<iframe src="https://player.vimeo.com/video/165197924?color=ffffff&title=0&byline=0&portrait=0"></iframe>
-	</div>#}
 	<script>
 		$(document).ready(function() {
 			$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup(
