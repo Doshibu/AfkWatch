@@ -32,7 +32,14 @@ class Movie
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
+     * @ORM\Column(name="tiny_description", type="string", length=255, nullable=false)
+     */
+    private $tinyDescription;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=false)
      */
     private $description;
 
@@ -51,10 +58,36 @@ class Movie
     private $rating;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="date_release", type="date")
+     */
+    private $dateRelease;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url_trailer", type="string", length=255, nullable=false)
+     */
+    private $urlTrailer;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255)
+     */
+    private $url;
+
+    /**
     * @Gedmo\Slug(fields={"name"})
     * @ORM\Column(length=128, unique=true)
     */
     private $slug;
+
+    /**
+     * @ORM\Column(name="added_at", type="datetime", nullable=true)
+     */
+    private $addedAt;
 
     /**
      * @ORM\Column(name="updated_at", type="datetime", nullable=true)
@@ -88,6 +121,7 @@ class Movie
     public function __construct()
     {
         $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->addedAt = new \DateTime();
     }
 
     /**
@@ -325,5 +359,149 @@ class Movie
     public function updateDate()
     {
         $this->setUpdatedAt(new \DateTime());
+    }
+
+    /**
+     * Set tinyDescription
+     *
+     * @param string $tinyDescription
+     *
+     * @return Movie
+     */
+    public function setTinyDescription($tinyDescription)
+    {
+        $this->tinyDescription = $tinyDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get tinyDescription
+     *
+     * @return string
+     */
+    public function getTinyDescription()
+    {
+        return $this->tinyDescription;
+    }
+
+    /**
+     * Set dateRelease
+     *
+     * @param \DateTime $dateRelease
+     *
+     * @return Movie
+     */
+    public function setDateRelease($dateRelease)
+    {
+        $this->dateRelease = $dateRelease;
+
+        return $this;
+    }
+
+    /**
+     * Get dateRelease
+     *
+     * @return \DateTime
+     */
+    public function getDateRelease()
+    {
+        return $this->dateRelease;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Movie
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set addedAt
+     *
+     * @param \DateTime $addedAt
+     *
+     * @return Movie
+     */
+    public function setAddedAt($addedAt)
+    {
+        $this->addedAt = $addedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get addedAt
+     *
+     * @return \DateTime
+     */
+    public function getAddedAt()
+    {
+        return $this->addedAt;
+    }
+
+    /**
+     * Set urlTrailer
+     *
+     * @param string $urlTrailer
+     *
+     * @return Movie
+     */
+    public function setUrlTrailer($urlTrailer)
+    {
+        $this->urlTrailer = $urlTrailer;
+
+        return $this;
+    }
+
+    /**
+     * Get urlTrailer
+     *
+     * @return string
+     */
+    public function getUrlTrailer()
+    {
+        return $this->urlTrailer;
+    }
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     *
+     * @return Movie
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
     }
 }

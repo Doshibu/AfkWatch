@@ -3,6 +3,7 @@
 namespace Doshibu\AfkWatchBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Movie
@@ -31,7 +32,14 @@ class Movie
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
+     * @ORM\Column(name="tiny_description", type="string", length=255, nullable=false)
+     */
+    private $tinyDescription;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=false)
      */
     private $description;
 
@@ -48,6 +56,43 @@ class Movie
      * @ORM\Column(name="rating", type="integer")
      */
     private $rating;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date_release", type="date")
+     */
+    private $dateRelease;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url_trailer", type="string", length=255, nullable=false)
+     */
+    private $urlTrailer;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255)
+     */
+    private $url;
+
+    /**
+    * @Gedmo\Slug(fields={"name"})
+    * @ORM\Column(length=128, unique=true)
+    */
+    private $slug;
+
+    /**
+     * @ORM\Column(name="added_at", type="datetime", nullable=true)
+     */
+    private $addedAt;
+
+    /**
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     */
+    private $updatedAt;
 
     /**
     * @ORM\OneToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Image", cascade={"persist"})
@@ -71,9 +116,13 @@ class Movie
     private $country;
 
     /**
-     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     * Constructor
      */
-    private $updatedAt;
+    public function __construct()
+    {
+        $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->addedAt = new \DateTime();
+    }
 
     /**
      * Get id
@@ -106,13 +155,6 @@ class Movie
     public function getName()
     {
         return $this->name;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -208,26 +250,51 @@ class Movie
     }
 
     /**
-     * Set image
+     * Set imageLarge
      *
-     * @param \Doshibu\AfkWatchBundle\Entity\Image $image
+     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageLarge
+     *
      * @return Movie
      */
-    public function setImage(\Doshibu\AfkWatchBundle\Entity\Image $image = null)
+    public function setImageLarge(\Doshibu\AfkWatchBundle\Entity\Image $imageLarge = null)
     {
-        $this->image = $image;
+        $this->imageLarge = $imageLarge;
 
         return $this;
     }
 
     /**
-     * Get image
+     * Get imageLarge
      *
-     * @return \Doshibu\AfkWatchBundle\Entity\Image 
+     * @return \Doshibu\AfkWatchBundle\Entity\Image
      */
-    public function getImage()
+    public function getImageLarge()
     {
-        return $this->image;
+        return $this->imageLarge;
+    }
+
+    /**
+     * Set imageSmall
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageSmall
+     *
+     * @return Movie
+     */
+    public function setImageSmall(\Doshibu\AfkWatchBundle\Entity\Image $imageSmall = null)
+    {
+        $this->imageSmall = $imageSmall;
+
+        return $this;
+    }
+
+    /**
+     * Get imageSmall
+     *
+     * @return \Doshibu\AfkWatchBundle\Entity\Image
+     */
+    public function getImageSmall()
+    {
+        return $this->imageSmall;
     }
 
     /**
@@ -287,50 +354,154 @@ class Movie
     }
 
     /**
-     * Set imageLarge
+    * @ORM\PreUpdate
+    */
+    public function updateDate()
+    {
+        $this->setUpdatedAt(new \DateTime());
+    }
+
+    /**
+     * Set tinyDescription
      *
-     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageLarge
+     * @param string $tinyDescription
      *
      * @return Movie
      */
-    public function setImageLarge(\Doshibu\AfkWatchBundle\Entity\Image $imageLarge = null)
+    public function setTinyDescription($tinyDescription)
     {
-        $this->imageLarge = $imageLarge;
+        $this->tinyDescription = $tinyDescription;
 
         return $this;
     }
 
     /**
-     * Get imageLarge
+     * Get tinyDescription
      *
-     * @return \Doshibu\AfkWatchBundle\Entity\Image
+     * @return string
      */
-    public function getImageLarge()
+    public function getTinyDescription()
     {
-        return $this->imageLarge;
+        return $this->tinyDescription;
     }
 
     /**
-     * Set imageSmall
+     * Set dateRelease
      *
-     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageSmall
+     * @param \DateTime $dateRelease
      *
      * @return Movie
      */
-    public function setImageSmall(\Doshibu\AfkWatchBundle\Entity\Image $imageSmall = null)
+    public function setDateRelease($dateRelease)
     {
-        $this->imageSmall = $imageSmall;
+        $this->dateRelease = $dateRelease;
 
         return $this;
     }
 
     /**
-     * Get imageSmall
+     * Get dateRelease
      *
-     * @return \Doshibu\AfkWatchBundle\Entity\Image
+     * @return \DateTime
      */
-    public function getImageSmall()
+    public function getDateRelease()
     {
-        return $this->imageSmall;
+        return $this->dateRelease;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Movie
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set addedAt
+     *
+     * @param \DateTime $addedAt
+     *
+     * @return Movie
+     */
+    public function setAddedAt($addedAt)
+    {
+        $this->addedAt = $addedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get addedAt
+     *
+     * @return \DateTime
+     */
+    public function getAddedAt()
+    {
+        return $this->addedAt;
+    }
+
+    /**
+     * Set urlTrailer
+     *
+     * @param string $urlTrailer
+     *
+     * @return Movie
+     */
+    public function setUrlTrailer($urlTrailer)
+    {
+        $this->urlTrailer = $urlTrailer;
+
+        return $this;
+    }
+
+    /**
+     * Get urlTrailer
+     *
+     * @return string
+     */
+    public function getUrlTrailer()
+    {
+        return $this->urlTrailer;
+    }
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     *
+     * @return Movie
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
     }
 }
