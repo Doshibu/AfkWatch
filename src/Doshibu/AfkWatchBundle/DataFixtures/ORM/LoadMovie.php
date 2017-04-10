@@ -1797,6 +1797,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 						->setRating($movie['rating'])
 						->setUrlTrailer($movie['urlTrailer'])
 						->setUrl($movie['url'])
+						->setNbViews(mt_rand(1, 500000))
 						->setImageLarge($imageLarge)
 						->setImageSmall($imageSmall);
 			$manager->persist($movieEntity);
@@ -1814,15 +1815,12 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			foreach ($movie['countries'] as $pays) 
 			{
 				$paysEntity = $paysRepo->findOneBy(array('name' => $pays));
-				//$paysEntity->addMovie($movieEntity);
+				$paysEntity->addMovie($movieEntity);
 				$movieEntity->addCountry($paysEntity);
 
 				$manager->persist($paysEntity);
 				$manager->persist($movieEntity);
 			}
-			/*$paysEntity = $paysRepo->findOneBy(array('name' => $movie['country']));
-			$paysEntity->addMovie($movieEntity);
-			$manager->persist($paysEntity);*/
 		}
 
 		// On déclenche l'enregistrement de toutes les catégories

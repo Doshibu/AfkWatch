@@ -4,6 +4,7 @@ namespace Doshibu\AfkWatchBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+//use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * Movie
@@ -79,6 +80,13 @@ class Movie
     private $url;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="nb_views", type="integer", nullable=true)
+     */
+    private $nbViews;
+
+    /**
     * @Gedmo\Slug(fields={"name"})
     * @ORM\Column(length=128, unique=true)
     */
@@ -112,7 +120,7 @@ class Movie
     /**
     * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Pays", cascade={"persist"})
     */
-    private $country;
+    private $countries;
 
     /**
      * Constructor
@@ -120,7 +128,10 @@ class Movie
     public function __construct()
     {
         $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
         $this->addedAt = new \DateTime();
+        //$now = new DateTime();
+        //$this->addedAt = date("Y-m-d H:i:s", mt_rand(1262304000, strtotime($now->format('Y-m-d H:i:s'))));
     }
 
     /**
@@ -513,7 +524,7 @@ class Movie
      */
     public function addCountry(\Doshibu\AfkWatchBundle\Entity\Pays $country)
     {
-        $this->country[] = $country;
+        $this->countries[] = $country;
 
         return $this;
     }
@@ -525,6 +536,40 @@ class Movie
      */
     public function removeCountry(\Doshibu\AfkWatchBundle\Entity\Pays $country)
     {
-        $this->country->removeElement($country);
+        $this->countries->removeElement($country);
+    }
+
+    /**
+     * Get countries
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCountries()
+    {
+        return $this->countries;
+    }
+
+    /**
+     * Set nbViews
+     *
+     * @param integer $nbViews
+     *
+     * @return Movie
+     */
+    public function setNbViews($nbViews)
+    {
+        $this->nbViews = $nbViews;
+
+        return $this;
+    }
+
+    /**
+     * Get nbViews
+     *
+     * @return integer
+     */
+    public function getNbViews()
+    {
+        return $this->nbViews;
     }
 }

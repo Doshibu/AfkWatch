@@ -34,9 +34,9 @@ class MovieRepository extends EntityRepository
 		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function getByGenre($slug, $page, $nbPerPage)
+	public function findByGenre($slug, $page, $nbPerPage)
 	{
-		$query = $this->createQueryBuilder('m')
+		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
 			->addSelect('genres')
 			->where('genres.slug = :slug')
@@ -44,25 +44,63 @@ class MovieRepository extends EntityRepository
 			->orderBy('m.addedAt', 'DESC')
 			->getQuery();
 
-		$query->setFirstResult(($page-1) * $nbPerPage)
+		$qb->setFirstResult(($page-1) * $nbPerPage)
 			->setMaxResults($nbPerPage);
 
-		return new Paginator($query, true);
+		return new Paginator($qb, true);
 	}
 
-	public function getByPays($slug, $page, $nbPerPage)
+	public function findByPays($slug, $page, $nbPerPage)
 	{
-		$query = $this->createQueryBuilder('m')
-			->leftJoin('m.country', 'pays')
+		$qb = $this->createQueryBuilder('m')
+			->leftJoin('m.countries', 'pays')
 			->addSelect('pays')
 			->where('pays.slug = :slug')
 			->setParameter('slug', $slug)
 			->orderBy('m.addedAt', 'DESC')
 			->getQuery();
 
-		$query->setFirstResult(($page-1) * $nbPerPage)
+		$qb->setFirstResult(($page-1) * $nbPerPage)
 			->setMaxResults($nbPerPage);
 
-		return new Paginator($query, true);
+		return new Paginator($qb, true);
+	}
+
+	public function findMostPopular($limit, $hasArray=false)
+	{
+		$qb = $this->createQueryBuilder('m')
+			->orderBy('m.nbViews', 'DESC')
+			->getQuery()
+			->setMaxResults($limit);
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function findMostPopularByGenre($slug, $limit=10, $hasArray=false)
+	{
+		$qb = $this->createQueryBuilder('m')
+			->leftJoin('m.genders', 'genres')
+			->addSelect('genres')
+			->where('genres.slug = :slug')
+			->setParameter('slug', $slug)
+			->orderBy('m.nbViews', 'DESC')
+			->getQuery()
+			->setMaxResults($limit);
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function findMostPopularByPays($slug, $limit=10, $hasArray=false)
+	{
+		$qb = $this->createQueryBuilder('m')
+			->leftJoin('m.countries', 'pays')
+			->addSelect('pays')
+			->where('pays.slug = :slug')
+			->setParameter('slug', $slug)
+			->orderBy('m.nbViews', 'DESC')
+			->getQuery()
+			->setMaxResults($limit);
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 }
