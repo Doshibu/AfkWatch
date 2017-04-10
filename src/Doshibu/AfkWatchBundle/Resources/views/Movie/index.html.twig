@@ -44,7 +44,11 @@
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>{{ movie.dateRelease|date('Y') }}</p>
-										{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
+										<div class="block-stars">
+											<ul class="w3l-ratings">
+												{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
+											</ul>
+										</div>
 										<div class="clearfix"></div>
 									</div>
 								</div>
@@ -87,11 +91,7 @@
 											<p>{{ movie.dateRelease|date('Y') }}</p>
 											<div class="block-stars">
 												<ul class="w3l-ratings">
-													<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-													<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+													{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 												</ul>
 											</div>
 											<div class="clearfix"></div>
@@ -120,11 +120,7 @@
 										<p>{{ movie.dateRelease|date('Y') }}</p>
 										<div class="block-stars">
 											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+												{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -152,11 +148,7 @@
 										<p>{{ movie.dateRelease|date('Y') }}</p>
 										<div class="block-stars">
 											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+												{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -184,11 +176,7 @@
 										<p>{{ movie.dateRelease|date('Y') }}</p>
 										<div class="block-stars">
 											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+												{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -254,11 +242,7 @@
 										<span>Note
 											<label>:</label>
 										</span>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': listPopular[0].rating, 'agileTv' : true})) }}
 									</p>
 								</div>
 								<div class="clearfix"> </div>
@@ -277,11 +261,7 @@
 													<p>{{ movie.dateRelease|date('Y') }}</p>
 													<div class="block-stars">
 														<ul class="w3l-ratings">
-															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 														</ul>
 													</div>
 													<div class="clearfix"></div>
@@ -337,11 +317,7 @@
 										<span>Note
 											<label>:</label>
 										</span>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': listPopular[1].rating, 'agileTv' : true})) }}
 									</p>
 								</div>
 								<div class="clearfix"> </div>
@@ -360,11 +336,7 @@
 													<p>{{ movie.dateRelease|date('Y') }}</p>
 													<div class="block-stars">
 														<ul class="w3l-ratings">
-															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 														</ul>
 													</div>
 													<div class="clearfix"></div>
@@ -420,11 +392,7 @@
 										<span>Note
 											<label>:</label>
 										</span>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': listPopular[2].rating, 'agileTv' : true})) }}
 									</p>
 								</div>
 								<div class="clearfix"> </div>
@@ -443,11 +411,7 @@
 													<p>{{ movie.dateRelease|date('Y') }}</p>
 													<div class="block-stars">
 														<ul class="w3l-ratings">
-															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 														</ul>
 													</div>
 													<div class="clearfix"></div>
@@ -503,11 +467,7 @@
 										<span>Note
 											<label>:</label>
 										</span>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': listPopular[3].rating, 'agileTv' : true})) }}
 									</p>
 								</div>
 								<div class="clearfix"> </div>
@@ -526,11 +486,7 @@
 													<p>{{ movie.dateRelease|date('Y') }}</p>
 													<div class="block-stars">
 														<ul class="w3l-ratings">
-															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 														</ul>
 													</div>
 													<div class="clearfix"></div>
@@ -586,11 +542,7 @@
 										<span>Note
 											<label>:</label>
 										</span>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
-										<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+										{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': listPopular[4].rating, 'agileTv' : true})) }}
 									</p>
 								</div>
 								<div class="clearfix"> </div>
@@ -609,11 +561,7 @@
 													<p>{{ movie.dateRelease|date('Y') }}</p>
 													<div class="block-stars">
 														<ul class="w3l-ratings">
-															<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-															<li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+															{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 														</ul>
 													</div>
 													<div class="clearfix"></div>

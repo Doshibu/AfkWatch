@@ -1,12 +1,23 @@
-{% set rate = (rating/10)|round(1, 'floor') %} {# Arrondi à 0.5 #}
-<div class="block-stars">
-	<ul class="w3l-ratings">
-		{% for i in range(1, rate|round) %}
-			<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-		{% endfor %}
+{% set rate = (rating/10)|round(1, 'floor') %} {# Arrondi vers l'inférieur de 0.5 #}
 
-		{% if (rate-rate|round) > 0 %}
-			<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-		{% endif %}
-	</ul>
-</div>
+{% if agileTv is defined %}
+	{% for i in range(1, rate|round) %}
+		<a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+	{% endfor %}
+
+	{% if (rate-rate|round) > 0 %}
+		<a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
+	{% endif %}
+
+	{% for i in range(1, (5 - (rate|round + 1))) %}
+		<a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+	{% endfor %}
+{% else %}
+	{% for i in range(1, rate|round) %}
+		<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+	{% endfor %}
+
+	{% if (rate-rate|round) > 0 %}
+		<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+	{% endif %}
+{% endif %}

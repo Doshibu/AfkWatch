@@ -160,10 +160,17 @@ class MovieController extends Controller
 		));
 	}
 
-	public function blockStarAction($rating)
+	public function blockStarAction($rating, $agileTv = false)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:blockStar.html.twig', array(
+		$arrayReturn = array(
 			'rating' => $rating
-		));
+		);
+
+		if($agileTv === true) 
+		{
+			$arrayReturn['agileTv'] = true;
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:blockStar.html.twig', $arrayReturn);
 	}
 }
