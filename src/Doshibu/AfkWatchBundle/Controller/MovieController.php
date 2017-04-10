@@ -159,4 +159,11 @@ class MovieController extends Controller
 			'listPays' 	=> $listPays
 		));
 	}
+
+	public function blockStarAction($rating)
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:blockStar.html.twig', array(
+			'rating' => $rating
+		));
+	}
 }

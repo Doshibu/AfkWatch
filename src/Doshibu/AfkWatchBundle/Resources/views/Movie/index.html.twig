@@ -4,7 +4,7 @@
 	{# Start banner #}
 	<div id="slidey" style="display:none;">
 		<ul>
-			{% for movie in listMovie[:5] %}
+			{% for movie in listPopular[0:5] %}
 				<li>
 					<img src="{{ movie.imageLarge.url }}" alt="{{ movie.imageLarge.alt }}">
 					<p class='title'>{{ movie.name }}</p>
@@ -31,7 +31,7 @@
 		<div class="container">
 			<div class="w3_agile_banner_bottom_grid">
 				<div id="owl-demo" class="owl-carousel owl-theme">
-					{% for movie in listMovie[:10] %}
+					{% for movie in listPopular[0:10] %}
 						<div class="item">
 							<div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
 								<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
@@ -44,15 +44,7 @@
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>{{ movie.dateRelease|date('Y') }}</p>
-										<div class="block-stars">
-											<ul class="w3l-ratings">
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-												<li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-											</ul>
-										</div>
+										{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
 										<div class="clearfix"></div>
 									</div>
 								</div>
@@ -223,36 +215,33 @@
 					<ul class="slides">
 						<li>
 							<div class="agile_tv_series_grid">
-								{#<div id="small-dialog{{ listMovie[9].id }}" class="mfp-hide">
-									<iframe src="{{ listMovie[9].urlTrailer }}"></iframe>
-								</div>#}
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="{{ listMovie[9].imageLarge.url }}" alt="{{ listMovie[9].imageSmall.alt }}" class="img-responsive"/>
-										<a class="w3_play_icon" href="#small-dialog{{ listMovie[9].id }}">
+										<img src="{{ listPopular[0].imageLarge.url }}" alt="{{ listPopular[0].imageSmall.alt }}" class="img-responsive"/>
+										<a class="w3_play_icon" href="#small-dialog{{ listPopular[0].id }}">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
-									<p class="fexi_header">{{ listMovie[9].name }}</p>
+									<p class="fexi_header">{{ listPopular[0].name }}</p>
 									<p class="fexi_header_para">
 										<span class="conjuring_w3">Description
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[9].tinyDescription }}
+										{{ listPopular[0].tinyDescription }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Date de sortie
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[9].dateRelease|localizeddate('medium', 'none', 'fr') }}
+										{{ listPopular[0].dateRelease|localizeddate('medium', 'none', 'fr') }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										{% for genre in listMovie[9].genders %}
+										{% for genre in listPopular[0].genders %}
 											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
 												{{ genre.name }}
 											</a>
@@ -274,7 +263,7 @@
 								</div>
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
-									{% for movie in listMovie[0:5] %}									
+									{% for movie in listMovie[4:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
 											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
@@ -309,36 +298,33 @@
 						</li>
 						<li>
 							<div class="agile_tv_series_grid">
-								{#<div id="small-dialog{{ listMovie[5].id }}" class="mfp-hide">
-									<iframe src="{{ listMovie[5].urlTrailer }}"></iframe>
-								</div>#}
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="{{ listMovie[5].imageLarge.url }}" alt="{{ listMovie[5].imageSmall.alt }}" class="img-responsive"/>
-										<a class="w3_play_icon" href="#small-dialog{{ listMovie[5].id }}">
+										<img src="{{ listPopular[1].imageLarge.url }}" alt="{{ listPopular[1].imageSmall.alt }}" class="img-responsive"/>
+										<a class="w3_play_icon" href="#small-dialog{{ listPopular[1].id }}">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
-									<p class="fexi_header">{{ listMovie[5].name }}</p>
+									<p class="fexi_header">{{ listPopular[1].name }}</p>
 									<p class="fexi_header_para">
 										<span class="conjuring_w3">Description
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[5].tinyDescription }}
+										{{ listPopular[1].tinyDescription }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Date de sortie
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[5].dateRelease| localizeddate('medium', 'none', 'fr') }}
+										{{ listPopular[1].dateRelease| localizeddate('medium', 'none', 'fr') }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										{% for genre in listMovie[5].genders %}
+										{% for genre in listPopular[1].genders %}
 											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
 												{{ genre.name }}
 											</a>
@@ -360,7 +346,7 @@
 								</div>
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
-									{% for movie in listMovie[2:5] %}									
+									{% for movie in listPopular[10:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
 											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
@@ -395,36 +381,33 @@
 						</li>
 						<li>
 							<div class="agile_tv_series_grid">
-								{#<div id="small-dialog{{ listMovie[6].id }}" class="mfp-hide">
-									<iframe src="{{ listMovie[6].urlTrailer }}"></iframe>
-								</div>#}
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="{{ listMovie[6].imageLarge.url }}" alt="{{ listMovie[6].imageSmall.alt }}" class="img-responsive"/>
-										<a class="w3_play_icon" href="#small-dialog{{ listMovie[6].id }}">
+										<img src="{{ listPopular[2].imageLarge.url }}" alt="{{ listPopular[2].imageSmall.alt }}" class="img-responsive"/>
+										<a class="w3_play_icon" href="#small-dialog{{ listPopular[2].id }}">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
-									<p class="fexi_header">{{ listMovie[6].name }}</p>
+									<p class="fexi_header">{{ listPopular[2].name }}</p>
 									<p class="fexi_header_para">
 										<span class="conjuring_w3">Description
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[6].tinyDescription }}
+										{{ listPopular[2].tinyDescription }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Date de sortie
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[6].dateRelease| localizeddate('medium', 'none', 'fr') }}
+										{{ listPopular[2].dateRelease| localizeddate('medium', 'none', 'fr') }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										{% for genre in listMovie[6].genders %}
+										{% for genre in listPopular[2].genders %}
 											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
 												{{ genre.name }}
 											</a>
@@ -446,7 +429,7 @@
 								</div>
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
-									{% for movie in listMovie[4:5] %}									
+									{% for movie in listPopular[16:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
 											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
@@ -481,36 +464,33 @@
 						</li>
 						<li>
 							<div class="agile_tv_series_grid">
-								{#<div id="small-dialog{{ listMovie[7].id }}" class="mfp-hide">
-									<iframe src="{{ listMovie[7].urlTrailer }}"></iframe>
-								</div>#}
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="{{ listMovie[7].imageLarge.url }}" alt="{{ listMovie[7].imageSmall.alt }}" class="img-responsive"/>
-										<a class="w3_play_icon" href="#small-dialog{{ listMovie[7].id }}">
+										<img src="{{ listPopular[3].imageLarge.url }}" alt="{{ listPopular[3].imageSmall.alt }}" class="img-responsive"/>
+										<a class="w3_play_icon" href="#small-dialog{{ listPopular[3].id }}">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
-									<p class="fexi_header">{{ listMovie[7].name }}</p>
+									<p class="fexi_header">{{ listPopular[3].name }}</p>
 									<p class="fexi_header_para">
 										<span class="conjuring_w3">Description
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[7].tinyDescription }}
+										{{ listPopular[3].tinyDescription }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Date de sortie
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[7].dateRelease| localizeddate('medium', 'none', 'fr') }}
+										{{ listPopular[3].dateRelease| localizeddate('medium', 'none', 'fr') }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										{% for genre in listMovie[7].genders %}
+										{% for genre in listPopular[3].genders %}
 											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
 												{{ genre.name }}
 											</a>
@@ -532,7 +512,7 @@
 								</div>
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
-									{% for movie in listMovie[3:5] %}									
+									{% for movie in listPopular[22:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
 											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
@@ -567,36 +547,33 @@
 						</li>
 						<li>
 							<div class="agile_tv_series_grid">
-								{#<div id="small-dialog{{ listMovie[8].id }}" class="mfp-hide">
-									<iframe src="{{ listMovie[8].urlTrailer }}"></iframe>
-								</div>#}
 								<div class="col-md-6 agile_tv_series_grid_left">
 									<div class="w3ls_market_video_grid1">
-										<img src="{{ listMovie[8].imageLarge.url }}" alt="{{ listMovie[8].imageSmall.alt }}" class="img-responsive"/>
-										<a class="w3_play_icon" href="#small-dialog{{ listMovie[8].id }}">
+										<img src="{{ listPopular[4].imageLarge.url }}" alt="{{ listPopular[4].imageSmall.alt }}" class="img-responsive"/>
+										<a class="w3_play_icon" href="#small-dialog{{ listPopular[4].id }}">
 											<span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
 										</a>
 									</div>
 								</div>
 								<div class="col-md-6 agile_tv_series_grid_right">
-									<p class="fexi_header">{{ listMovie[8].name }}</p>
+									<p class="fexi_header">{{ listPopular[4].name }}</p>
 									<p class="fexi_header_para">
 										<span class="conjuring_w3">Description
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[8].tinyDescription }}
+										{{ listPopular[4].tinyDescription }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Date de sortie
 											<label>:</label>
 										</span>&nbsp;
-										{{ listMovie[8].dateRelease| localizeddate('medium', 'none', 'fr') }}
+										{{ listPopular[4].dateRelease| localizeddate('medium', 'none', 'fr') }}
 									</p>
 									<p class="fexi_header_para">
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										{% for genre in listMovie[8].genders %}
+										{% for genre in listPopular[4].genders %}
 											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
 												{{ genre.name }}
 											</a>
@@ -618,7 +595,7 @@
 								</div>
 								<div class="clearfix"> </div>
 								<div class="agileinfo_flexislider_grids">
-									{% for movie in listMovie[0:5] %}									
+									{% for movie in listPopular[28:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
 											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
@@ -676,20 +653,20 @@
 	<!-- pop-up-box -->  
 	<script src="{{ asset('streaming/js/jquery.magnific-popup.js') }}" type="text/javascript"></script>
 	<!--//pop-up-box -->
-	<div id="small-dialog{{ listMovie[9].id }}" class="mfp-hide" data-mfp="small-dialog">
-		<iframe src="{{ listMovie[9].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listPopular[0].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listPopular[0].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="small-dialog{{ listMovie[5].id }}" class="mfp-hide" data-mfp="small-dialog">
-		<iframe src="{{ listMovie[5].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listPopular[1].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listPopular[1].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="small-dialog{{ listMovie[6].id }}" class="mfp-hide" data-mfp="small-dialog">
-		<iframe src="{{ listMovie[6].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listPopular[2].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listPopular[2].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="small-dialog{{ listMovie[7].id }}" class="mfp-hide" data-mfp="small-dialog">
-		<iframe src="{{ listMovie[7].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listPopular[3].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listPopular[3].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="small-dialog{{ listMovie[8].id }}" class="mfp-hide" data-mfp="small-dialog">
-		<iframe src="{{ listMovie[8].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
+	<div id="small-dialog{{ listPopular[4].id }}" class="mfp-hide" data-mfp="small-dialog">
+		<iframe src="{{ listPopular[4].urlTrailer }}" frameborder="0" allowfullscreen></iframe>
 	</div>
 
 	<script>
