@@ -49,4 +49,20 @@ class MovieRepository extends EntityRepository
 
 		return new Paginator($query, true);
 	}
+
+	public function getByPays($slug, $page, $nbPerPage)
+	{
+		$query = $this->createQueryBuilder('m')
+			->leftJoin('m.country', 'pays')
+			->addSelect('pays')
+			->where('pays.slug = :slug')
+			->setParameter('slug', $slug)
+			->orderBy('m.addedAt', 'DESC')
+			->getQuery();
+
+		$query->setFirstResult(($page-1) * $nbPerPage)
+			->setMaxResults($nbPerPage);
+
+		return new Paginator($query, true);
+	}
 }

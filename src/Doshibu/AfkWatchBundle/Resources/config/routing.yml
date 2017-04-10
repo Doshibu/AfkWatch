@@ -41,10 +41,13 @@ doshibu_aw_news_single:
         id: \d+
 
 doshibu_aw_pays:
-    path :   /pays/{slug}
+    path :   /pays/{slug}/{page}
     defaults:
         _controller : DoshibuAfkWatchBundle:Movie:pays
         slug: france
+        page: 1
+    requirements:
+        page: \d+
 
 doshibu_aw_list:
     path :   /list

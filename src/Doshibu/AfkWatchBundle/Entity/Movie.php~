@@ -110,8 +110,7 @@ class Movie
     private $genders;
 
     /**
-    * @ORM\ManyToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Pays", inversedBy="movies")
-    * @ORM\JoinColumn(nullable=true)
+    * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Pays", cascade={"persist"})
     */
     private $country;
 

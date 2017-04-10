@@ -110,8 +110,7 @@ class Movie
     private $genders;
 
     /**
-    * @ORM\ManyToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Pays", inversedBy="movies")
-    * @ORM\JoinColumn(nullable=true)
+    * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Pays", cascade={"persist"})
     */
     private $country;
 
@@ -503,5 +502,29 @@ class Movie
     public function getUrl()
     {
         return $this->url;
+    }
+
+    /**
+     * Add country
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Pays $country
+     *
+     * @return Movie
+     */
+    public function addCountry(\Doshibu\AfkWatchBundle\Entity\Pays $country)
+    {
+        $this->country[] = $country;
+
+        return $this;
+    }
+
+    /**
+     * Remove country
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Pays $country
+     */
+    public function removeCountry(\Doshibu\AfkWatchBundle\Entity\Pays $country)
+    {
+        $this->country->removeElement($country);
     }
 }

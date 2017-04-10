@@ -36,7 +36,7 @@ class Pays
     private $slug;
 
     /**
-    * @ORM\OneToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", mappedBy="country")
+    * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", cascade={"persist"})
     */
     private $movies;
 

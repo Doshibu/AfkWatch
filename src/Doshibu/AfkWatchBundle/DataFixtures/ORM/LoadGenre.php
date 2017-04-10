@@ -3,10 +3,12 @@
 namespace Doshibu\AfkWatchBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+
 use Doshibu\AfkWatchBundle\Entity\Genre;
 
-class LoadGenre implements FixtureInterface
+class LoadGenre implements FixtureInterface, OrderedFixtureInterface
 {
   // Dans l'argument de la méthode load, l'objet $manager est l'EntityManager
 	public function load(ObjectManager $manager)
@@ -48,4 +50,9 @@ class LoadGenre implements FixtureInterface
 		// On déclenche l'enregistrement de toutes les catégories
 		$manager->flush();
 	}
+
+	public function getOrder()
+    {
+        return 1;
+    }
 }
