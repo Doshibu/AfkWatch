@@ -33,9 +33,26 @@ class MovieController extends Controller
 		return $this->render('DoshibuAfkWatchBundle:Movie:single.html.twig');
 	}
 
-	public function genreAction(Request $request)
+	public function genreAction(Request $request, $slug, $page=1)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig');
+		$em = $this->getDoctrine()->getManager();
+
+		$nbPerPage = 24;
+		$listMovie = $em->getRepository('DoshibuAfkWatchBundle:Movie')
+						->getByGenre($slug, $page, $nbPerPage);
+		$nbPages = ceil(count($listMovie)/$nbPerPage);
+
+		if ( $page > $nbPages )
+		{
+			throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig', array(
+			'listMovie' 	=> $listMovie,
+			'nbPages'		=> $nbPages,
+			'page' 			=> $page,
+			'slug'			=> $slug
+		));
 	}
 
 	public function seriesAction(Request $request)

@@ -4,6 +4,7 @@ namespace Doshibu\AfkWatchBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * MovieRepository
@@ -31,5 +32,21 @@ class MovieRepository extends EntityRepository
 			->getQuery();
 
 		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function getByGenre($slug, $page, $nbPerPage)
+	{
+		$query = $this->createQueryBuilder('m')
+			->leftJoin('m.genders', 'genres')
+			->addSelect('genres')
+			->where('genres.slug = :slug')
+			->setParameter('slug', $slug)
+			->orderBy('m.addedAt', 'DESC')
+			->getQuery();
+
+		$query->setFirstResult(($page-1) * $nbPerPage)
+			->setMaxResults($nbPerPage);
+
+		return new Paginator($query, true);
 	}
 }

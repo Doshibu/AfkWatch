@@ -12,10 +12,13 @@ doshibu_aw_single:
         id: \d+
 
 doshibu_aw_genre:
-    path :   /genre/{slug}
+    path :   /genre/{slug}/{page}
     defaults: 
         _controller : DoshibuAfkWatchBundle:Movie:genre
         slug: action
+        page: 1
+    requirements:
+        page: \d+
 
 doshibu_aw_series:
     path :   /series
