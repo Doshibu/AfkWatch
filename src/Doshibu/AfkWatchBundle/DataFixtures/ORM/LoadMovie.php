@@ -19,8 +19,55 @@ class LoadMovie implements FixtureInterface
 		$imageRepo = $manager->getRepository('DoshibuAfkWatchBundle:Image');
 		$paysRepo = $manager->getRepository('DoshibuAfkWatchBundle:Pays');
 
-		// Liste des noms de catégorie à ajouter
-		$listMovie = array(
+		// Liste des films à ajouter
+		$listMovie = getListMovie();
+
+		foreach($listMovie as $movie)
+		{
+			$imageLarge = new Image();
+			$imageLarge->setUrl($movie['imageLarge']['url'])
+					->setAlt($movie['imageLarge']['alt']);
+			$imageSmall = new Image();
+			$imageSmall->setUrl($movie['imageSmall']['url'])
+					->setAlt($movie['imageSmall']['alt']);
+			$manager->persist($imageLarge);
+			$manager->persist($imageSmall);
+
+			$movieEntity = new Movie();
+			$movieEntity->setName($movie['name'])
+						->setTinyDescription($movie['tinyDescription'])
+						->setDescription($movie['description'])
+						->setFilmMaker($movie['filmMaker'])
+						->setDateRelease(new \DateTime($movie['dateRelease']['year'].'-'.$movie['dateRelease']['month'].'-'.$movie['dateRelease']['day']))
+						->setRating($movie['rating'])
+						->setUrlTrailer($movie['urlTrailer'])
+						->setUrl($movie['url'])
+						->setImageLarge($imageLarge)
+						->setImageSmall($imageSmall);
+			$manager->persist($movieEntity);
+
+			foreach ($movie['genders'] as $genre) 
+			{
+				$genreEntity = $genreRepo->findOneBy(array('name' => $genre));
+				$genreEntity->addMovie($movieEntity);
+				$movieEntity->addGender($genreEntity);
+
+				$manager->persist($genreEntity);
+				$manager->persist($movieEntity);
+			}
+
+			$paysEntity = $paysRepo->findOneBy(array('name' => $movie['country']));
+			$paysEntity->addMovie($movieEntity);
+			$manager->persist($paysEntity);
+		}
+
+		// On déclenche l'enregistrement de toutes les catégories
+		$manager->flush();
+	}
+
+	public function getListMovie()
+	{
+		return array(
 			array(
 				'name' => 'Deadpool',
 				'tinyDescription' => 'Deadpool, est l\'anti-héros le plus atypique de l\'univers Marvel. A l\'origine, il s\'appelle Wade Wilson : un ancien militaire des Forces Spéciales devenu mercenaire.',
@@ -168,47 +215,5 @@ class LoadMovie implements FixtureInterface
 				'country' => 'Etats-Unis'
 			)
 		);
-
-		foreach($listMovie as $movie)
-		{
-			$imageLarge = new Image();
-			$imageLarge->setUrl($movie['imageLarge']['url'])
-					->setAlt($movie['imageLarge']['alt']);
-			$imageSmall = new Image();
-			$imageSmall->setUrl($movie['imageSmall']['url'])
-					->setAlt($movie['imageSmall']['alt']);
-			$manager->persist($imageLarge);
-			$manager->persist($imageSmall);
-
-			$movieEntity = new Movie();
-			$movieEntity->setName($movie['name'])
-						->setTinyDescription($movie['tinyDescription'])
-						->setDescription($movie['description'])
-						->setFilmMaker($movie['filmMaker'])
-						->setDateRelease(new \DateTime($movie['dateRelease']['year'].'-'.$movie['dateRelease']['month'].'-'.$movie['dateRelease']['day']))
-						->setRating($movie['rating'])
-						->setUrlTrailer($movie['urlTrailer'])
-						->setUrl($movie['url'])
-						->setImageLarge($imageLarge)
-						->setImageSmall($imageSmall);
-			$manager->persist($movieEntity);
-
-			/*foreach ($movie['genders'] as $genre) 
-			{
-				$genreEntity = $genreRepo->findOneBy(array('name' => $genre));
-				$genreEntity->addMovie($movieEntity);
-				$movieEntity->addGender($genreEntity);
-
-				$manager->persist($genreEntity);
-				$manager->persist($movieEntity);
-			}*/
-
-			/*$paysEntity = $paysRepo->findOneBy(array('name' => $movie['country']));
-			$paysEntity->addMovie($movieEntity);
-			$manager->persist($paysEntity);*/
-		}
-
-		// On déclenche l'enregistrement de toutes les catégories
-		$manager->flush();
 	}
 }

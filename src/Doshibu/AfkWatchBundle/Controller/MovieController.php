@@ -21,7 +21,7 @@ class MovieController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager();
 		$listMovie = $em->getRepository('DoshibuAfkWatchBundle:Movie')
-						->findAll();
+						->getAllWithGenres();
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', array(
 			'listMovie' => $listMovie
@@ -81,13 +81,13 @@ class MovieController extends Controller
 		$listGenre[0] = array(); $listGenre[1] = array(); $listGenre[2] = array();
 		$genres = $em
 			->getRepository('DoshibuAfkWatchBundle:Genre')
-			->findAllAsArray();
+			->getAll();
 
 		$listPays = array();
 		$listPays[0] = array(); $listPays[1] = array(); $listPays[2] = array();
 		$pays = $em
 			->getRepository('DoshibuAfkWatchBundle:Pays')
-			->findAllAsArray();
+			->getAll();
 
 		// Prepare data column thanks to 3 list of "Genres" & "Pays" menu
 		for($a=0; $a<3; $a++)

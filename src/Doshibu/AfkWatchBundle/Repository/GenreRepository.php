@@ -13,11 +13,12 @@ use Doctrine\ORM\Query;
  */
 class GenreRepository extends EntityRepository
 {
-	public function findAllAsArray()
+	public function getAll($hasArray=false)
 	{
-		return $this
-			->createQueryBuilder('a')
-			->getQuery()
-			->getResult(Query::HYDRATE_ARRAY);
+		$qb = $this
+			->createQueryBuilder('g')
+			->getQuery();
+
+		return $hasArray ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 }

@@ -13,20 +13,12 @@ use Doctrine\ORM\Query;
  */
 class PaysRepository extends EntityRepository
 {
-	public function findAllAsArray()
+	public function getAll($hasArray=false)
 	{
-		return $this
-			->createQueryBuilder('a')
-			->getQuery()
-			->getResult(Query::HYDRATE_ARRAY);
-	}
+		$qb = $this
+			->createQueryBuilder('p')
+			->getQuery();
 
-	/*public function findOneBy($id)
-	{
-		return $this->createQueryBuilder('a')
-			->where('a.id = :id')
-			->setParameter('id', $id)
-			->getQuery()
-			->getResult();
-	}*/
+		return $hasArray ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
 }

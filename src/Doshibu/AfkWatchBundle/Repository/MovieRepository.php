@@ -13,11 +13,23 @@ use Doctrine\ORM\Query;
  */
 class MovieRepository extends EntityRepository
 {
-	public function findAllAsArray()
+	public function getAll($hasArray=false)
 	{
-		return $this
-			->createQueryBuilder('a')
-			->getQuery()
-			->getResult(Query::HYDRATE_ARRAY);
+		$qb = $this
+			->createQueryBuilder('m')
+			->getQuery();
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function getAllWithGenres($hasArray=false)
+	{
+		$qb = $this
+			->createQueryBuilder('m')
+			->leftJoin('m.genders', 'genres')
+			->addSelect('genres')
+			->getQuery();
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 }

@@ -252,9 +252,14 @@
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+										{% for genre in listMovie[9].genders %}
+											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
+												{{ genre.name }}
+											</a>
+											{% if not loop.last %}
+												&nbsp;|&nbsp;
+											{% endif %}
+										{% endfor %}							
 									</p>
 									<p class="fexi_header_para fexi_header_para1">
 										<span>Note
@@ -333,9 +338,14 @@
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+										{% for genre in listMovie[5].genders %}
+											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
+												{{ genre.name }}
+											</a>
+											{% if not loop.last %}
+												&nbsp;|&nbsp;
+											{% endif %}
+										{% endfor %}							
 									</p>
 									<p class="fexi_header_para fexi_header_para1">
 										<span>Note
@@ -414,9 +424,14 @@
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+										{% for genre in listMovie[6].genders %}
+											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
+												{{ genre.name }}
+											</a>
+											{% if not loop.last %}
+												&nbsp;|&nbsp;
+											{% endif %}
+										{% endfor %}							
 									</p>
 									<p class="fexi_header_para fexi_header_para1">
 										<span>Note
@@ -495,9 +510,14 @@
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+										{% for genre in listMovie[7].genders %}
+											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
+												{{ genre.name }}
+											</a>
+											{% if not loop.last %}
+												&nbsp;|&nbsp;
+											{% endif %}
+										{% endfor %}							
 									</p>
 									<p class="fexi_header_para fexi_header_para1">
 										<span>Note
@@ -576,9 +596,14 @@
 										<span>Genres
 											<label>:</label> 
 										</span>&nbsp;
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'drame'}) }}">Drame</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'aventure'}) }}">Aventure</a> | 
-										<a href="{{ path('doshibu_aw_genre', {'slug': 'action'}) }}">Action</a>								
+										{% for genre in listMovie[8].genders %}
+											<a href="{{ path('doshibu_aw_genre', {'slug': genre.slug}) }}">
+												{{ genre.name }}
+											</a>
+											{% if not loop.last %}
+												&nbsp;|&nbsp;
+											{% endif %}
+										{% endfor %}							
 									</p>
 									<p class="fexi_header_para fexi_header_para1">
 										<span>Note
