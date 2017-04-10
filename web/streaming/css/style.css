@@ -217,6 +217,12 @@ ul.dropdown-menu.multi-column ul li a:hover{
 }
 /*-- //general --*/
 /*-- Latest-tv-series --*/
+.agile_tv_series_grid_left, 
+.agile_tv_series_grid_left img,
+.agile_tv_series_grid_right {
+  height: 325px;
+}
+
 .agile_tv_series_grid_left {
     padding: 0;
 }
