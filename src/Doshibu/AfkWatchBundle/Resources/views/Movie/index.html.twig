@@ -34,13 +34,13 @@
 					{% for movie in listPopular[0:10] %}
 						<div class="item">
 							<div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
-								<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+								<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 									<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+										<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>{{ movie.dateRelease|date('Y') }}</p>
@@ -79,13 +79,13 @@
 						<div class="w3_agile_featured_movies">
 							{% for movie in listMovie[:8] %}
 								<div class="col-md-2 w3l-movie-gride-agile">
-									<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+									<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 										<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 										<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 									</a>
 									<div class="mid-1 agileits_w3layouts_mid_1_home">
 										<div class="w3l-movie-text">
-											<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+											<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 										</div>
 										<div class="mid-2 agile_mid_2_home">
 											<p>{{ movie.dateRelease|date('Y') }}</p>
@@ -108,13 +108,13 @@
 					<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
 						{% for movie in listMovie[5:5] %}
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+								<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 									<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+										<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>{{ movie.dateRelease|date('Y') }}</p>
@@ -136,13 +136,13 @@
 					<div role="tabpanel" class="tab-pane fade" id="rating" aria-labelledby="rating-tab">
 						{% for movie in listMovie[4:4] %}
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+								<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 									<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+										<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>{{ movie.dateRelease|date('Y') }}</p>
@@ -164,13 +164,13 @@
 					<div role="tabpanel" class="tab-pane fade" id="imdb" aria-labelledby="imdb-tab">
 						{% for movie in listMovie[1:7] %}
 							<div class="col-md-2 w3l-movie-gride-agile">
-								<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+								<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 									<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;"/>
 									<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 								</a>
 								<div class="mid-1 agileits_w3layouts_mid_1_home">
 									<div class="w3l-movie-text">
-										<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+										<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 									</div>
 									<div class="mid-2 agile_mid_2_home">
 										<p>{{ movie.dateRelease|date('Y') }}</p>
@@ -249,13 +249,13 @@
 								<div class="agileinfo_flexislider_grids">
 									{% for movie in listMovie[4:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
-											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+											<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 											</a>
 											<div class="mid-1 agileits_w3layouts_mid_1_home">
 												<div class="w3l-movie-text">
-													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+													<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 												</div>
 												<div class="mid-2 agile_mid_2_home">
 													<p>{{ movie.dateRelease|date('Y') }}</p>
@@ -324,13 +324,13 @@
 								<div class="agileinfo_flexislider_grids">
 									{% for movie in listPopular[10:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
-											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+											<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 											</a>
 											<div class="mid-1 agileits_w3layouts_mid_1_home">
 												<div class="w3l-movie-text">
-													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+													<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 												</div>
 												<div class="mid-2 agile_mid_2_home">
 													<p>{{ movie.dateRelease|date('Y') }}</p>
@@ -399,13 +399,13 @@
 								<div class="agileinfo_flexislider_grids">
 									{% for movie in listPopular[16:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
-											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+											<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 											</a>
 											<div class="mid-1 agileits_w3layouts_mid_1_home">
 												<div class="w3l-movie-text">
-													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+													<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 												</div>
 												<div class="mid-2 agile_mid_2_home">
 													<p>{{ movie.dateRelease|date('Y') }}</p>
@@ -474,13 +474,13 @@
 								<div class="agileinfo_flexislider_grids">
 									{% for movie in listPopular[22:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
-											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+											<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 											</a>
 											<div class="mid-1 agileits_w3layouts_mid_1_home">
 												<div class="w3l-movie-text">
-													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+													<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 												</div>
 												<div class="mid-2 agile_mid_2_home">
 													<p>{{ movie.dateRelease|date('Y') }}</p>
@@ -549,13 +549,13 @@
 								<div class="agileinfo_flexislider_grids">
 									{% for movie in listPopular[28:6] %}									
 										<div class="col-md-2 w3l-movie-gride-agile">
-											<a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
+											<a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}" class="hvr-shutter-out-horizontal">
 												<img src="{{ movie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ movie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 												<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 											</a>
 											<div class="mid-1 agileits_w3layouts_mid_1_home">
 												<div class="w3l-movie-text">
-													<h6><a href="{{ path('doshibu_aw_single', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
+													<h6><a href="{{ path('doshibu_aw_movie', {'id' : movie.id}) }}">{{ movie.name }}</a></h6>							
 												</div>
 												<div class="mid-2 agile_mid_2_home">
 													<p>{{ movie.dateRelease|date('Y') }}</p>

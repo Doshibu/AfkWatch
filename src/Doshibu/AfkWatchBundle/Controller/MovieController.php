@@ -31,9 +31,28 @@ class MovieController extends Controller
 		));
 	}
 
-	public function singleAction(Request $request)
+	public function movieAction(Request $request, $id)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:single.html.twig');
+		// 3 films (plus récents ou plus vus) du même genre
+		// 3 films (plus récents ou plus vus) du même pays d'origine
+		// 10 films les plus populaires du même genre
+		$em = $this->getDoctrine()->getManager();
+		$movieRepo = $em->getRepository('DoshibuAfkWatchBundle:Movie');
+
+		$movie = $movieRepo->findOneBy(array('id' => $id)); // joined full with genre & pays
+		$movieGenders = $movie->getGenders();
+		$listPopular = $movieRepo->findMostPopularByGenres($movieGenders);
+
+		$listProposedByGenre = $movieRepo->findMostPopularByGenre($movieGenders->first(), 3);
+		$listProposedByPays = $movieRepo->findMostPopularByPays($movie->getCountries()->first(), 3);
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', array(
+			'movie' 				=> $movie,
+			'movieGenders'			=> $movieGenders,
+			'listProposedByGenre' 	=> $listProposedByGenre,
+			'listProposedByPays' 	=> $listProposedByPays,
+			'listPopular' 			=> $listPopular
+		));
 	}
 
 	public function genreAction(Request $request, $slug, $page=1)
@@ -67,21 +86,6 @@ class MovieController extends Controller
 		));
 	}
 
-	public function seriesAction(Request $request)
-	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig');
-	}
-
-	public function newsAction(Request $request)
-	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig');
-	}
-
-	public function newsSingleAction(Request $request)
-	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:newsSingle.html.twig');
-	}
-
 	public function paysAction(Request $request, $slug, $page=1)
 	{
 		$em = $this->getDoctrine()->getManager();
@@ -111,6 +115,30 @@ class MovieController extends Controller
 			'page' 			=> $page,
 			'listPopular'	=> $listPopular
 		));
+	}
+
+	public function seriesAction(Request $request)
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig');
+	}
+
+	public function serieAction(Request $request)
+	{
+		// 3 séries (plus récents ou plus vus) du même genre
+		// 3 séries (plus récents ou plus vus) du même pays d'origine
+		// 10 séries les plus populaires du même genre
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig');
+	}
+
+	public function newsAction(Request $request)
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig');
+	}
+
+	public function newsSingleAction(Request $request)
+	{
+		return $this->render('DoshibuAfkWatchBundle:Movie:newsSingle.html.twig');
 	}
 
 	public function listAction(Request $request)

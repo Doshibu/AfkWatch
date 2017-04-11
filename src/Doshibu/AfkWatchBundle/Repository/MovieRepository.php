@@ -103,4 +103,46 @@ class MovieRepository extends EntityRepository
 
 		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
+
+	public function findOneById($id)
+	{
+		$qb = $this->createQueryBuilder('m')
+			->leftJoin('m.genders', 'genres')
+			->addSelect('genres')
+			->leftJoin('m.countries', 'pays')
+			->addSelect('pays')
+			->where('m.id = :id')
+			->setParameter('id', $id)
+			->getQuery()
+			->getResult();
+
+		return $qb;
+	}
+
+	public function findMostPopularByGenres($genres, $limit=10, $hasArray=false)
+	{
+		$qb = $this->createQueryBuilder('m')
+			->leftJoin('m.genders', 'genres')
+			->addSelect('genres');
+
+		$i=0;
+		foreach($genres as $genre)
+		{
+			if($i=0)
+			{
+				$qb->where('genres.slug = :slug')
+					->setParameter('slug', $genre->getSlug());
+				++$i;
+			}
+			else
+			{
+				$qb->andWhere('genres.slug = :slug')
+					->setParameter('slug', $genre->getSlug());
+			}
+		}
+
+		$qb = $qb->orderBy('m.nbViews', 'DESC')->getQuery()->setMaxResults($limit);
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
 }

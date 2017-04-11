@@ -4,6 +4,7 @@ namespace Doshibu\AfkWatchBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\Common\Collections\ArrayCollection;
 //use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
@@ -338,29 +339,6 @@ class Movie
     public function getGenders()
     {
         return $this->genders;
-    }
-
-    /**
-     * Set country
-     *
-     * @param \Doshibu\AfkWatchBundle\Entity\Pays $country
-     * @return Movie
-     */
-    public function setCountry(\Doshibu\AfkWatchBundle\Entity\Pays $country = null)
-    {
-        $this->country = $country;
-
-        return $this;
-    }
-
-    /**
-     * Get country
-     *
-     * @return \Doshibu\AfkWatchBundle\Entity\Pays 
-     */
-    public function getCountry()
-    {
-        return $this->country;
     }
 
     /**
