@@ -1,5 +1,14 @@
 {% extends "DoshibuAfkWatchBundle::layout.html.twig" %}
 
+{% block head_scripts %}
+	<script src="{{ asset('streaming/js/simplePlayer.js') }}"></script>
+	<script>
+		$("document").ready(function() {
+			$("#video").simplePlayer();
+		});
+	</script>
+{% endblock %}
+
 {% block body %}
 	<!-- single -->
 	<div class="single-page-agile-main">
