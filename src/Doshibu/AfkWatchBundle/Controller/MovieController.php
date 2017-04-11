@@ -119,7 +119,18 @@ class MovieController extends Controller
 
 	public function seriesAction(Request $request)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig');
+		$em = $this->getDoctrine()->getManager();
+		$serieRepo = $em->getRepository('DoshibuAfkWatchBundle:Serie');
+
+		$listPopular = $serieRepo->findMostPopular();
+		$listRated = $serieRepo->findMostRated();
+		$listRecent = $serieRepo->findMostRecent();
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig', array(
+			'listPopular'	=> $listPopular,
+			'listRated'		=> $listRated,
+			'listRecent' 	=> $listRecent
+		));
 	}
 
 	public function serieAction(Request $request)
@@ -127,7 +138,6 @@ class MovieController extends Controller
 		// 3 séries (plus récents ou plus vus) du même genre
 		// 3 séries (plus récents ou plus vus) du même pays d'origine
 		// 10 séries les plus populaires du même genre
-
 		return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig');
 	}
 

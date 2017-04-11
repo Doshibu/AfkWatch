@@ -2,6 +2,9 @@
 
 namespace Doshibu\AfkWatchBundle\Repository;
 
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query;
+
 /**
  * SerieRepository
  *
@@ -10,4 +13,33 @@ namespace Doshibu\AfkWatchBundle\Repository;
  */
 class SerieRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function findMostPopular($limit=12, $hasArray=false)
+	{
+		$qb = $this->createQueryBuilder('s')
+			->orderBy('s.nbViews', 'DESC')
+			->getQuery()
+			->setMaxResults($limit);
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function findMostRated($limit=12, $hasArray=false)
+	{
+		$qb = $this->createQueryBuilder('s')
+			->orderBy('s.rating', 'DESC')
+			->getQuery()
+			->setMaxResults($limit);
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function findMostRecent($limit=12, $hasArray=false)
+	{
+		$qb = $this->createQueryBuilder('s')
+			->orderBy('s.addedAt', 'DESC')
+			->getQuery()
+			->setMaxResults($limit);
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
 }
