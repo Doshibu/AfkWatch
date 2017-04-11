@@ -158,7 +158,14 @@ class MovieController extends Controller
 
 	public function faqAction(Request $request)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig');
+		$questionRepo = $this->getDoctrine()
+						->getManager()
+						->getRepository('DoshibuAfkWatchBundle:Question');
+		$listQuestion = $questionRepo->findAll();
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig', array(
+			'listQuestion' 	=> $listQuestion
+		));
 	}
 
 	public function contactAction(Request $request)
