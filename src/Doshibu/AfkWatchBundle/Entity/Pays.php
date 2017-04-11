@@ -41,6 +41,11 @@ class Pays
     private $movies;
 
     /**
+    * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Serie", cascade={"persist"})
+    */
+    private $series;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -136,5 +141,39 @@ class Pays
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Add series
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Serie $series
+     *
+     * @return Pays
+     */
+    public function addSerie(\Doshibu\AfkWatchBundle\Entity\Serie $series)
+    {
+        $this->series[] = $series;
+
+        return $this;
+    }
+
+    /**
+     * Remove series
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Serie $series
+     */
+    public function removeSerie(\Doshibu\AfkWatchBundle\Entity\Serie $series)
+    {
+        $this->series->removeElement($series);
+    }
+
+    /**
+     * Get series
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSeries()
+    {
+        return $this->series;
     }
 }

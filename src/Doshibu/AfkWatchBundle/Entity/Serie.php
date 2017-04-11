@@ -5,15 +5,14 @@ namespace Doshibu\AfkWatchBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\Common\Collections\ArrayCollection;
-//use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
- * Movie
+ * Serie
  *
- * @ORM\Table(name="movie")
- * @ORM\Entity(repositoryClass="Doshibu\AfkWatchBundle\Repository\MovieRepository")
+ * @ORM\Table(name="serie")
+ * @ORM\Entity(repositoryClass="Doshibu\AfkWatchBundle\Repository\SerieRepository")
  */
-class Movie
+class Serie
 {
     /**
      * @var int
@@ -123,22 +122,17 @@ class Movie
     */
     private $countries;
 
-    /**
-     * Constructor
-     */
     public function __construct()
     {
         $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
         $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
         $this->addedAt = new \DateTime();
-        //$now = new DateTime();
-        //$this->addedAt = date("Y-m-d H:i:s", mt_rand(1262304000, strtotime($now->format('Y-m-d H:i:s'))));
     }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return int
      */
     public function getId()
     {
@@ -149,7 +143,8 @@ class Movie
      * Set name
      *
      * @param string $name
-     * @return Movie
+     *
+     * @return Serie
      */
     public function setName($name)
     {
@@ -161,7 +156,7 @@ class Movie
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -169,192 +164,11 @@ class Movie
     }
 
     /**
-     * Set description
-     *
-     * @param string $description
-     * @return Movie
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string 
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set filmMaker
-     *
-     * @param string $filmMaker
-     * @return Movie
-     */
-    public function setFilmMaker($filmMaker)
-    {
-        $this->filmMaker = $filmMaker;
-
-        return $this;
-    }
-
-    /**
-     * Get filmMaker
-     *
-     * @return string 
-     */
-    public function getFilmMaker()
-    {
-        return $this->filmMaker;
-    }
-
-    /**
-     * Set rating
-     *
-     * @param integer $rating
-     * @return Movie
-     */
-    public function setRating($rating)
-    {
-        $this->rating = $rating;
-
-        return $this;
-    }
-
-    /**
-     * Get rating
-     *
-     * @return integer 
-     */
-    public function getRating()
-    {
-        return $this->rating;
-    }
-
-    /**
-     * Set updatedAt
-     *
-     * @param \DateTime $updatedAt
-     * @return Movie
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
-    }
-
-    /**
-     * Get updatedAt
-     *
-     * @return \DateTime 
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updatedAt;
-    }
-
-    /**
-     * Set imageLarge
-     *
-     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageLarge
-     *
-     * @return Movie
-     */
-    public function setImageLarge(\Doshibu\AfkWatchBundle\Entity\Image $imageLarge = null)
-    {
-        $this->imageLarge = $imageLarge;
-
-        return $this;
-    }
-
-    /**
-     * Get imageLarge
-     *
-     * @return \Doshibu\AfkWatchBundle\Entity\Image
-     */
-    public function getImageLarge()
-    {
-        return $this->imageLarge;
-    }
-
-    /**
-     * Set imageSmall
-     *
-     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageSmall
-     *
-     * @return Movie
-     */
-    public function setImageSmall(\Doshibu\AfkWatchBundle\Entity\Image $imageSmall = null)
-    {
-        $this->imageSmall = $imageSmall;
-
-        return $this;
-    }
-
-    /**
-     * Get imageSmall
-     *
-     * @return \Doshibu\AfkWatchBundle\Entity\Image
-     */
-    public function getImageSmall()
-    {
-        return $this->imageSmall;
-    }
-
-    /**
-     * Add genders
-     *
-     * @param \Doshibu\AfkWatchBundle\Entity\Genre $genders
-     * @return Movie
-     */
-    public function addGender(\Doshibu\AfkWatchBundle\Entity\Genre $genders)
-    {
-        $this->genders[] = $genders;
-
-        return $this;
-    }
-
-    /**
-     * Remove genders
-     *
-     * @param \Doshibu\AfkWatchBundle\Entity\Genre $genders
-     */
-    public function removeGender(\Doshibu\AfkWatchBundle\Entity\Genre $genders)
-    {
-        $this->genders->removeElement($genders);
-    }
-
-    /**
-     * Get genders
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getGenders()
-    {
-        return $this->genders;
-    }
-
-    /**
-    * @ORM\PreUpdate
-    */
-    public function updateDate()
-    {
-        $this->setUpdatedAt(new \DateTime());
-    }
-
-    /**
      * Set tinyDescription
      *
      * @param string $tinyDescription
      *
-     * @return Movie
+     * @return Serie
      */
     public function setTinyDescription($tinyDescription)
     {
@@ -374,11 +188,83 @@ class Movie
     }
 
     /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Serie
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set filmMaker
+     *
+     * @param string $filmMaker
+     *
+     * @return Serie
+     */
+    public function setFilmMaker($filmMaker)
+    {
+        $this->filmMaker = $filmMaker;
+
+        return $this;
+    }
+
+    /**
+     * Get filmMaker
+     *
+     * @return string
+     */
+    public function getFilmMaker()
+    {
+        return $this->filmMaker;
+    }
+
+    /**
+     * Set rating
+     *
+     * @param integer $rating
+     *
+     * @return Serie
+     */
+    public function setRating($rating)
+    {
+        $this->rating = $rating;
+
+        return $this;
+    }
+
+    /**
+     * Get rating
+     *
+     * @return integer
+     */
+    public function getRating()
+    {
+        return $this->rating;
+    }
+
+    /**
      * Set dateRelease
      *
      * @param \DateTime $dateRelease
      *
-     * @return Movie
+     * @return Serie
      */
     public function setDateRelease($dateRelease)
     {
@@ -398,59 +284,11 @@ class Movie
     }
 
     /**
-     * Set slug
-     *
-     * @param string $slug
-     *
-     * @return Movie
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Get slug
-     *
-     * @return string
-     */
-    public function getSlug()
-    {
-        return $this->slug;
-    }
-
-    /**
-     * Set addedAt
-     *
-     * @param \DateTime $addedAt
-     *
-     * @return Movie
-     */
-    public function setAddedAt($addedAt)
-    {
-        $this->addedAt = $addedAt;
-
-        return $this;
-    }
-
-    /**
-     * Get addedAt
-     *
-     * @return \DateTime
-     */
-    public function getAddedAt()
-    {
-        return $this->addedAt;
-    }
-
-    /**
      * Set urlTrailer
      *
      * @param string $urlTrailer
      *
-     * @return Movie
+     * @return Serie
      */
     public function setUrlTrailer($urlTrailer)
     {
@@ -474,7 +312,7 @@ class Movie
      *
      * @param string $url
      *
-     * @return Movie
+     * @return Serie
      */
     public function setUrl($url)
     {
@@ -494,11 +332,189 @@ class Movie
     }
 
     /**
+     * Set nbViews
+     *
+     * @param integer $nbViews
+     *
+     * @return Serie
+     */
+    public function setNbViews($nbViews)
+    {
+        $this->nbViews = $nbViews;
+
+        return $this;
+    }
+
+    /**
+     * Get nbViews
+     *
+     * @return integer
+     */
+    public function getNbViews()
+    {
+        return $this->nbViews;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Serie
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set addedAt
+     *
+     * @param \DateTime $addedAt
+     *
+     * @return Serie
+     */
+    public function setAddedAt($addedAt)
+    {
+        $this->addedAt = $addedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get addedAt
+     *
+     * @return \DateTime
+     */
+    public function getAddedAt()
+    {
+        return $this->addedAt;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Serie
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Set imageLarge
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageLarge
+     *
+     * @return Serie
+     */
+    public function setImageLarge(\Doshibu\AfkWatchBundle\Entity\Image $imageLarge = null)
+    {
+        $this->imageLarge = $imageLarge;
+
+        return $this;
+    }
+
+    /**
+     * Get imageLarge
+     *
+     * @return \Doshibu\AfkWatchBundle\Entity\Image
+     */
+    public function getImageLarge()
+    {
+        return $this->imageLarge;
+    }
+
+    /**
+     * Set imageSmall
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Image $imageSmall
+     *
+     * @return Serie
+     */
+    public function setImageSmall(\Doshibu\AfkWatchBundle\Entity\Image $imageSmall = null)
+    {
+        $this->imageSmall = $imageSmall;
+
+        return $this;
+    }
+
+    /**
+     * Get imageSmall
+     *
+     * @return \Doshibu\AfkWatchBundle\Entity\Image
+     */
+    public function getImageSmall()
+    {
+        return $this->imageSmall;
+    }
+
+    /**
+     * Add gender
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Genre $gender
+     *
+     * @return Serie
+     */
+    public function addGender(\Doshibu\AfkWatchBundle\Entity\Genre $gender)
+    {
+        $this->genders[] = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Remove gender
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Genre $gender
+     */
+    public function removeGender(\Doshibu\AfkWatchBundle\Entity\Genre $gender)
+    {
+        $this->genders->removeElement($gender);
+    }
+
+    /**
+     * Get genders
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getGenders()
+    {
+        return $this->genders;
+    }
+
+    /**
      * Add country
      *
      * @param \Doshibu\AfkWatchBundle\Entity\Pays $country
      *
-     * @return Movie
+     * @return Serie
      */
     public function addCountry(\Doshibu\AfkWatchBundle\Entity\Pays $country)
     {
@@ -525,29 +541,5 @@ class Movie
     public function getCountries()
     {
         return $this->countries;
-    }
-
-    /**
-     * Set nbViews
-     *
-     * @param integer $nbViews
-     *
-     * @return Movie
-     */
-    public function setNbViews($nbViews)
-    {
-        $this->nbViews = $nbViews;
-
-        return $this;
-    }
-
-    /**
-     * Get nbViews
-     *
-     * @return integer
-     */
-    public function getNbViews()
-    {
-        return $this->nbViews;
     }
 }

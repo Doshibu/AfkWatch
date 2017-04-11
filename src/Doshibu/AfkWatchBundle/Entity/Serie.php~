@@ -1,0 +1,166 @@
+<?php
+
+namespace Doshibu\AfkWatchBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\Common\Collections\ArrayCollection;
+
+/**
+ * Serie
+ *
+ * @ORM\Table(name="serie")
+ * @ORM\Entity(repositoryClass="Doshibu\AfkWatchBundle\Repository\SerieRepository")
+ */
+class Serie
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tiny_description", type="string", length=255, nullable=false)
+     */
+    private $tinyDescription;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="film_maker", type="string", length=255)
+     */
+    private $filmMaker;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rating", type="integer")
+     */
+    private $rating;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="date_release", type="date")
+     */
+    private $dateRelease;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url_trailer", type="string", length=255, nullable=false)
+     */
+    private $urlTrailer;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255)
+     */
+    private $url;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nb_views", type="integer", nullable=true)
+     */
+    private $nbViews;
+
+    /**
+    * @Gedmo\Slug(fields={"name"})
+    * @ORM\Column(length=128, unique=true)
+    */
+    private $slug;
+
+    /**
+     * @ORM\Column(name="added_at", type="datetime", nullable=true)
+     */
+    private $addedAt;
+
+    /**
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+    /**
+    * @ORM\OneToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Image", cascade={"persist"})
+    */
+    private $imageLarge;
+
+    /**
+    * @ORM\OneToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Image", cascade={"persist"})
+    */
+    private $imageSmall;
+
+    /**
+    * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Genre", cascade={"persist"})
+    */
+    private $genders;
+
+    /**
+    * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Pays", cascade={"persist"})
+    */
+    private $countries;
+
+    public function __construct()
+    {
+        $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->addedAt = new \DateTime();
+    }
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Serie
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+}
+

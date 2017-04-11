@@ -41,6 +41,11 @@ class Pays
     private $movies;
 
     /**
+    * @ORM\ManyToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\Serie", cascade={"persist"})
+    */
+    private $series;
+
+    /**
      * Constructor
      */
     public function __construct()
