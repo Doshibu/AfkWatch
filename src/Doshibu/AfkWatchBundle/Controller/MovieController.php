@@ -38,14 +38,19 @@ class MovieController extends Controller
 
 	public function genreAction(Request $request, $slug, $page=1)
 	{
-		$movieRepo = $this->getDoctrine()
-						->getManager()
-						->getRepository('DoshibuAfkWatchBundle:Movie');
+		$em = $this->getDoctrine()->getManager();
+		$movieRepo = $em->getRepository('DoshibuAfkWatchBundle:Movie');
+		$genreRepo = $em->getRepository('DoshibuAfkWatchBundle:Genre');
+
+		$genre = $genreRepo->findOneBy(array('slug' => $slug));
+		if($genre === null)
+		{
+			throw $this->createNotFoundException('Le genre demandé n\'existe pas.');
+		}
 
 		$nbPerPage = 24;
 		$listMovie = $movieRepo->findByGenre($slug, $page, $nbPerPage);
 		$nbPages = ceil(count($listMovie)/$nbPerPage);
-
 		if ( $page > $nbPages )
 		{
 			throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
@@ -54,11 +59,11 @@ class MovieController extends Controller
 		$listPopular = $movieRepo->findMostPopularByGenre($slug);
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig', array(
+			'genre'			=> $genre,
 			'listMovie' 	=> $listMovie,
-			'listPopular'	=> $listPopular,
 			'nbPages'		=> $nbPages,
 			'page' 			=> $page,
-			'slug'			=> $slug
+			'listPopular'	=> $listPopular
 		));
 	}
 
@@ -79,14 +84,19 @@ class MovieController extends Controller
 
 	public function paysAction(Request $request, $slug, $page=1)
 	{
-		$movieRepo = $this->getDoctrine()
-						->getManager()
-						->getRepository('DoshibuAfkWatchBundle:Movie');
+		$em = $this->getDoctrine()->getManager();
+		$movieRepo = $em->getRepository('DoshibuAfkWatchBundle:Movie');
+		$paysRepo = $em->getRepository('DoshibuAfkWatchBundle:Pays');
+
+		$pays = $paysRepo->findOneBy(array('slug' => $slug));
+		if($pays === null)
+		{
+			throw $this->createNotFoundException('Le pays demandé n\'existe pas.');
+		}
 
 		$nbPerPage = 24;
 		$listMovie = $movieRepo->findByPays($slug, $page, $nbPerPage);
 		$nbPages = ceil(count($listMovie)/$nbPerPage);
-
 		if ( $page > $nbPages )
 		{
 			throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
@@ -95,11 +105,11 @@ class MovieController extends Controller
 		$listPopular = $movieRepo->findMostPopularByPays($slug);
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', array(
+			'pays'			=> $pays,
 			'listMovie' 	=> $listMovie,
-			'listPopular'	=> $listPopular,
 			'nbPages'		=> $nbPages,
 			'page' 			=> $page,
-			'slug'			=> $slug
+			'listPopular'	=> $listPopular
 		));
 	}
 

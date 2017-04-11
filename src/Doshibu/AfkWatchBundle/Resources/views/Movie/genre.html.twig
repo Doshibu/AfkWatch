@@ -9,12 +9,14 @@
 				<!--/browse-agile-w3ls -->
 				<div class="browse-agile-w3ls general-w3ls">
 					<div class="tittle-head">
-						<h4 class="latest-text">Family Movies </h4>
+						<h4 class="latest-text">Film par genre&nbsp;:&nbsp;
+							<a href="{{ path('doshibu_aw_genre', {'slug' : genre.slug, 'page' : 1}) }}">{{ genre.name }}</a>
+						</h4>
 						<div class="container">
 							<div class="agileits-single-top">
 								<ol class="breadcrumb">
-									<li><a href="index.html">Home</a></li>
-									<li class="active">Genres</li>
+									<li><a href="{{ path('doshibu_aw_home') }}">Accueil</a></li>
+									<li class="active"><a href="{{ path('doshibu_aw_genre', {'slug' : genre.slug, 'page' : 1}) }}">{{ genre.name }}</a></li>
 								</ol>
 							</div>
 						</div>
@@ -148,17 +150,17 @@
 					<ul>
 						{# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
 						{% if page >= 2 %}
-							<li><a class="frist" href="{{ path('doshibu_aw_genre', {'slug' : slug, 'page' : page-1}) }}">Avant</a></li>
+							<li><a class="frist" href="{{ path('doshibu_aw_genre', {'slug' : genre.slug, 'page' : page-1}) }}">Précédent</a></li>
 						{% endif %}
 
 						{% for p in range(1, nbPages) %}
 							<li{% if p == page %} class="active"{% endif %}>
-								<a href="{{ path('doshibu_aw_genre', {'slug' : slug, 'page' : p}) }}">{{ p }}</a>
+								<a href="{{ path('doshibu_aw_genre', {'slug' : genre.slug, 'page' : p}) }}">{{ p }}</a>
 							</li>
 						{% endfor %}
 
 						{% if page <= nbPages-1 %}
-							<li><a class="last" href="{{ path('doshibu_aw_genre', {'slug' : slug, 'page' : page+1}) }}">Après</a></li>
+							<li><a class="last" href="{{ path('doshibu_aw_genre', {'slug' : genre.slug, 'page' : page+1}) }}">Suivant</a></li>
 						{% endif %}
 					</ul>
 				</div>
