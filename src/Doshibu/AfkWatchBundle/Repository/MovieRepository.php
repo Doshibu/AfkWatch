@@ -118,7 +118,7 @@ class MovieRepository extends EntityRepository
 
 		return $qb;
 	}
-
+	
 	public function findMostPopularByGenres($genres, $limit=10, $hasArray=false)
 	{
 		$qb = $this->createQueryBuilder('m')

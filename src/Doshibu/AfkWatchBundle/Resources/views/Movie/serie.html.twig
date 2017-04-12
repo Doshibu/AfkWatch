@@ -1,0 +1,228 @@
+{% extends "DoshibuAfkWatchBundle::layout.html.twig" %}
+
+{% block head_scripts %}
+	<script src="{{ asset('streaming/js/simplePlayer.js') }}"></script>
+	<script>
+		$("document").ready(function() {
+			$("#video").simplePlayer();
+		});
+	</script>
+{% endblock %}
+
+{% block body %}
+	<!-- single -->
+	<div class="single-page-agile-main">
+		<div class="container">
+			<!-- /w3l-medile-movies-grids -->
+			<div class="agileits-single-top">
+				<ol class="breadcrumb">
+					<li><a href="{{ path('doshibu_aw_home') }}">Accueil</a></li>
+					<li>
+						{% for genre in serieGenders %}
+							&nbsp;<a href="{{ path('doshibu_aw_genre', {'slug' : genre.slug, 'page' : 1}) }}">{{ genre.name }}</a>&nbsp;
+							{% if not loop.last %}
+								&nbsp;|&nbsp;
+							{% endif %}
+						{% endfor %}
+					</li>
+					<li class="active"><a href="{{ path('doshibu_aw_serie', {'id' : serie.id}) }}">{{ serie.name }}</a></li>
+				</ol>
+			</div>
+			<div class="single-page-agile-info">
+				<!-- /movie-browse-agile -->
+				<div class="show-top-grids-w3lagile">
+					<div class="col-sm-8 single-left">
+						<div class="song">
+							<div class="song-info">
+								<h3>{{ serie.name }}</h3>	
+							</div>
+							<div class="video-grid-single-page-agileits">
+								<!-- To load the video you must set your youtube video ID to the data-video attribute
+								Example of url saved in DB : https://www.youtube.com/embed/XWtH7anz7io -->
+								<div data-video="{{ (serie.urlTrailer|split('/'))|last }}" id="video">
+									<img src="{{ serie.imageLarge.url }}" alt="{{ serie.imageLarge.alt }}" class="img-responsive" /> 
+								</div>
+							</div>
+						</div>
+						<div class="song-grid-right">
+							<div class="share">
+								<h5>Partagez avec vos amis !</h5>
+								<div class="single-agile-shar-buttons">
+									<ul>
+										<li>
+											<div class="fb-like" data-href="https://www.facebook.com/w3layouts" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+											<script>(function(d, s, id) {
+												var js, fjs = d.getElementsByTagName(s)[0];
+												if (d.getElementById(id)) return;
+												js = d.createElement(s); js.id = id;
+												js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+												fjs.parentNode.insertBefore(js, fjs);
+											}(document, 'script', 'facebook-jssdk'));</script>
+										</li>
+										<li>
+											<div class="fb-share-button" data-href="https://www.facebook.com/w3layouts" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fw3layouts&amp;src=sdkpreparse">Share</a></div>
+										</li>
+										<li class="news-twitter">
+											<a href="https://twitter.com/w3layouts" class="twitter-follow-button" data-show-count="false">Follow @w3layouts</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+										</li>
+										<li>
+											<a href="https://twitter.com/intent/tweet?screen_name=w3layouts" class="twitter-mention-button" data-show-count="false">Tweet to @w3layouts</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+										</li>
+										<li>
+											<!-- Place this tag where you want the +1 button to render. -->
+											<div class="g-plusone" data-size="medium"></div>
+
+											<!-- Place this tag after the last +1 button tag. -->
+											<script type="text/javascript">
+												(function() {
+													var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+													po.src = 'https://apis.google.com/js/platform.js';
+													var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+												})();
+											</script>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+
+						<div class="all-comments">
+							<div class="all-comments-info">
+								<a href="#">Partagez votre opinion</a>
+								<div class="agile-info-wthree-box">
+									<form>
+										<input type="text" placeholder="Nom" required="">			           					   
+										<input type="text" placeholder="Email" required="">
+										<input type="text" placeholder="Téléphone" required="">
+										<textarea placeholder="Message" required=""></textarea>
+										<input type="submit" value="Envoyer">
+										<div class="clearfix"> </div>
+									</form>
+								</div>
+							</div>
+							<div class="media-grids">
+								<div class="media">
+									<h5>TOM BROWN</h5>
+									<div class="media-left">
+										<a href="#">
+											<img src="{{ asset('streaming/images/user.jp') }}g" title="One movies" alt=" " />
+										</a>
+									</div>
+									<div class="media-body">
+										<p>Maecenas ultricies rhoncus tincidunt maecenas imperdiet ipsum id ex pretium hendrerit maecenas imperdiet ipsum id ex pretium hendrerit</p>
+										<span>View all posts by :<a href="#"> Admin </a></span>
+									</div>
+								</div>
+								<div class="media">
+									<h5>MARK JOHNSON</h5>
+									<div class="media-left">
+										<a href="#">
+											<img src="{{ asset('streaming/images/user.jp') }}g" title="One movies" alt=" " />
+										</a>
+									</div>
+									<div class="media-body">
+										<p>Maecenas ultricies rhoncus tincidunt maecenas imperdiet ipsum id ex pretium hendrerit maecenas imperdiet ipsum id ex pretium hendrerit</p>
+										<span>View all posts by :<a href="#"> Admin </a></span>
+									</div>
+								</div>
+								<div class="media">
+									<h5>STEVEN SMITH</h5>
+									<div class="media-left">
+										<a href="#">
+											<img src="{{ asset('streaming/images/user.jp') }}g" title="One movies" alt=" " />
+										</a>
+									</div>
+									<div class="media-body">
+										<p>Maecenas ultricies rhoncus tincidunt maecenas imperdiet ipsum id ex pretium hendrerit maecenas imperdiet ipsum id ex pretium hendrerit</p>
+										<span>View all posts by :<a href="#"> Admin </a></span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 single-right">
+						<h3>Même genre</h3>
+						<div class="single-grid-right">
+							{% for proposition in listProposedByGenre %}
+								<div class="single-right-grids">
+									<div class="col-md-4 single-right-grid-left">
+										<a href="{{ path('doshibu_aw_serie', {'id' : proposition.id}) }}">
+											<img src="{{ proposition.imageSmall.url }}" alt="{{ proposition.imageSmall.alt }}" />
+										</a>
+									</div>
+									<div class="col-md-8 single-right-grid-right">
+										<a href="{{ path('doshibu_aw_serie', {'id' : proposition.id}) }}" class="title">
+											{{ proposition.name }}
+										</a>
+										<p class="author"><a href="#" class="author">{{ proposition.filmMaker }}</a></p>
+										<p class="views">{{ proposition.nbViews }}&nbsp;vues</p>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							{% endfor %}
+						</div>
+						<h3>Même Pays d'origine</h3>
+						<div class="single-grid-right">
+							{% for proposition in listProposedByPays %}
+								<div class="single-right-grids">
+									<div class="col-md-4 single-right-grid-left">
+										<a href="{{ path('doshibu_aw_serie', {'id' : proposition.id}) }}">
+											<img src="{{ proposition.imageSmall.url }}" alt="{{ proposition.imageSmall.alt }}" />
+										</a>
+									</div>
+									<div class="col-md-8 single-right-grid-right">
+										<a href="{{ path('doshibu_aw_serie', {'id' : proposition.id}) }}" class="title">
+											{{ proposition.name }}
+										</a>
+										<p class="author"><a href="#" class="author">{{ proposition.filmMaker }}</a></p>
+										<p class="views">{{ proposition.nbViews }}&nbsp;vues</p>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<!-- //movie-browse-agile -->
+				<!--body wrapper start-->
+				<div class="w3_agile_banner_bottom_grid">
+					<div id="owl-demo" class="owl-carousel owl-theme">
+						{% for serie in listPopular %}
+							<div class="item">
+								<div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
+									<a href="{{ path('doshibu_aw_serie', {'id' : serie.id}) }}" class="hvr-shutter-out-horizontal">
+										<img src="{{ serie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ serie.imageSmall.alt }}" style="width:182px; height: 268px;" />
+										<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+									</a>
+									<div class="mid-1 agileits_w3layouts_mid_1_home">
+										<div class="w3l-movie-text">
+											<h6><a href="{{ path('doshibu_aw_serie', {'id' : serie.id}) }}">{{ serie.name }}</a></h6>							
+										</div>
+										<div class="mid-2 agile_mid_2_home">
+											<p>{{ serie.dateRelease|date('Y') }}</p>
+											<div class="block-stars">
+												<ul class="w3l-ratings">
+													{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': serie.rating})) }}
+												</ul>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+									<div class="ribben">
+										<p>NEW</p>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<!--body wrapper end-->
+			</div>
+			<!-- //w3l-latest-movies-grids -->
+		</div>	
+	</div>
+	<!-- //w3l-medile-movies-grids -->
+{% endblock %}

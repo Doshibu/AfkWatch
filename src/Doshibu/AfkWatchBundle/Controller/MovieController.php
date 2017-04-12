@@ -33,9 +33,6 @@ class MovieController extends Controller
 
 	public function movieAction(Request $request, $id)
 	{
-		// 3 films (plus récents ou plus vus) du même genre
-		// 3 films (plus récents ou plus vus) du même pays d'origine
-		// 10 films les plus populaires du même genre
 		$em = $this->getDoctrine()->getManager();
 		$movieRepo = $em->getRepository('DoshibuAfkWatchBundle:Movie');
 
@@ -43,8 +40,8 @@ class MovieController extends Controller
 		$movieGenders = $movie->getGenders();
 		$listPopular = $movieRepo->findMostPopularByGenres($movieGenders);
 
-		$listProposedByGenre = $movieRepo->findMostPopularByGenre($movieGenders->first(), 3);
-		$listProposedByPays = $movieRepo->findMostPopularByPays($movie->getCountries()->first(), 3);
+		$listProposedByGenre = $movieRepo->findMostPopularByGenre($movieGenders->first()->getSlug(), 3);
+		$listProposedByPays = $movieRepo->findMostPopularByPays($movie->getCountries()->first()->getSlug(), 3);
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', array(
 			'movie' 				=> $movie,
@@ -133,12 +130,25 @@ class MovieController extends Controller
 		));
 	}
 
-	public function serieAction(Request $request)
+	public function serieAction(Request $request, $id)
 	{
-		// 3 séries (plus récents ou plus vus) du même genre
-		// 3 séries (plus récents ou plus vus) du même pays d'origine
-		// 10 séries les plus populaires du même genre
-		return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig');
+		$em = $this->getDoctrine()->getManager();
+		$serieRepo = $em->getRepository('DoshibuAfkWatchBundle:Serie');
+
+		$serie = $serieRepo->findOneBy(array('id' => $id)); // joined full with genre & pays
+		$serieGenders = $serie->getGenders();
+		$listPopular = $serieRepo->findMostPopularByGenres($serieGenders);
+
+		$listProposedByGenre = $serieRepo->findMostPopularByGenre($serieGenders->first()->getSlug(), 3);
+		$listProposedByPays = $serieRepo->findMostPopularByPays($serie->getCountries()->first()->getSlug(), 3);
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig', array(
+			'serie' 				=> $serie,
+			'serieGenders'			=> $serieGenders,
+			'listProposedByGenre' 	=> $listProposedByGenre,
+			'listProposedByPays' 	=> $listProposedByPays,
+			'listPopular' 			=> $listPopular
+		));
 	}
 
 	public function newsAction(Request $request)

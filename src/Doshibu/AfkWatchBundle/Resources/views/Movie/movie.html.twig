@@ -37,7 +37,9 @@
 								<h3>{{ movie.name }}</h3>	
 							</div>
 							<div class="video-grid-single-page-agileits">
-								<div data-video="dLmKio67pVQ" id="video">
+								<!-- To load the video you must set your youtube video ID to the data-video attribute
+								Example of url saved in DB : https://www.youtube.com/embed/XWtH7anz7io -->
+								<div data-video="{{ (movie.urlTrailer|split('/'))|last }}" id="video">
 									<img src="{{ movie.imageLarge.url }}" alt="{{ movie.imageLarge.alt }}" class="img-responsive" /> 
 								</div>
 							</div>
@@ -141,7 +143,7 @@
 						</div>
 					</div>
 					<div class="col-md-4 single-right">
-						<h3>Du même genre</h3>
+						<h3>Même genre</h3>
 						<div class="single-grid-right">
 							{% for proposition in listProposedByGenre %}
 								<div class="single-right-grids">
@@ -155,13 +157,13 @@
 											{{ proposition.name }}
 										</a>
 										<p class="author"><a href="#" class="author">{{ proposition.filmMaker }}</a></p>
-										<p class="views">{{ propostion.nbViews }}&nbsp;vues</p>
+										<p class="views">{{ proposition.nbViews }}&nbsp;vues</p>
 									</div>
 									<div class="clearfix"> </div>
 								</div>
 							{% endfor %}
 						</div>
-						<h3>Du même Pays d'origine</h3>
+						<h3>Même Pays d'origine</h3>
 						<div class="single-grid-right">
 							{% for proposition in listProposedByPays %}
 								<div class="single-right-grids">
@@ -175,7 +177,7 @@
 											{{ proposition.name }}
 										</a>
 										<p class="author"><a href="#" class="author">{{ proposition.filmMaker }}</a></p>
-										<p class="views">{{ propostion.nbViews }}&nbsp;vues</p>
+										<p class="views">{{ proposition.nbViews }}&nbsp;vues</p>
 									</div>
 									<div class="clearfix"> </div>
 								</div>
