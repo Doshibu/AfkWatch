@@ -17,7 +17,8 @@ class ContactType extends AbstractType
                 ->add('lastName',   'text',  array('attr' => array('placeholder' => 'NOM'), 'label' => false, 'required' => true))
                 ->add('email',      'text',  array('attr' => array('placeholder' => 'EMAIL'), 'label' => false, 'required' => true))
                 ->add('subject',    'text',  array('attr' => array('placeholder' => 'SUJET'), 'label' => false, 'required' => true))
-                ->add('message',    'textarea',  array('attr' => array('placeholder' => 'VOTRE MESSAGE'), 'label' => false, 'required' => true));
+                ->add('message',    'textarea',  array('attr' => array('placeholder' => 'VOTRE MESSAGE'), 'label' => false, 'required' => true))
+                ->add('Envoyer votre message', 'submit');;
     }
     
     /**

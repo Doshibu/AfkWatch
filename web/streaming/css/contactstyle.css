@@ -27,7 +27,9 @@ ul,label{
 body a:hover{
 	text-decoration:none;
 }
-input[type="submit"],.agileinfo_chat a,.w3_customer_email_right a,ul.dropdown-menu.multi-column ul li a{
+input[type="submit"],
+.contact-agile button[type="submit"],
+.agileinfo_chat a,.w3_customer_email_right a,ul.dropdown-menu.multi-column ul li a{
 	transition:.5s ease-in;
 	-webkit-transition:.5s ease-in;
 	-moz-transition:.5s ease-in;
@@ -132,9 +134,18 @@ li.twt {
     background: transparent;
     outline: none;
     padding: 10px;
-    width: 48.5%;
-    margin-bottom: 15px;
+    width: 100%;
 }
+
+#doshibu_afkwatchbundle_contact div {
+    display: inline-block;
+    padding: 10px;
+    width: 48.5%;
+}
+#doshibu_afkwatchbundle_contact div:nth-child(5) {
+    width: 97%;
+}
+
 .contact-agile textarea {
     width: 100%;
     padding: 10px;
@@ -147,7 +158,8 @@ li.twt {
 .contact-agile input[type="text"]:nth-child(1), .contact-agile input[type="text"]:nth-child(3) {
     margin-right: 2.4%;
 }
-.contact-agile input[type="submit"] {
+.contact-agile input[type="submit"],
+.contact-agile button[type="submit"] {
    background: #212121;
     color: #fff;
     padding: 8px 15px;
@@ -155,7 +167,8 @@ li.twt {
     border: none;
     outline: none;
 }
-.contact-agile input[type="submit"]:hover{
+.contact-agile input[type="submit"]:hover,
+.contact-agile button[type="submit"]:hover{
 	background: #FF8D1B;
 }
 #map {

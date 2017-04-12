@@ -213,9 +213,17 @@ class MovieController extends Controller
 
 		if($form->handleRequest($request)->isValid())
 		{
-			//$em = $this->getDoctrine()->getManager();
+			$data = $form->getData();
+			$mail = \Swift_Message::newInstance();
+			$mail->setSubject('<AfkWatch> Message de la part de  '.$request->request->get('firstName').' '.$request->request->get('lastName'))
+		        ->setFrom($request->request->get('email'))
+		        ->setTo('guiallaume.bonhommeau@gmail.com')
+		        ->setBody($request->request->get('subject')."\n".$request->request->get('message'));
+
+        	$this->get('mailer')->send($mail);
+
 			$request->getSession()->getFlashBag()->add('notice', 'ContactForm bien soumis.');
-			return $this->redirect($this->generateUrl('Doshibu_aw_contact'));
+			return $this->redirect($this->generateUrl('doshibu_aw_contact'));
 		}
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig', array(
