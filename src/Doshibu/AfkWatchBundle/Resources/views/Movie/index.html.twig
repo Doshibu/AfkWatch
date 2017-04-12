@@ -1,19 +1,5 @@
 {% extends "DoshibuAfkWatchBundle::layout.html.twig" %}
 
-{% block head_scripts %}
-	<script src="{{ asset('streaming/js/owl.carousel.js') }}"></script>
-	<script>
-		$(document).ready(function() { 
-			$("#owl-demo").owlCarousel({
-					autoPlay: 3000, //Set AutoPlay to 3 seconds
-					items : 5,
-					itemsDesktop : [640,4],
-					itemsDesktopSmall : [414,3]
-				});
-		}); 
-	</script> 
-{% endblock %}
-
 {% block body %}
 	{# Start banner #}
 	<div id="slidey" style="display:none;">

@@ -16,6 +16,7 @@ class LoadPays implements FixtureInterface, OrderedFixtureInterface
 		// Liste des noms de catégorie à ajouter
 		$names = array(
 			'Allemagne',
+			'Angleterre',
 			'Argentine',
 			'Brésil',
 			'Chine',

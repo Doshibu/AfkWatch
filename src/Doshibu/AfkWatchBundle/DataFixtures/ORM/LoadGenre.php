@@ -26,15 +26,17 @@ class LoadGenre implements FixtureInterface, OrderedFixtureInterface
 			'Drame',
 			'Famille',
 			'Fantastique',
+			'Guerre',
 			'Histoire',
-			'Horreur',
+			'Epouvante-Horreur',
 			'Thriller',
 			'Musique',
 			'Psychologique',
+			'Policier',
 			'Romance',
 			'Science Fiction',
 			'Sports',
-			'Guerre'
+			'Western'
 			);
 
 		foreach ($names as $name) 
