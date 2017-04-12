@@ -1,3 +1,5 @@
+{% set activeMenu = (activeMenu|default('Accueil')) %}
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -168,7 +170,7 @@
 	</script>
 	<!-- //bootstrap-pop-up -->
 	
-	{{ render(controller("DoshibuAfkWatchBundle:Movie:mainMenu")) }}
+	{{ render(controller("DoshibuAfkWatchBundle:Movie:mainMenu", {'activeMenu' : activeMenu})) }}
 
 	<div class="general_social_icons">
 		<nav class="social">

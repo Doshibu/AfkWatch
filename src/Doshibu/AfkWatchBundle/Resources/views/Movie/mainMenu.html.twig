@@ -15,8 +15,10 @@
 			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 				<nav>
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="{{ path('doshibu_aw_home') }}">Accueil</a></li>
-						<li class="dropdown">
+						<li {% if activeMenu=='Accueil' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_aw_home') }}">Accueil</a>
+						</li>
+						<li class="dropdown{% if activeMenu=='Genre' %} active{% endif %}">
 							<a href="{{ path('doshibu_aw_genre') }}" class="dropdown-toggle" data-toggle="dropdown">Genres <b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<li>
@@ -45,9 +47,13 @@
 								</li>
 							</ul>
 						</li>
-						<li><a href="{{ path('doshibu_aw_series') }}">tv - series</a></li>
-						<li><a href="{{ path('doshibu_aw_news') }}">news</a></li>
-						<li class="dropdown">
+						<li {% if activeMenu=='Series' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_aw_series') }}">TV - Séries</a>
+						</li>
+						<li {% if activeMenu=='News' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_aw_news') }}">News</a>
+						</li>
+						<li class="dropdown{% if activeMenu=='Pays' %} active{% endif %}">
 							<a href="{{ path('doshibu_aw_pays') }}" class="dropdown-toggle" data-toggle="dropdown">Pays <b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<li>
@@ -76,7 +82,9 @@
 								</li>
 							</ul>
 						</li>
-						<li><a href="{{ path('doshibu_aw_list') }}">A - z liste</a></li>
+						<li {% if activeMenu=='Liste' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_aw_list') }}">A - z liste</a>
+						</li>
 					</ul>
 				</nav>
 			</div>

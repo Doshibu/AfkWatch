@@ -207,7 +207,7 @@ class MovieController extends Controller
 		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig');
 	}
 
-	public function mainMenuAction()
+	public function mainMenuAction($activeMenu)
 	{
 		$em = $this->getDoctrine()->getManager();
 
@@ -244,8 +244,9 @@ class MovieController extends Controller
 		}
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:mainMenu.html.twig', array(
-			'listGenre' => $listGenre,
-			'listPays' 	=> $listPays
+			'activeMenu' 	=> $activeMenu,
+			'listGenre' 	=> $listGenre,
+			'listPays' 		=> $listPays
 		));
 	}
 
