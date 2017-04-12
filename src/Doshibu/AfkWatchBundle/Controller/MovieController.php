@@ -37,6 +37,11 @@ class MovieController extends Controller
 		$movieRepo = $em->getRepository('DoshibuAfkWatchBundle:Movie');
 
 		$movie = $movieRepo->findOneBy(array('id' => $id)); // joined full with genre & pays
+		if($movie === null)
+		{
+			throw $this->createNotFoundException('Ce film n\'existe pas ou plus.');
+		}
+
 		$movieGenders = $movie->getGenders();
 		$listPopular = $movieRepo->findMostPopularByGenres($movieGenders);
 
@@ -69,7 +74,14 @@ class MovieController extends Controller
 		$nbPages = ceil(count($listMovie)/$nbPerPage);
 		if ( $page > $nbPages )
 		{
-			throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
+			if($page === 1)
+			{
+				throw $this->createNotFoundException('Malheureusement aucune donnée n\'est enregistré avec ce genre en référence.');
+			}
+			else
+			{
+				throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
+			}
 		}
 
 		$listPopular = $movieRepo->findMostPopularByGenre($slug);
@@ -100,7 +112,14 @@ class MovieController extends Controller
 		$nbPages = ceil(count($listMovie)/$nbPerPage);
 		if ( $page > $nbPages )
 		{
-			throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
+			if($page === 1)
+			{
+				throw $this->createNotFoundException('Malheureusement aucune donnée n\'est enregistré avec ce pays en référence.');
+			}
+			else
+			{
+				throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
+			}
 		}
 
 		$listPopular = $movieRepo->findMostPopularByPays($slug);
@@ -136,6 +155,11 @@ class MovieController extends Controller
 		$serieRepo = $em->getRepository('DoshibuAfkWatchBundle:Serie');
 
 		$serie = $serieRepo->findOneBy(array('id' => $id)); // joined full with genre & pays
+		if($serie === null)
+		{
+			throw $this->createNotFoundException('Ce film n\'existe pas ou plus.');
+		}
+
 		$serieGenders = $serie->getGenders();
 		$listPopular = $serieRepo->findMostPopularByGenres($serieGenders);
 
