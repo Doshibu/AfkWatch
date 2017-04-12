@@ -35,7 +35,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -181,7 +181,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -327,7 +327,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -473,7 +473,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -619,7 +619,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -765,7 +765,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -911,7 +911,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -1057,7 +1057,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -1203,7 +1203,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -1349,7 +1349,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -1495,7 +1495,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
@@ -1641,7 +1641,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
-				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima.',
+				'tinyDescription' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces homme.',
 				'description' => 'En 1945, les armées américaine et japonaise s\'affrontèrent sur l\'île d\'Iwo Jima. Quelques décennies plus tard, des centaines de lettres furent extraites de cette terre aride, permettant enfin de donner un nom, un visage, une voix à ces hommes ainsi qu\'à leur extraordinaire commandant.
 				Les soldats japonais qu\'on envoyait à Iwo Jima savaient que leurs chances de survie étaient quasi nulles. Animé d\'une volonté implacable, leur chef, le général Kuribayashi, exploita ingénieusement la nature du terrain, transformant ainsi la défaite éclair annoncée en 40 jours d\'héroïques combats.
 				De nombreux soldats américains et japonais ont perdu la vie à Iwo Jima. Leur sang s\'est depuis longtemps perdu dans les profondeurs du sable noir, mais leurs sacrifices, leur courage et leur compassion ont survécu dans ces Lettres.',
