@@ -24,14 +24,14 @@ class Question
     /**
      * @var string
      *
-     * @ORM\Column(name="question", type="string", length=255)
+     * @ORM\Column(name="question", type="string", nullable=false)
      */
     private $question;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="answer", type="string", length=255)
+     * @ORM\Column(name="answer", type="text", nullable=false)
      */
     private $answer;
 
