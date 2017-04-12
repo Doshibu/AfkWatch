@@ -13,7 +13,10 @@ use Doshibu\AfkWatchBundle\Entity\Image;
 use Doshibu\AfkWatchBundle\Entity\Movie;
 use Doshibu\AfkWatchBundle\Entity\News;
 use Doshibu\AfkWatchBundle\Entity\Pays;
-use Doshibu\AfkWatchBundle\Entity\Series;
+use Doshibu\AfkWatchBundle\Entity\Serie;
+
+use Doshibu\AfkWatchBundle\Entity\Contact;
+use Doshibu\AfkWatchBundle\Form\ContactType;
 
 class MovieController extends Controller
 {
@@ -204,7 +207,20 @@ class MovieController extends Controller
 
 	public function contactAction(Request $request)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig');
+		$contact = new Contact();
+		$form = $this->get('form.factory')
+				->create(new ContactType(), $contact);
+
+		if($form->handleRequest($request)->isValid())
+		{
+			//$em = $this->getDoctrine()->getManager();
+			$request->getSession()->getFlashBag()->add('notice', 'ContactForm bien soumis.');
+			return $this->redirect($this->generateUrl('Doshibu_aw_contact'));
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig', array(
+			'form' => $form->createView()
+		));
 	}
 
 	public function mainMenuAction($activeMenu)
