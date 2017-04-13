@@ -12,7 +12,7 @@ parameters:
 
 framework:
     #esi: ~
-    #translator: { fallbacks: ['%locale%'] }
+    translator: { fallbacks: ['%locale%'] }
     secret: '%secret%'
     router:
         resource: '%kernel.root_dir%/config/routing.yml'
@@ -83,3 +83,16 @@ services:
         class: Twig_Extensions_Extension_Intl
         tags:
             - { name: twig.extension }
+
+fos_user:
+    # Le type de BDD à utiliser, nous utilisons l'ORM Doctrine depuis le début
+    db_driver:     orm
+    # Le nom du firewall derrière lequel on utilisera ces utilisateurs
+    firewall_name: main
+    # La classe de l'entité User que nous utilisons
+    user_class:    Doshibu\UserBundle\Entity\User
+    #group:
+    #    group_class: Doshibu\UserBundle\Entity\Group
+    from_email:
+        address: "noreply@yourcompany.com"
+        sender_name: "No Reply"
