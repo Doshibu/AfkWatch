@@ -4,12 +4,9 @@ doshibu_aw_home:
         _controller: DoshibuAfkWatchBundle:Movie:index
 
 doshibu_aw_movie:
-    path :   /movie/{id}
+    path :   /movie/{slug}
     defaults: 
         _controller : DoshibuAfkWatchBundle:Movie:movie
-        id: 1
-    requirements:
-        id: \d+
 
 doshibu_aw_genre:
     path :   /genre/{slug}/{page}
@@ -35,12 +32,9 @@ doshibu_aw_series:
         _controller : DoshibuAfkWatchBundle:Movie:series
 
 doshibu_aw_serie:
-    path :   /serie/{id}
+    path :   /serie/{slug}
     defaults: 
         _controller : DoshibuAfkWatchBundle:Movie:serie
-        id: 1
-    requirements:
-        id: \d+
 
 doshibu_aw_news:
     path :   /news

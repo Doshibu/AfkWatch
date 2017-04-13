@@ -34,12 +34,12 @@ class MovieController extends Controller
 		));
 	}
 
-	public function movieAction(Request $request, $id)
+	public function movieAction(Request $request, $slug)
 	{
 		$em = $this->getDoctrine()->getManager();
 		$movieRepo = $em->getRepository('DoshibuAfkWatchBundle:Movie');
 
-		$movie = $movieRepo->findOneBy(array('id' => $id)); // joined full with genre & pays
+		$movie = $movieRepo->findOneBy(array('slug' => $slug)); // joined full with genre & pays
 		if($movie === null)
 		{
 			throw $this->createNotFoundException('Ce film n\'existe pas ou plus.');
@@ -152,12 +152,12 @@ class MovieController extends Controller
 		));
 	}
 
-	public function serieAction(Request $request, $id)
+	public function serieAction(Request $request, $slug)
 	{
 		$em = $this->getDoctrine()->getManager();
 		$serieRepo = $em->getRepository('DoshibuAfkWatchBundle:Serie');
 
-		$serie = $serieRepo->findOneBy(array('id' => $id)); // joined full with genre & pays
+		$serie = $serieRepo->findOneBy(array('slug' => $slug)); // joined full with genre & pays
 		if($serie === null)
 		{
 			throw $this->createNotFoundException('Ce film n\'existe pas ou plus.');

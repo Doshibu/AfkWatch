@@ -25,7 +25,7 @@
 							{% endif %}
 						{% endfor %}
 					</li>
-					<li class="active"><a href="{{ path('doshibu_aw_serie', {'id' : serie.id}) }}">{{ serie.name }}</a></li>
+					<li class="active"><a href="{{ path('doshibu_aw_serie', {'slug' : serie.slug}) }}">{{ serie.name }}</a></li>
 				</ol>
 			</div>
 			<div class="single-page-agile-info">
@@ -148,12 +148,12 @@
 							{% for proposition in listProposedByGenre %}
 								<div class="single-right-grids">
 									<div class="col-md-4 single-right-grid-left">
-										<a href="{{ path('doshibu_aw_serie', {'id' : proposition.id}) }}">
+										<a href="{{ path('doshibu_aw_serie', {'slug' : proposition.slug}) }}">
 											<img src="{{ proposition.imageSmall.url }}" alt="{{ proposition.imageSmall.alt }}" />
 										</a>
 									</div>
 									<div class="col-md-8 single-right-grid-right">
-										<a href="{{ path('doshibu_aw_serie', {'id' : proposition.id}) }}" class="title">
+										<a href="{{ path('doshibu_aw_serie', {'slug' : proposition.slug}) }}" class="title">
 											{{ proposition.name }}
 										</a>
 										<p class="author"><a href="#" class="author">{{ proposition.filmMaker }}</a></p>
@@ -168,12 +168,12 @@
 							{% for proposition in listProposedByPays %}
 								<div class="single-right-grids">
 									<div class="col-md-4 single-right-grid-left">
-										<a href="{{ path('doshibu_aw_serie', {'id' : proposition.id}) }}">
+										<a href="{{ path('doshibu_aw_serie', {'slug' : proposition.slug}) }}">
 											<img src="{{ proposition.imageSmall.url }}" alt="{{ proposition.imageSmall.alt }}" />
 										</a>
 									</div>
 									<div class="col-md-8 single-right-grid-right">
-										<a href="{{ path('doshibu_aw_serie', {'id' : proposition.id}) }}" class="title">
+										<a href="{{ path('doshibu_aw_serie', {'slug' : proposition.slug}) }}" class="title">
 											{{ proposition.name }}
 										</a>
 										<p class="author"><a href="#" class="author">{{ proposition.filmMaker }}</a></p>
@@ -193,13 +193,13 @@
 						{% for serie in listPopular %}
 							<div class="item">
 								<div class="w3l-movie-gride-agile w3l-movie-gride-agile1">
-									<a href="{{ path('doshibu_aw_serie', {'id' : serie.id}) }}" class="hvr-shutter-out-horizontal">
+									<a href="{{ path('doshibu_aw_serie', {'slug' : serie.slug}) }}" class="hvr-shutter-out-horizontal">
 										<img src="{{ serie.imageSmall.url }}" title="album-name" class="img-responsive" alt="{{ serie.imageSmall.alt }}" style="width:182px; height: 268px;" />
 										<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
 									</a>
 									<div class="mid-1 agileits_w3layouts_mid_1_home">
 										<div class="w3l-movie-text">
-											<h6><a href="{{ path('doshibu_aw_serie', {'id' : serie.id}) }}">{{ serie.name }}</a></h6>							
+											<h6><a href="{{ path('doshibu_aw_serie', {'slug' : serie.slug}) }}">{{ serie.name }}</a></h6>							
 										</div>
 										<div class="mid-2 agile_mid_2_home">
 											<p>{{ serie.dateRelease|date('Y') }}</p>

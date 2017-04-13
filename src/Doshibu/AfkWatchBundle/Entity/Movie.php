@@ -130,9 +130,12 @@ class Movie
     {
         $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
         $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->addedAt = new \DateTime();
-        //$now = new DateTime();
-        //$this->addedAt = date("Y-m-d H:i:s", mt_rand(1262304000, strtotime($now->format('Y-m-d H:i:s'))));
+
+        $timestampMin = 1262304000; // 1/01/2010 0:00:00
+        $timestampMax = 1483228800;
+        $date = new \DateTime();
+        $date->setTimestamp(rand($timestampMin, $timestampMax));
+        $this->addedAt = $date;
     }
 
     /**

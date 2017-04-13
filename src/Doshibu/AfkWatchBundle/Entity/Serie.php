@@ -126,7 +126,12 @@ class Serie
     {
         $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
         $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->addedAt = new \DateTime();
+        
+        $timestampMin = 1262304000; // 1/01/2010 0:00:00
+        $timestampMax = 1483228800;
+        $date = new \DateTime();
+        $date->setTimestamp(rand($timestampMin, $timestampMax));
+        $this->addedAt = $date;
     }
 
     /**
