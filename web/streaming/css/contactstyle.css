@@ -128,7 +128,8 @@ li.twt {
     -ms-transform: rotatey(360deg);
     transition: .5s all;
 }
-.contact-agile input[type="text"] {
+.contact-agile input[type="text"],
+.contact-agile input[type="email"] {
     font-size: 14px;
     border: 1px solid #d5d3d3;
     background: transparent;

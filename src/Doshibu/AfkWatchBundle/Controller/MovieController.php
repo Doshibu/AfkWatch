@@ -209,7 +209,7 @@ class MovieController extends Controller
 	{
 		$contact = new Contact();
 		$form = $this->get('form.factory')
-				->create(new ContactType(), $contact);
+				->create(ContactType::class, $contact);
 
 		if($form->handleRequest($request)->isValid())
 		{

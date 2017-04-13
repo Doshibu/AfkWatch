@@ -2,6 +2,17 @@ doshibu_aw:
     resource: "@DoshibuAfkWatchBundle/Resources/config/routing.yml"
     prefix:   /platform
 
+login:
+    path:   /login
+    defaults:  
+        _controller: DoshibuUserBundle:Security:login
+
+login_check:
+    path:   /login_check
+
+logout:
+    path:   /logout
+
 #doshibu_aw_admin:
 #    resource: "@DoshibuAdminBundle/Resources/config/routing.yml"
 #    prefix:   /admin
