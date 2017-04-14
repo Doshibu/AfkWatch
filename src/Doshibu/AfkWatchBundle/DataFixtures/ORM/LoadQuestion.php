@@ -51,6 +51,6 @@ class LoadQuestion implements FixtureInterface, OrderedFixtureInterface
 
 	public function getOrder()
     {
-        return 5;
+        return 6;
     }
 }
