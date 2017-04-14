@@ -124,12 +124,18 @@ class Movie
     private $countries;
 
     /**
+    * @ORM\OneToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\News", mappedBy="movie")
+    */
+    private $news;
+
+    /**
      * Constructor
      */
     public function __construct()
     {
         $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
         $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->news = new \Doctrine\Common\Collections\ArrayCollection();
 
         $timestampMin = 1262304000; // 1/01/2010 0:00:00
         $timestampMax = 1483228800;

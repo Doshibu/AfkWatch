@@ -109,8 +109,14 @@
 			</div>
 			<div class="w3l_sign_in_register">
 				<ul>
-					<li><i class="fa fa-phone" aria-hidden="true"></i> (+33).6.19.99.15.75</li>
+				{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+				    Connecté en tant que {{ app.user.username }}
+				    -
+				    <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
+				{% else %}
 					<li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+				    <!--<li><a href="{{ path('fos_user_security_login') }}">Connexion</a></li>-->
+				{% endif %}
 				</ul>
 			</div>
 			<div class="clearfix"> </div>
