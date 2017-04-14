@@ -539,57 +539,22 @@
 					<!-- news-right-top -->
 					<div class="news-right-top">
 						<div class="wthree-news-right-heading">
-							<h3>Updated News</h3>
+							<h3>Articles Populaire</h3>
 						</div>
 						<div class="wthree-news-right-top">
 							<div class="news-grids-bottom">
 								<!-- date -->
 								<div id="design" class="date">
-									<div id="cycler">   
-										<div class="date-text">
-											<a href="news-single.html">August 15,2016</a>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-										<div class="date-text">
-											<a href="news-single.html">July 08,2016 <span class="blinking">
-												<img src="{{ asset('streaming/images/new.png') }}" alt="" /></span></a>
-											<p>Nullam non turpis sit amet metus tristique egestas et et orci.</p>
-										</div>
-										<div class="date-text">
-											<a href="news-single.html">February 15,2016</a>
-											<p>Duis venenatis ac ipsum vel ultricies in placerat quam</p>
-										</div>
-										<div class="date-text">
-											<a href="news-single.html">January 15,2016 <span class="blinking">
-												<img src="{{ asset('streaming/images/new.png') }}" alt="" /></span></a>
-											<p>Pellentesque ullamcorper fringilla ipsum, ornare dapibus velit volutpat sit amet.</p>
-										</div>
-										<div class="date-text">
-											<a href="news-single.html">September 24,2016</a>
-											<p>In lobortis ipsum mi, ac imperdiet elit pellentesque at.</p>
-										</div>
-										<div class="date-text">
-											<a href="news-single.html">August 15,2016</a>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-										</div>
-										<div class="date-text">
-											<a href="news-single.html">July 08,2016 <span class="blinking">
-												<img src="{{ asset('streaming/images/new.png') }}" alt="" /></span></a>
-											<p>Nullam non turpis sit amet metus tristique egestas et et orci.</p>
-										</div>
-										<div class="date-text">
-											<a href="news-single.html">February 15,2016</a>
-											<p>Duis venenatis ac ipsum vel ultricies in placerat quam</p>
-										</div>
-										<div class="date-text">
-											<a href="news-single.html">January 15,2016 <span class="blinking">
-												<img src="{{ asset('streaming/images/new.png') }}" alt="" /></span></a>
-											<p>Pellentesque ullamcorper fringilla ipsum, ornare dapibus velit volutpat sit amet.</p>
-										</div>
-										<div class="date-text">
-											<a href="news-single.html">September 24,2016</a>
-											<p>In lobortis ipsum mi, ac imperdiet elit pellentesque at.</p>
-										</div>
+									<div id="cycler">
+										{% for news in listMostViewed %}
+											<div class="date-text">
+												<a href="news-single.html">{{ news.addedAt|localizeddate('medium', 'none', 'fr') }}</a>
+												{% if date(news.addedAt) >= date('-30days') %}
+													<span class="blinking"><img src="{{ asset('streaming/images/new.png') }}" alt="newLogo" /></span></a>
+												{% endif %}
+												<p>{{ news.title }}</p>
+											</div>
+										{% endfor %}   
 									</div>
 									<script>
 										function blinker() {
@@ -617,76 +582,23 @@
 					<!-- news-right-bottom -->
 					<div class="news-right-bottom">
 						<div class="wthree-news-right-heading">
-							<h3>Top News</h3>
+							<h3>Articles Récent</h3>
 						</div>
 						<div class="news-right-bottom-bg">
 							<div class="news-grids-bottom">
-								<div class="top-news-grid">
-									<div class="top-news-grid-heading">
-										<a href="news-single.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum ac nulla</a>
+								{% for news in listMostRecent %}
+									<div class="top-news-grid">
+										<div class="top-news-grid-heading">
+											<a href="news-single.html">{{ news.title }}</a>
+										</div>
+										<div class="w3ls-news-t-grid top-t-grid">
+											<ul>
+												<li><a href="#"><i class="fa fa-clock-o"></i>&nbsp;{{ news.addedAt|time_diff }}</a></li>
+												<li><a href="#"><i class="fa fa-user"></i>&nbsp;Auteur</a></li>
+											</ul>
+										</div>
 									</div>
-									<div class="w3ls-news-t-grid top-t-grid">
-										<ul>
-											<li><a href="#"><i class="fa fa-clock-o"></i> 1h</a></li>
-											<li><a href="#"><i class="fa fa-user"></i> Vivamus nibh</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="top-news-grid">
-									<div class="top-news-grid-heading">
-										<a href="news-single.html">Duis orci enim, rutrum vel sodales ut, tincidunt nec turpis.</a>
-									</div>
-									<div class="w3ls-news-t-grid top-t-grid">
-										<ul>
-											<li><a href="#"><i class="fa fa-clock-o"></i> 3h</a></li>
-											<li><a href="#"><i class="fa fa-user"></i> Cras pretium</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="top-news-grid">
-									<div class="top-news-grid-heading">
-										<a href="news-single.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum ac nulla</a>
-									</div>
-									<div class="w3ls-news-t-grid top-t-grid">
-										<ul>
-											<li><a href="#"><i class="fa fa-clock-o"></i> 1h</a></li>
-											<li><a href="#"><i class="fa fa-user"></i> Vivamus nibh</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="top-news-grid">
-									<div class="top-news-grid-heading">
-										<a href="news-single.html">Duis orci enim, rutrum vel sodales ut, tincidunt nec turpis.</a>
-									</div>
-									<div class="w3ls-news-t-grid top-t-grid">
-										<ul>
-											<li><a href="#"><i class="fa fa-clock-o"></i> 3h</a></li>
-											<li><a href="#"><i class="fa fa-user"></i> Cras pretium</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="top-news-grid">
-									<div class="top-news-grid-heading">
-										<a href="news-single.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum ac nulla</a>
-									</div>
-									<div class="w3ls-news-t-grid top-t-grid">
-										<ul>
-											<li><a href="#"><i class="fa fa-clock-o"></i> 1h</a></li>
-											<li><a href="#"><i class="fa fa-user"></i> Vivamus nibh</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="top-news-grid">
-									<div class="top-news-grid-heading">
-										<a href="news-single.html">Duis orci enim, rutrum vel sodales ut, tincidunt nec turpis.</a>
-									</div>
-									<div class="w3ls-news-t-grid top-t-grid">
-										<ul>
-											<li><a href="#"><i class="fa fa-clock-o"></i> 3h</a></li>
-											<li><a href="#"><i class="fa fa-user"></i> Cras pretium</a></li>
-										</ul>
-									</div>
-								</div>
+								{% endfor %}
 							</div>
 						</div>
 					</div>

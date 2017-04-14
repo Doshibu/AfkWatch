@@ -178,9 +178,36 @@ class MovieController extends Controller
 		));
 	}
 
-	public function newsAction(Request $request)
+	public function newsAction(Request $request, $page=1)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig');
+		$em = $this->getDoctrine()->getManager();
+		$newsRepo = $em->getRepository('DoshibuAfkWatchBundle:News');
+
+		$nbPerPage = 24;
+		$listNews = $newsRepo->findRecents($page, $nbPerPage);
+		$nbPages = ceil(count($listNews)/$nbPerPage);
+		if ( $page > $nbPages )
+		{
+			if($page === 1)
+			{
+				throw $this->createNotFoundException('Malheureusement aucune donnée n\'est enregistré avec ce pays en référence.');
+			}
+			else
+			{
+				throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
+			}
+		}
+
+		$listMostViewed = $newsRepo->findMostViewed(15);
+		$listMostRecent = $newsRepo->findMostRecent(5);
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig', array(
+			'listNews'			=> $listNews,
+			'nbPages'			=> $nbPages,
+			'page'				=> $page,
+			'listMostViewed'	=> $listMostViewed,
+			'listMostRecent'	=> $listMostRecent
+		));
 	}
 
 	public function newsSingleAction(Request $request)

@@ -137,7 +137,7 @@ class Movie
         $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
         $this->news = new \Doctrine\Common\Collections\ArrayCollection();
 
-        $timestampMin = 1262304000; // 1/01/2010 0:00:00
+        $timestampMin = 1483275600; // 1/01/2017 0:00:00
         $timestampMax = 1483228800;
         $date = new \DateTime();
         $date->setTimestamp(rand($timestampMin, $timestampMax));

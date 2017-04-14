@@ -32,9 +32,23 @@ class News
     /**
      * @var string
      *
+     * @ORM\Column(name="tiny_description", type="string", length=255, nullable=false)
+     */
+    private $tinyDescription;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description", type="text", nullable=false)
      */
     private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nb_views", type="integer", nullable=true)
+     */
+    private $nbViews;
 
     /**
     * @Gedmo\Slug(fields={"title"})
@@ -63,8 +77,8 @@ class News
      */
     public function __construct()
     {
-        $timestampMin = 1262304000; // 1/01/2010 0:00:00
-        $timestampMax = 1483228800;
+        $timestampMin = 1483275600; // 1/01/2017 0:00:00
+        $timestampMax = 1491051600;
         $date = new \DateTime();
         $date->setTimestamp(rand($timestampMin, $timestampMax));
         $this->addedAt = $date;
@@ -221,5 +235,53 @@ class News
     public function getMovie()
     {
         return $this->movie;
+    }
+
+    /**
+     * Set nbViews
+     *
+     * @param integer $nbViews
+     *
+     * @return News
+     */
+    public function setNbViews($nbViews)
+    {
+        $this->nbViews = $nbViews;
+
+        return $this;
+    }
+
+    /**
+     * Get nbViews
+     *
+     * @return integer
+     */
+    public function getNbViews()
+    {
+        return $this->nbViews;
+    }
+
+    /**
+     * Set tinyDescription
+     *
+     * @param string $tinyDescription
+     *
+     * @return News
+     */
+    public function setTinyDescription($tinyDescription)
+    {
+        $this->tinyDescription = $tinyDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get tinyDescription
+     *
+     * @return string
+     */
+    public function getTinyDescription()
+    {
+        return $this->tinyDescription;
     }
 }

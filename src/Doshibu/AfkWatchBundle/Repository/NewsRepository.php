@@ -3,6 +3,8 @@
 namespace Doshibu\AfkWatchBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * NewsRepository
@@ -12,4 +14,37 @@ use Doctrine\ORM\EntityRepository;
  */
 class NewsRepository extends EntityRepository
 {
+	public function findRecents($page, $nbPerPage)
+	{
+		$qb = $this->createQueryBuilder('s')
+			->leftJoin('s.movie', 'movie')
+			->addSelect('movie')
+			->orderBy('s.addedAt', 'DESC')
+			->getQuery();
+
+		$qb->setFirstResult(($page-1) * $nbPerPage)
+			->setMaxResults($nbPerPage);
+
+		return new Paginator($qb, true);
+	}
+
+	public function findMostViewed($limit=10, $hasArray=false)
+	{
+		$qb = $this->createQueryBuilder('s')
+			->orderBy('s.nbViews', 'DESC')
+			->getQuery()
+			->setMaxResults($limit);
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function findMostRecent($limit=10, $hasArray=false)
+	{
+		$qb = $this->createQueryBuilder('s')
+			->orderBy('s.addedAt', 'DESC')
+			->getQuery()
+			->setMaxResults($limit);
+
+		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
 }

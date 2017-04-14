@@ -15,7 +15,8 @@ class LoadNews implements FixtureInterface, OrderedFixtureInterface
 	{
 		// Liste des noms de catégorie à ajouter
 		$defaultNews = array(
-			'title' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique mattis fermentum. Etiam semper aliquet massa, id tempus massa mattis eget.',
+			'title' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+			'tinyDescription' => 'Pellentesque vel urna accumsan, dictum sapien vitae, condimentum tellus.',
 			'description' => 'Pellentesque vel urna accumsan, dictum sapien vitae, condimentum tellus. Nulla fermentum enim vitae commodo dapibus. Vivamus diam ligula, accumsan non malesuada et, interdum malesuada turpis. Donec posuere eros eget velit iaculis consequat. Vestibulum ante felis, congue a sapien pharetra, sodales congue magna. Curabitur id varius urna. Morbi finibus, velit sagittis fermentum venenatis, erat risus elementum nibh, at commodo lorem orci sed nulla. Pellentesque eu velit pulvinar, scelerisque lacus ut, semper dolor. Donec semper, nibh et lacinia sollicitudin, nibh dui pellentesque elit, eu placerat leo felis nec nunc. Sed bibendum pretium metus eget euismod. Mauris id lacus lacus. Praesent faucibus nunc eget turpis tristique molestie. Duis dui diam, tristique eu gravida ut, congue eget felis. Proin sapien ligula, volutpat ut ultrices sit amet, dignissim quis urna. Cras fermentum eu dolor in porttitor. Praesent sagittis sollicitudin scelerisque. Vivamus ac erat in ex consectetur imperdiet vel eget sapien. Duis viverra nisi id leo varius, vitae eleifend turpis vulputate. Mauris eget sagittis augue, ut efficitur mauris. Aenean risus nisi, faucibus eget condimentum at, porttitor vel felis. Aliquam eu augue ut tortor gravida iaculis in in orci. Quisque vehicula consectetur sagittis.' 
 			);
 
@@ -25,12 +26,16 @@ class LoadNews implements FixtureInterface, OrderedFixtureInterface
 		{
 			$news1 = new News();
 			$news1->setTitle($defaultNews['title'])
+				->setTinyDescription($defaultNews['tinyDescription'])
 				->setDescription($defaultNews['description'])
+				->setNbViews(mt_rand(1, 500000))
 				->setMovie($movie);
 
 			$news2 = new News();
 			$news2->setTitle($defaultNews['title'])
+				->setTinyDescription($defaultNews['tinyDescription'])
 				->setDescription($defaultNews['description'])
+				->setNbViews(mt_rand(1, 500000))
 				->setMovie($movie);
 
 			$manager->persist($news1);

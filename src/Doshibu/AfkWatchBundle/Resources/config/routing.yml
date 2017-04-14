@@ -27,10 +27,13 @@ doshibu_aw_pays:
         page: \d+
 
 doshibu_aw_series:
-    path :   /series
+    path :   /series/{page}
     defaults:
         _controller : DoshibuAfkWatchBundle:Movie:series
-
+        page: 1
+    requirements:
+        page: \d+
+        
 doshibu_aw_serie:
     path :   /serie/{slug}
     defaults: 

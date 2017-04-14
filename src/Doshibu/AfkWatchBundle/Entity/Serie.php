@@ -127,8 +127,8 @@ class Serie
         $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
         $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
         
-        $timestampMin = 1262304000; // 1/01/2010 0:00:00
-        $timestampMax = 1483228800;
+        $timestampMin = 1483275600; // 1/01/2017 0:00:00
+        $timestampMax = 1491051600;
         $date = new \DateTime();
         $date->setTimestamp(rand($timestampMin, $timestampMax));
         $this->addedAt = $date;
