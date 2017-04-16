@@ -13,37 +13,37 @@ use Doctrine\ORM\Query;
  */
 class SerieRepository extends \Doctrine\ORM\EntityRepository
 {
-	public function findMostPopular($limit=12, $hasArray=false)
+	public function findMostPopular($limit=12, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('s')
 			->orderBy('s.nbViews', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function findMostRated($limit=12, $hasArray=false)
+	public function findMostRated($limit=12, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('s')
 			->orderBy('s.rating', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function findMostRecent($limit=12, $hasArray=false)
+	public function findMostRecent($limit=12, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('s')
 			->orderBy('s.addedAt', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function findMostPopularByGenre($slug, $limit=10, $hasArray=false)
+	public function findMostPopularByGenre($slug, $limit=10, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
@@ -54,10 +54,10 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function findMostPopularByPays($slug, $limit=10, $hasArray=false)
+	public function findMostPopularByPays($slug, $limit=10, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.countries', 'pays')
@@ -68,10 +68,10 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 	
-	public function findMostPopularByGenres($genres, $limit=10, $hasArray=false)
+	public function findMostPopularByGenres($genres, $limit=10, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
@@ -95,6 +95,6 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 
 		$qb = $qb->orderBy('m.nbViews', 'DESC')->getQuery()->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 }

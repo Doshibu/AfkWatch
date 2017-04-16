@@ -27,32 +27,30 @@ doshibu_aw_pays:
         page: \d+
 
 doshibu_aw_series:
-    path :   /series/{page}
+    path :   /series
     defaults:
         _controller : DoshibuAfkWatchBundle:Movie:series
-        page: 1
-    requirements:
-        page: \d+
         
 doshibu_aw_serie:
     path :   /serie/{slug}
     defaults: 
         _controller : DoshibuAfkWatchBundle:Movie:serie
+        page: 1
+    requirements:
+        page: \d+
 
 doshibu_aw_news:
-    path :   /news
+    path :   /news/{media}/{page}
     defaults:
         _controller : DoshibuAfkWatchBundle:Movie:news
+        page: 1
     requirements:
         id: \d+
 
 doshibu_aw_news_single:
-    path :   /news-single/{id}
+    path :   /news-single/{slug}
     defaults: 
         _controller : DoshibuAfkWatchBundle:Movie:newsSingle
-        id: 1
-    requirements:
-        id: \d+
 
 doshibu_aw_list:
     path :   /list

@@ -138,9 +138,8 @@ class Movie
         $this->news = new \Doctrine\Common\Collections\ArrayCollection();
 
         $timestampMin = 1483275600; // 1/01/2017 0:00:00
-        $timestampMax = 1483228800;
         $date = new \DateTime();
-        $date->setTimestamp(rand($timestampMin, $timestampMax));
+        $date->setTimestamp(rand($timestampMin, $date->getTimestamp()));
         $this->addedAt = $date;
     }
 

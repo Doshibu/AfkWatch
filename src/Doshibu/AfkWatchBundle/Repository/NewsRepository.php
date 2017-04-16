@@ -14,37 +14,69 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
  */
 class NewsRepository extends EntityRepository
 {
-	public function findRecents($page, $nbPerPage)
+	public function findMovieRecentsPage($page, $nbPerPage, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('s')
-			->leftJoin('s.movie', 'movie')
+			->join('s.movie', 'movie')
 			->addSelect('movie')
+			->leftJoin('movie.imageSmall', 'imgS')
+			->addSelect('imgS')
+			->leftJoin('movie.imageLarge', 'imgL')
+			->addSelect('imgL')
 			->orderBy('s.addedAt', 'DESC')
 			->getQuery();
 
 		$qb->setFirstResult(($page-1) * $nbPerPage)
 			->setMaxResults($nbPerPage);
 
-		return new Paginator($qb, true);
+		if($asArray === true)
+		{
+			$qb->setHydrationMode(Query::HYDRATE_ARRAY);
+		}
+
+		return new Paginator($qb, $fetchJoinCollection=true);
 	}
 
-	public function findMostViewed($limit=10, $hasArray=false)
+	public function findMostViewed($limit=10, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('s')
 			->orderBy('s.nbViews', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function findMostRecent($limit=10, $hasArray=false)
+	public function findMostRecent($limit=10, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('s')
 			->orderBy('s.addedAt', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function findSerieRecentsPage($page, $nbPerPage, $asArray=false)
+	{
+		$qb = $this->createQueryBuilder('s')
+			->join('s.serie', 'serie')
+			->addSelect('serie')
+			->leftJoin('serie.imageSmall', 'imgS')
+			->addSelect('imgS')
+			->leftJoin('serie.imageLarge', 'imgL')
+			->addSelect('imgL')
+			->orderBy('s.addedAt', 'DESC')
+			->getQuery();
+
+		$qb->setFirstResult(($page-1) * $nbPerPage)
+			->setMaxResults($nbPerPage);
+
+		if($asArray === true)
+		{
+			$qb->setHydrationMode(Query::HYDRATE_ARRAY);
+		}
+
+		return new Paginator($qb, $fetchJoinCollection=true);
 	}
 }

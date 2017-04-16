@@ -68,9 +68,16 @@ class News
 
     /**
     * @ORM\ManyToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Movie", inversedBy="news")
-    * @ORM\JoinColumn(nullable=false)
+    * @ORM\JoinColumn(nullable=true)
     */
     private $movie;
+
+    /**
+    * @ORM\ManyToOne(targetEntity="Doshibu\AfkWatchBundle\Entity\Serie", inversedBy="news")
+    * @ORM\JoinColumn(nullable=true)
+    */
+    private $serie;
+
 
     /**
      * Constructor
@@ -78,9 +85,8 @@ class News
     public function __construct()
     {
         $timestampMin = 1483275600; // 1/01/2017 0:00:00
-        $timestampMax = 1491051600;
         $date = new \DateTime();
-        $date->setTimestamp(rand($timestampMin, $timestampMax));
+        $date->setTimestamp(rand($timestampMin, $date->getTimestamp()));
         $this->addedAt = $date;
     }
 
@@ -283,5 +289,29 @@ class News
     public function getTinyDescription()
     {
         return $this->tinyDescription;
+    }
+
+    /**
+     * Set serie
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\Serie $serie
+     *
+     * @return News
+     */
+    public function setSerie(\Doshibu\AfkWatchBundle\Entity\Serie $serie = null)
+    {
+        $this->serie = $serie;
+
+        return $this;
+    }
+
+    /**
+     * Get serie
+     *
+     * @return \Doshibu\AfkWatchBundle\Entity\Serie
+     */
+    public function getSerie()
+    {
+        return $this->serie;
     }
 }

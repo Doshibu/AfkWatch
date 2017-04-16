@@ -50,11 +50,22 @@
 						<li {% if activeMenu=='Series' %}class="active"{% endif %}>
 							<a href="{{ path('doshibu_aw_series') }}">TV - Séries</a>
 						</li>
-						<li {% if activeMenu=='News' %}class="active"{% endif %}>
-							<a href="{{ path('doshibu_aw_news') }}">News</a>
+						<li class="dropdown{% if activeMenu=='News' %} active{% endif %}">
+							<a href="{{ path('doshibu_aw_news', {'media': 'movie'}) }}" class="dropdown-toggle" data-toggle="dropdown">News&nbsp;<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-3" style="width: 175px;">
+								<li>
+									<div class="col-sm-12">
+										<ul class="multi-column-dropdown">
+											<li><a href="{{ path('doshibu_aw_news', {'media': 'movie'}) }}">Film</a></li>
+											<li><a href="{{ path('doshibu_aw_news', {'media': 'serie'}) }}">Série</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"></div>
+								</li>
+							</ul>
 						</li>
 						<li class="dropdown{% if activeMenu=='Pays' %} active{% endif %}">
-							<a href="{{ path('doshibu_aw_pays') }}" class="dropdown-toggle" data-toggle="dropdown">Pays <b class="caret"></b></a>
+							<a href="{{ path('doshibu_aw_pays') }}" class="dropdown-toggle" data-toggle="dropdown">Pays&nbsp;<b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<li>
 									<div class="col-sm-4">

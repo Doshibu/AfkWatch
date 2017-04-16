@@ -14,16 +14,16 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
  */
 class MovieRepository extends EntityRepository
 {
-	public function getAll($hasArray=false)
+	public function getAll($asArray=false)
 	{
 		$qb = $this
 			->createQueryBuilder('m')
 			->getQuery();
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function getAllWithGenres($hasArray=false)
+	public function getAllWithGenres($asArray=false)
 	{
 		$qb = $this
 			->createQueryBuilder('m')
@@ -31,7 +31,7 @@ class MovieRepository extends EntityRepository
 			->addSelect('genres')
 			->getQuery();
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
 	public function findByGenre($slug, $page, $nbPerPage)
@@ -66,17 +66,17 @@ class MovieRepository extends EntityRepository
 		return new Paginator($qb, true);
 	}
 
-	public function findMostPopular($limit, $hasArray=false)
+	public function findMostPopular($limit, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('m')
 			->orderBy('m.nbViews', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function findMostPopularByGenre($slug, $limit=10, $hasArray=false)
+	public function findMostPopularByGenre($slug, $limit=10, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
@@ -87,10 +87,10 @@ class MovieRepository extends EntityRepository
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function findMostPopularByPays($slug, $limit=10, $hasArray=false)
+	public function findMostPopularByPays($slug, $limit=10, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.countries', 'pays')
@@ -101,7 +101,7 @@ class MovieRepository extends EntityRepository
 			->getQuery()
 			->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
 	public function findOneById($id)
@@ -119,7 +119,7 @@ class MovieRepository extends EntityRepository
 		return $qb;
 	}
 	
-	public function findMostPopularByGenres($genres, $limit=10, $hasArray=false)
+	public function findMostPopularByGenres($genres, $limit=10, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
@@ -143,6 +143,6 @@ class MovieRepository extends EntityRepository
 
 		$qb = $qb->orderBy('m.nbViews', 'DESC')->getQuery()->setMaxResults($limit);
 
-		return ($hasArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 }

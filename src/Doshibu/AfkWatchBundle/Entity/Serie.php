@@ -122,15 +122,19 @@ class Serie
     */
     private $countries;
 
+    /**
+    * @ORM\OneToMany(targetEntity="Doshibu\AfkWatchBundle\Entity\News", mappedBy="serie")
+    */
+    private $news;
+
     public function __construct()
     {
         $this->genders = new \Doctrine\Common\Collections\ArrayCollection();
         $this->countries = new \Doctrine\Common\Collections\ArrayCollection();
         
         $timestampMin = 1483275600; // 1/01/2017 0:00:00
-        $timestampMax = 1491051600;
         $date = new \DateTime();
-        $date->setTimestamp(rand($timestampMin, $timestampMax));
+        $date->setTimestamp(rand($timestampMin, $date->getTimestamp()));
         $this->addedAt = $date;
     }
 
@@ -546,5 +550,39 @@ class Serie
     public function getCountries()
     {
         return $this->countries;
+    }
+
+    /**
+     * Add news
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\News $news
+     *
+     * @return Serie
+     */
+    public function addNews(\Doshibu\AfkWatchBundle\Entity\News $news)
+    {
+        $this->news[] = $news;
+
+        return $this;
+    }
+
+    /**
+     * Remove news
+     *
+     * @param \Doshibu\AfkWatchBundle\Entity\News $news
+     */
+    public function removeNews(\Doshibu\AfkWatchBundle\Entity\News $news)
+    {
+        $this->news->removeElement($news);
+    }
+
+    /**
+     * Get news
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getNews()
+    {
+        return $this->news;
     }
 }

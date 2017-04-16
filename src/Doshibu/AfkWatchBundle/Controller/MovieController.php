@@ -178,13 +178,21 @@ class MovieController extends Controller
 		));
 	}
 
-	public function newsAction(Request $request, $page=1)
+	public function newsAction(Request $request, $media, $page=1)
 	{
+		if ($media !== 'movie' && $media !== 'serie') 
+		{
+			throw $this->createNotFoundException('Cette page n\'existe pas.');
+		}
+
 		$em = $this->getDoctrine()->getManager();
 		$newsRepo = $em->getRepository('DoshibuAfkWatchBundle:News');
 
 		$nbPerPage = 24;
-		$listNews = $newsRepo->findRecents($page, $nbPerPage);
+		$listNews = $media === 'movie' ? 
+				$newsRepo->findMovieRecentsPage($page, $nbPerPage, true) : 
+				$newsRepo->findSerieRecentsPage($page, $nbPerPage, true);
+
 		$nbPages = ceil(count($listNews)/$nbPerPage);
 		if ( $page > $nbPages )
 		{
@@ -202,6 +210,7 @@ class MovieController extends Controller
 		$listMostRecent = $newsRepo->findMostRecent(5);
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig', array(
+			'media'				=> $media,
 			'listNews'			=> $listNews,
 			'nbPages'			=> $nbPages,
 			'page'				=> $page,
@@ -210,7 +219,7 @@ class MovieController extends Controller
 		));
 	}
 
-	public function newsSingleAction(Request $request)
+	public function newsSingleAction(Request $request, $slug)
 	{
 		return $this->render('DoshibuAfkWatchBundle:Movie:newsSingle.html.twig');
 	}

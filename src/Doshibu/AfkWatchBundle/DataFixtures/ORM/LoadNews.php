@@ -15,9 +15,11 @@ class LoadNews implements FixtureInterface, OrderedFixtureInterface
 	{
 		// Liste des noms de catégorie à ajouter
 		$defaultNews = array(
-			'title' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-			'tinyDescription' => 'Pellentesque vel urna accumsan, dictum sapien vitae, condimentum tellus.',
-			'description' => 'Pellentesque vel urna accumsan, dictum sapien vitae, condimentum tellus. Nulla fermentum enim vitae commodo dapibus. Vivamus diam ligula, accumsan non malesuada et, interdum malesuada turpis. Donec posuere eros eget velit iaculis consequat. Vestibulum ante felis, congue a sapien pharetra, sodales congue magna. Curabitur id varius urna. Morbi finibus, velit sagittis fermentum venenatis, erat risus elementum nibh, at commodo lorem orci sed nulla. Pellentesque eu velit pulvinar, scelerisque lacus ut, semper dolor. Donec semper, nibh et lacinia sollicitudin, nibh dui pellentesque elit, eu placerat leo felis nec nunc. Sed bibendum pretium metus eget euismod. Mauris id lacus lacus. Praesent faucibus nunc eget turpis tristique molestie. Duis dui diam, tristique eu gravida ut, congue eget felis. Proin sapien ligula, volutpat ut ultrices sit amet, dignissim quis urna. Cras fermentum eu dolor in porttitor. Praesent sagittis sollicitudin scelerisque. Vivamus ac erat in ex consectetur imperdiet vel eget sapien. Duis viverra nisi id leo varius, vitae eleifend turpis vulputate. Mauris eget sagittis augue, ut efficitur mauris. Aenean risus nisi, faucibus eget condimentum at, porttitor vel felis. Aliquam eu augue ut tortor gravida iaculis in in orci. Quisque vehicula consectetur sagittis.' 
+			'title' => 'Star Wars Battlefront 2 : la bande-annonce qui tue !',
+			'tinyDescription' => 'Electronic Arts vient de dévoiler la toute première bande-annonce de son très attendu "Star Wars Battlefront 2".',
+			'description' => "Tandis que la Star Wars Celebration bat son plein à Orlando, l'éditeur Electronic Arts a enfin lâché dans l'arène la toute première bande-annonce de son très attendu Star Wars Battlefront 2, dévoilé avec une date de sortie : le 17 novembre prochain. Le titre sera disponible sur PC, PS4 et Xbox One.\n
+				Contrairement au précédent volet, cet opus, toujours développé par le studio suédois DICE, contiendra une campagne solo, qui manquait cruellement auparavant. Le jeu traversera aussi les époques, comme le montre les multiples personnages croisés dans ce somptueux Trailer, entre Rey, Kylo Ren, Dark Maul, Luke Skywalker, Yoda, etc. Le tout généreusement arrosé de combats spatiaux.\n
+				Misère... L'attente va être douloureuse !"
 			);
 
 		$movieRepo = $manager->getRepository('DoshibuAfkWatchBundle:Movie');
@@ -37,6 +39,28 @@ class LoadNews implements FixtureInterface, OrderedFixtureInterface
 				->setDescription($defaultNews['description'])
 				->setNbViews(mt_rand(1, 500000))
 				->setMovie($movie);
+
+			$manager->persist($news1);
+			$manager->persist($news2);
+		}
+
+		$serieRepo = $manager->getRepository('DoshibuAfkWatchBundle:Serie');
+		$listSerie = $serieRepo->findAll();
+		foreach ($listSerie as $serie) 
+		{
+			$news1 = new News();
+			$news1->setTitle($defaultNews['title'])
+				->setTinyDescription($defaultNews['tinyDescription'])
+				->setDescription($defaultNews['description'])
+				->setNbViews(mt_rand(1, 500000))
+				->setSerie($serie);
+
+			$news2 = new News();
+			$news2->setTitle($defaultNews['title'])
+				->setTinyDescription($defaultNews['tinyDescription'])
+				->setDescription($defaultNews['description'])
+				->setNbViews(mt_rand(1, 500000))
+				->setSerie($serie);
 
 			$manager->persist($news1);
 			$manager->persist($news2);
