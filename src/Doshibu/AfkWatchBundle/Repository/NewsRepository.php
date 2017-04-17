@@ -41,6 +41,7 @@ class NewsRepository extends EntityRepository
 	{
 		$qb = $this->createQueryBuilder('n')
 			->orderBy('n.nbViews', 'DESC')
+			//->addOrderBy('n.addedAt', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
 
