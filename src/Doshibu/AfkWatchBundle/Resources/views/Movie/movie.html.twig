@@ -53,16 +53,20 @@
 											<div class="fb-like" data-href="https://www.facebook.com/AfkWatch/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
 										</li>
 										<li>
-											<div class="fb-share-button" data-href="https://www.facebook.com/AfkWatch/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FAfkWatch%2F&amp;src=sdkpreparse">Partager</a></div>
+											<div class="fb-share-button" data-href="https://www.facebook.com/AfkWatch/" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+												<a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FAfkWatch%2F&amp;src=sdkpreparse">
+													Partager
+												</a>
+											</div>
 										</li>
 										<li class="news-twitter">
 											<a href="https://twitter.com/AfkWatch" class="twitter-follow-button" data-show-count="false">
-												Suivez&nbsp;@AfkWatch
+												Suiver&nbsp;@AfkWatch
 											</a>
 											<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 										</li>
 										<li>
-											<a href="https://twitter.com/intent/tweet?screen_name=AfkWatch" class="twitter-mention-button" data-show-count="false">
+											<a href="https://twitter.com/intent/tweet?screen_name=AfkWatch&text={{ ("J'ai adoré " ~ movie.name ~ " !!")|url_encode }}&url={{ path('doshibu_aw_movie', {'slug' : movie.slug}) }}&hashtags=AfkWatch, Movie" class="twitter-mention-button" data-show-count="false">
 												Tweeter&nbsp;à&nbsp;@AfkWatch
 											</a>
 											<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
