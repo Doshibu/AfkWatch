@@ -1,6 +1,9 @@
 {% extends "::layout.html.twig" %}
 
+{% set description = (description|default('AfkWatch, le site de référence du cinéma et des séries tv !')) %}
+{% set keywords = (keywords|default('')) %}
+
 {% set activeMenu = (activeMenu|default('Accueil')) %}
-{% set ogTitle = (ogTitle|default('Un bon titre !'|url_encode)) %}
-{% set ogDescription = (ogDescription|default('Une bonne description !'|url_encode)) %}
+{% set ogTitle = (ogTitle|default('Tous le cinéma sur AfkWatch')) %}
+{% set ogDescription = (ogDescription|default('Retrouvez les meilleurs films et séries du moment !')) %}
 {% set ogUrl = (ogUrl|default('Un bon lien !'|url_encode)) %}

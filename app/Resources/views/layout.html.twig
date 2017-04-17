@@ -5,18 +5,23 @@
 <head>
 	<title>AfkWatch - Streaming</title>
 	<!-- for-mobile-apps -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-language" content="fr">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="One Movies Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index,follow" />
+	<meta name="keywords" content="{{ keywords }}">
+	<meta name="Googlebot" content="noarchive" />	
+    <meta name="description" content="{{ description }}"> 
+    <meta name="country" content="France" />
+    <meta name="author" content="Guillaume Bonhommeau">
+ 	<meta name="publisher" content="Guillaume Bonhommeau">
+	<meta name="format-detection" content="telephone=no"/>
 
 	{% block facebookMeta %}
 		<meta property="og:site_name" content="AfkWatch"/>
 		<meta property="og:type" content="blog"/>
-		<meta property="og:image" content="{{ asset('img/favicon/apple-icon-57x57.png') }}"/>
 		<meta property="og:title" content="{{ ogTitle }}"/>
 		<meta property="og:description" content="{{ ogDescription }}">
-		<meta property="og:url" content="{{ ogUrl }}" />
 	{% endblock %}
 
 	<script type="application/x-javascript"> 
