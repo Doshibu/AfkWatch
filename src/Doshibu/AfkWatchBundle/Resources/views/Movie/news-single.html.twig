@@ -99,7 +99,7 @@
 									<div id="cycler">
 										{% for news in listPopular %}
 											<div class="date-text">
-												<a href="news-single.html">{{ news.addedAt|localizeddate('medium', 'none', 'fr') }}</a>
+												<a href="{{ path('doshibu_aw_news_single', {'media' : media, 'slug' : news.slug}) }}">{{ news.addedAt|localizeddate('medium', 'none', 'fr') }}</a>
 												{% if date(news.addedAt) >= date('-30days') %}
 													<span class="blinking"><img src="{{ asset('streaming/images/new.png') }}" alt="newLogo" /></span></a>
 												{% endif %}
@@ -140,7 +140,7 @@
 								{% for news in listRecent %}
 									<div class="top-news-grid">
 										<div class="top-news-grid-heading">
-											<a href="news-single.html">{{ news.title }}</a>
+											<a href="{{ path('doshibu_aw_news_single', {'media' : media, 'slug' : news.slug}) }}">{{ news.title }}</a>
 										</div>
 										<div class="w3ls-news-t-grid top-t-grid">
 											<ul>

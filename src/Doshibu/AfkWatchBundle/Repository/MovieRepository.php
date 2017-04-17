@@ -136,7 +136,7 @@ class MovieRepository extends EntityRepository
 			}
 			else
 			{
-				$qb->andWhere('genres.slug = :slug')
+				$qb->orWhere('genres.slug = :slug')
 					->setParameter('slug', $genre->getSlug());
 			}
 		}
