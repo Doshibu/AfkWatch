@@ -258,7 +258,7 @@ class MovieController extends Controller
 		$listMovie = $movieRepo->findByPrefix($prefix, $page, $nbPerPage);
 		$count = count($listMovie);
 		$nbPages = ceil($count/$nbPerPage);
-		if ( $page > $nbPages )
+		/*if ( $page > $nbPages )
 		{
 			if($page === 1)
 			{
@@ -271,9 +271,10 @@ class MovieController extends Controller
 			{
 				throw $this->createNotFoundException('La page '. $page .' n\'existe pas ou plus.');
 			}
-		}
+		}*/
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', array(
+			'prefix' 	=> $prefix,
 			'count' 	=> $count,
 			'listMovie' => $listMovie
 		));
