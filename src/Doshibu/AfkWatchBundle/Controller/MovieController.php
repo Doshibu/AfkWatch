@@ -225,7 +225,7 @@ class MovieController extends Controller
 		$news = $newsRepo->findUnique($media, $slug); // joined full with genre & pays
 		if($news === null)
 		{
-			throw $this->createNotFoundException('Cette n\'existe pas ou plus.');
+			throw $this->createNotFoundException('Cette page n\'existe pas ou plus.');
 		}
 
 		$newsMedia = $news->getMovie() !== null ? $news->getMovie() : $news->getSerie();
@@ -242,9 +242,41 @@ class MovieController extends Controller
 		));
 	}
 
-	public function listAction(Request $request)
+	public function listAction(Request $request, $prefix, $page=1)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig');
+		// === 'int' or One letter
+		if($prefix !== 'int' && !(strlen($prefix) === 1 && ctype_alpha($prefix)))
+		{
+			throw $this->createNotFoundException('Cette page n\'existe pas ou plus.');
+		}
+
+		$movieRepo = $this->getDoctrine()
+						->getManager()
+						->getRepository('DoshibuAfkWatchBundle:Movie');
+
+		$nbPerPage = 25;
+		$listMovie = $movieRepo->findByPrefix($prefix, $page, $nbPerPage);
+		$count = count($listMovie);
+		$nbPages = ceil($count/$nbPerPage);
+		if ( $page > $nbPages )
+		{
+			if($page === 1)
+			{
+				$msg = $prefix === 'int' ?
+						'Malheureusement aucun nom de film ne commence par un chiffre.' :
+						'Malheureusement aucun nom de film ne commence par la lettre "'. $prefix .'".';
+				throw $this->createNotFoundException($msg);
+			}
+			else
+			{
+				throw $this->createNotFoundException('La page '. $page .' n\'existe pas ou plus.');
+			}
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', array(
+			'count' 	=> $count,
+			'listMovie' => $listMovie
+		));
 	}
 
 	public function faqAction(Request $request)

@@ -145,4 +145,36 @@ class MovieRepository extends EntityRepository
 
 		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
+
+	public function findByPrefix($prefix, $page, $nbPerPage)
+	{
+		$qb = $this->createQueryBuilder('m');
+
+		if($prefix === 'int')
+		{
+			$qb->where('m.name LIKE :int0')
+				->setParameter('int0', 0);
+			
+			for($i=1; $i<=9; $i++)
+			{
+				$qb->orWhere('m.name LIKE :int'.$i)
+					->setParameter('int'.$i, $i);
+			}
+		}
+		else
+		{
+			$qb->where('m.name LIKE :letterMin')
+				->setParameter('letterMin', strtolower($prefix))
+				->orWhere('m.name LIKE :letterMaj')
+				->setParameter('letterMaj', strtoupper($prefix));
+		}
+		
+		$qb->orderBy('m.name', 'ASC')
+			->getQuery();
+
+		$qb->setFirstResult(($page-1) * $nbPerPage)
+			->setMaxResults($nbPerPage);
+
+		return new Paginator($qb, true);
+	}
 }

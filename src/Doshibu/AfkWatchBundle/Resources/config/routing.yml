@@ -35,9 +35,6 @@ doshibu_aw_serie:
     path :   /serie/{slug}
     defaults: 
         _controller : DoshibuAfkWatchBundle:Movie:serie
-        page: 1
-    requirements:
-        page: \d+
 
 doshibu_aw_news:
     path :   /news/{media}/{page}
@@ -45,7 +42,7 @@ doshibu_aw_news:
         _controller : DoshibuAfkWatchBundle:Movie:news
         page: 1
     requirements:
-        id: \d+
+        page: \d+
 
 doshibu_aw_news_single:
     path :   /news-single/{media}/{slug}
@@ -53,11 +50,13 @@ doshibu_aw_news_single:
         _controller : DoshibuAfkWatchBundle:Movie:newsSingle
 
 doshibu_aw_list:
-    path :   /list
+    path :   /list/{prefix}/{page}
     defaults:
         _controller : DoshibuAfkWatchBundle:Movie:list
+        prefix: int
+        page: 1
     requirements:
-        id: \d+
+        page: \d+
 
 doshibu_aw_faq:
     path :   /faq
