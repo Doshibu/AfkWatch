@@ -1,3 +1,6 @@
 {% extends "::layout.html.twig" %}
 
 {% set activeMenu = (activeMenu|default('Accueil')) %}
+{% set ogTitle = (ogTitle|default('Un bon titre !'|url_encode)) %}
+{% set ogDescription = (ogDescription|default('Une bonne description !'|url_encode)) %}
+{% set ogUrl = (ogUrl|default('Un bon lien !'|url_encode)) %}
