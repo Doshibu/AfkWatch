@@ -45,11 +45,11 @@
 											{% for n in listNews[i:1] %}
 												<div class="col-md-6 w3-agileits-news-left">
 													<div class="col-sm-5 wthree-news-img">
-														<a href="{{ path('doshibu_aw_news_single', {'slug' : n.slug}) }}">
+														<a href="{{ path('doshibu_aw_news_single', {'media' : media, 'slug' : n.slug}) }}">
 															<img src="{{ attribute(n, media).imageSmall.url }}" alt="{{ attribute(n, media).imageSmall.alt }}" /></a>
 													</div>
 													<div class="col-sm-7 wthree-news-info">
-														<h5><a href="{{ path('doshibu_aw_news_single', {'slug' : n.slug}) }}">{{ n.title }}</a></h5>
+														<h5><a href="{{ path('doshibu_aw_news_single', {'media' : media, 'slug' : n.slug}) }}">{{ n.title }}</a></h5>
 														<p>{{ n.tinyDescription }}</p>
 														<ul>
 															<li><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;{{ n.addedAt|localizeddate('medium', 'none', 'fr') }}</li>
@@ -62,11 +62,11 @@
 											{% for n in listNews[i+1:1] %}
 												<div class="col-md-6 w3-agileits-news-left">
 													<div class="col-sm-5 wthree-news-img">
-														<a href="{{ path('doshibu_aw_news_single', {'slug' : n.slug}) }}">
+														<a href="{{ path('doshibu_aw_news_single', {'media' : media, 'slug' : n.slug}) }}">
 															<img src="{{ attribute(n, media).imageSmall.url }}" alt="{{ attribute(n, media).imageSmall.alt }}" /></a>
 													</div>
 													<div class="col-sm-7 wthree-news-info">
-														<h5><a href="{{ path('doshibu_aw_news_single', {'slug' : n.slug}) }}">{{ n.title }}</a></h5>
+														<h5><a href="{{ path('doshibu_aw_news_single', {'media' : media, 'slug' : n.slug}) }}">{{ n.title }}</a></h5>
 														<p>{{ n.tinyDescription }}</p>
 														<ul>
 															<li><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;{{ n.addedAt|localizeddate('medium', 'none', 'fr') }}</li>

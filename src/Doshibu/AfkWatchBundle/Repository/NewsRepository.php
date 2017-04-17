@@ -14,16 +14,16 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
  */
 class NewsRepository extends EntityRepository
 {
-	public function findMovieRecentsPage($page, $nbPerPage, $asArray=false)
-	{
-		$qb = $this->createQueryBuilder('s')
-			->join('s.movie', 'movie')
-			->addSelect('movie')
-			->leftJoin('movie.imageSmall', 'imgS')
+	public function findRecentsPage($media, $page, $nbPerPage, $asArray=false)
+	{	
+		$qb = $this->createQueryBuilder('n')
+			->join('n.'.$media, 'media')
+			->addSelect('media')
+			->leftJoin('media.imageSmall', 'imgS')
 			->addSelect('imgS')
-			->leftJoin('movie.imageLarge', 'imgL')
+			->leftJoin('media.imageLarge', 'imgL')
 			->addSelect('imgL')
-			->orderBy('s.addedAt', 'DESC')
+			->orderBy('n.addedAt', 'DESC')
 			->getQuery();
 
 		$qb->setFirstResult(($page-1) * $nbPerPage)
@@ -39,8 +39,8 @@ class NewsRepository extends EntityRepository
 
 	public function findMostViewed($limit=10, $asArray=false)
 	{
-		$qb = $this->createQueryBuilder('s')
-			->orderBy('s.nbViews', 'DESC')
+		$qb = $this->createQueryBuilder('n')
+			->orderBy('n.nbViews', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
 
@@ -49,34 +49,84 @@ class NewsRepository extends EntityRepository
 
 	public function findMostRecent($limit=10, $asArray=false)
 	{
-		$qb = $this->createQueryBuilder('s')
-			->orderBy('s.addedAt', 'DESC')
+		$qb = $this->createQueryBuilder('n')
+			->orderBy('n.addedAt', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
 
 		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function findSerieRecentsPage($page, $nbPerPage, $asArray=false)
+	public function findMostViewedByGender($media, $genders, $limit=10, $asArray=false)
 	{
-		$qb = $this->createQueryBuilder('s')
-			->join('s.serie', 'serie')
-			->addSelect('serie')
-			->leftJoin('serie.imageSmall', 'imgS')
-			->addSelect('imgS')
-			->leftJoin('serie.imageLarge', 'imgL')
-			->addSelect('imgL')
-			->orderBy('s.addedAt', 'DESC')
-			->getQuery();
+		$qb = $this->createQueryBuilder('n')
+			->join('n.'.$media, 'media')
+			->addSelect('media')
+			->leftJoin('media.genders', 'genres')
+			->addSelect('genres');
 
-		$qb->setFirstResult(($page-1) * $nbPerPage)
-			->setMaxResults($nbPerPage);
-
-		if($asArray === true)
+		$i=0;
+		foreach($genders as $genre)
 		{
-			$qb->setHydrationMode(Query::HYDRATE_ARRAY);
+			if($i=0)
+			{
+				$qb->where('genres.slug = :slug')
+					->setParameter('slug', $genre->getSlug());
+				++$i;
+			}
+			else
+			{
+				$qb->andWhere('genres.slug = :slug')
+					->setParameter('slug', $genre->getSlug());
+			}
 		}
 
-		return new Paginator($qb, $fetchJoinCollection=true);
+		$qb = $qb->orderBy('n.nbViews', 'DESC')->getQuery()->setMaxResults($limit);
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function findMostRecentByGender($media, $genders, $limit=10, $asArray=false)
+	{
+		$qb = $this->createQueryBuilder('n')
+			->join('n.'.$media, 'media')
+			->addSelect('media')
+			->leftJoin('media.genders', 'genres')
+			->addSelect('genres');
+
+		$i=0;
+		foreach($genders as $genre)
+		{
+			if($i=0)
+			{
+				$qb->where('genres.slug = :slug')
+					->setParameter('slug', $genre->getSlug());
+				++$i;
+			}
+			else
+			{
+				$qb->andWhere('genres.slug = :slug')
+					->setParameter('slug', $genre->getSlug());
+			}
+		}
+
+		$qb = $qb->orderBy('n.addedAt', 'DESC')->getQuery()->setMaxResults($limit);
+		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
+
+	public function findUnique($media, $slug)
+	{
+		$qb = $this->createQueryBuilder('n')
+			->join('n.'.$media, 'movie')
+			->addSelect('movie')
+			->leftJoin('movie.genders', 'genres')
+			->addSelect('genres')
+			->leftJoin('movie.imageSmall', 'imgS')
+			->addSelect('imgS')
+			->leftJoin('movie.imageLarge', 'imgL')
+			->addSelect('imgL')
+			->where('n.slug = :slug')
+			->setParameter('slug', $slug);
+		
+		return $qb->getQuery()->getSingleResult();;
 	}
 }

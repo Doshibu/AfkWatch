@@ -69,7 +69,7 @@ class MovieController extends Controller
 		$genre = $genreRepo->findOneBy(array('slug' => $slug));
 		if($genre === null)
 		{
-			throw $this->createNotFoundException('Le genre demandé n\'existe pas.');
+			throw $this->createNotFoundException('Le genre demandé n\'existe pas ou plus.');
 		}
 
 		$nbPerPage = 24;
@@ -83,7 +83,7 @@ class MovieController extends Controller
 			}
 			else
 			{
-				throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
+				throw $this->createNotFoundException('La page '. $page .' n\'existe pas ou plus.');
 			}
 		}
 
@@ -107,7 +107,7 @@ class MovieController extends Controller
 		$pays = $paysRepo->findOneBy(array('slug' => $slug));
 		if($pays === null)
 		{
-			throw $this->createNotFoundException('Le pays demandé n\'existe pas.');
+			throw $this->createNotFoundException('Le pays demandé n\'existe pas ou plus.');
 		}
 
 		$nbPerPage = 24;
@@ -121,7 +121,7 @@ class MovieController extends Controller
 			}
 			else
 			{
-				throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
+				throw $this->createNotFoundException('La page '. $page .' n\'existe pas ou plus.');
 			}
 		}
 
@@ -182,16 +182,14 @@ class MovieController extends Controller
 	{
 		if ($media !== 'movie' && $media !== 'serie') 
 		{
-			throw $this->createNotFoundException('Cette page n\'existe pas.');
+			throw $this->createNotFoundException('La page n\'existe pas ou plus.');
 		}
 
 		$em = $this->getDoctrine()->getManager();
 		$newsRepo = $em->getRepository('DoshibuAfkWatchBundle:News');
 
 		$nbPerPage = 24;
-		$listNews = $media === 'movie' ? 
-				$newsRepo->findMovieRecentsPage($page, $nbPerPage, true) : 
-				$newsRepo->findSerieRecentsPage($page, $nbPerPage, true);
+		$listNews = $newsRepo->findRecentsPage($media, $page, $nbPerPage, true);
 
 		$nbPages = ceil(count($listNews)/$nbPerPage);
 		if ( $page > $nbPages )
@@ -202,7 +200,7 @@ class MovieController extends Controller
 			}
 			else
 			{
-				throw $this->createNotFoundException('La page '. $page .' n\'existe pas.');
+				throw $this->createNotFoundException('La page '. $page .' n\'existe pas ou plus.');
 			}
 		}
 
@@ -219,9 +217,29 @@ class MovieController extends Controller
 		));
 	}
 
-	public function newsSingleAction(Request $request, $slug)
+	public function newsSingleAction(Request $request, $media, $slug)
 	{
-		return $this->render('DoshibuAfkWatchBundle:Movie:newsSingle.html.twig');
+		$em = $this->getDoctrine()->getManager();
+		$newsRepo = $em->getRepository('DoshibuAfkWatchBundle:News');
+
+		$news = $newsRepo->findUnique($media, $slug); // joined full with genre & pays
+		if($news === null)
+		{
+			throw $this->createNotFoundException('Cette n\'existe pas ou plus.');
+		}
+
+		$newsMedia = $news->getMovie() !== null ? $news->getMovie() : $news->getSerie();
+		$newsMediaGenders = $newsMedia->getGenders();
+
+		$listPopular = $newsRepo->findMostViewedByGender($media, $newsMediaGenders, 15);
+		$listRecent = $newsRepo->findMostRecentByGender($media, $newsMediaGenders, 5);
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:news-single.html.twig', array(
+			'media' 		=> $media,
+			'news' 			=> $news,
+			'listPopular'	=> $listPopular,
+			'listRecent'	=> $listRecent
+		));
 	}
 
 	public function listAction(Request $request)

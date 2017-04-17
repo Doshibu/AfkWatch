@@ -48,7 +48,7 @@ doshibu_aw_news:
         id: \d+
 
 doshibu_aw_news_single:
-    path :   /news-single/{slug}
+    path :   /news-single/{media}/{slug}
     defaults: 
         _controller : DoshibuAfkWatchBundle:Movie:newsSingle
 
