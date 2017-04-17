@@ -258,20 +258,13 @@ class MovieController extends Controller
 		$listMovie = $movieRepo->findByPrefix($prefix, $page, $nbPerPage);
 		$count = count($listMovie);
 		$nbPages = ceil($count/$nbPerPage);
-		/*if ( $page > $nbPages )
+		if ( $page > $nbPages )
 		{
-			if($page === 1)
-			{
-				$msg = $prefix === 'int' ?
-						'Malheureusement aucun nom de film ne commence par un chiffre.' :
-						'Malheureusement aucun nom de film ne commence par la lettre "'. $prefix .'".';
-				throw $this->createNotFoundException($msg);
-			}
-			else
+			if($page !== 1)
 			{
 				throw $this->createNotFoundException('La page '. $page .' n\'existe pas ou plus.');
 			}
-		}*/
+		}
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', array(
 			'prefix' 	=> $prefix,

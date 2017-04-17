@@ -1,0 +1,25 @@
+{% extends "DoshibuAfkWatchBundle::layout.html.twig" %}
+
+{% block body %}
+	<div class="faq">
+		<!-- general -->
+		<div class="general_agileits_genres">
+			<h4 class="latest-text w3_latest_text">Cette page est introuvable</h4>
+			<div class="container">
+				<div class="agileits-single-top">
+					<ol class="breadcrumb">
+						<li><a href="{{ path('doshibu_aw_home') }}">Accueil</a></li>
+						<li class="active">Erreur {{ status_code }}</li>
+					</ol>
+				</div>
+			</div>
+			<div class="container">
+				<p class="alert alert-warning">
+					Nous vous incitions à vérifier que l'url sois bien saisie. <br />
+					Si malgré tout vous ne parvenez pas à afficher la page souhaitée, 
+					vous pouvez toujours revenir à l'<a href="{{ path('doshibu_aw_home') }}">accueil</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
