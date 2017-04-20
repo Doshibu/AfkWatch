@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
 class NewsletterType extends AbstractType
 {
     /**
@@ -13,7 +16,8 @@ class NewsletterType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('email');
+        $builder->add('email', EmailType::class, array('attr' => array('placeholder' => 'Votre Email'), 'label' => false, 'required' => true))
+                ->add('Envoyer', SubmitType::class);
     }
     
     /**

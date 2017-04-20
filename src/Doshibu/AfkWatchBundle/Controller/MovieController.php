@@ -15,6 +15,8 @@ use Doshibu\AfkWatchBundle\Entity\News;
 use Doshibu\AfkWatchBundle\Entity\Pays;
 use Doshibu\AfkWatchBundle\Entity\Serie;
 
+use Doshibu\AfkWatchBundle\Entity\Newsletter;
+use Doshibu\AfkWatchBundle\Form\NewsletterType;
 use Doshibu\AfkWatchBundle\Entity\Contact;
 use Doshibu\AfkWatchBundle\Form\ContactType;
 
@@ -22,6 +24,9 @@ class MovieController extends Controller
 {
 	public function indexAction(Request $request)
 	{
+		$contact = new Newsletter();
+		$form = $this->get('form.factory')->create(NewsletterType::class, $contact);
+
 		$movieRepo = $this->getDoctrine()
 						->getManager()
 						->getRepository('DoshibuAfkWatchBundle:Movie');
@@ -29,6 +34,7 @@ class MovieController extends Controller
 		$listPopular = $movieRepo->findMostPopular(35);
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', array(
+			'form'			=> $form->createView(),
 			'listMovie' 	=> $listMovie,
 			'listPopular' 	=> $listPopular
 		));
@@ -288,8 +294,7 @@ class MovieController extends Controller
 	public function contactAction(Request $request)
 	{
 		$contact = new Contact();
-		$form = $this->get('form.factory')
-				->create(ContactType::class, $contact);
+		$form = $this->get('form.factory')->create(ContactType::class, $contact);
 
 		if($form->handleRequest($request)->isValid())
 		{

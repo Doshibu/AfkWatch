@@ -400,29 +400,44 @@ p.fexi_header_para1 a i {
 	border:1px solid #fff;
 	padding:10px;
 }
+
+#doshibu_afkwatchbundle_newsletter div:nth-child(1){
+  width: 74.1%;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+#doshibu_afkwatchbundle_newsletter div:nth-child(2){
+  width: 25%;
+  display: inline-block;
+}
+
 .w3ls_footer_grid_left1_pos input[type="email"]{
 	outline: none;
     padding: 10px 10px;
     font-size: 14px;
     color: #999;
-    width: 74.1%;
+    width: 100%;
     background: #fff;
     border: none;
 }
-.w3ls_footer_grid_left1_pos input[type="submit"]{
+.w3ls_footer_grid_left1_pos input[type="submit"],
+.w3ls_footer_grid_left1_pos button[type="submit"] {
 	outline: none;
-    width: 25%;
-    background:#FF8D1B;
+  width: 100%;
+  background:#FF8D1B;
 	font-size:14px;
 	text-transform:uppercase;
 	color:#fff;
-    border: none;
+  border: none;
 	padding:10px 0;
 }
 .w3ls_footer_grid_left1_pos input[type="submit"]:hover{
     background:#fff;
 	color:#212121;
 }
+
+
 .w3ls_footer_grid_right,.w3ls_footer_grid1_right {
     text-align: right;
 }
