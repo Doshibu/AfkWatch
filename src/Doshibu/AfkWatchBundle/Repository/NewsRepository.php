@@ -39,11 +39,16 @@ class NewsRepository extends EntityRepository
 
 	public function findMostViewed($limit=10, $asArray=false)
 	{
-		$qb = $this->createQueryBuilder('n')
-			->orderBy('n.nbViews', 'DESC')
-			//->addOrderBy('n.addedAt', 'DESC')
-			->getQuery()
-			->setMaxResults($limit);
+		$subqb = $this->createQueryBuilder('nn')
+            ->orderBy('nn.nbViews', 'DESC')
+            ->getQuery()
+            ->setMaxResults($limit);
+
+       	$qb = $this->createQueryBuilder('n')
+       		->where('n.id IN (:ids)')
+        	->setParameter('ids', array_values($subqb->getResult()))
+            ->orderBy('n.addedAt', 'DESC')
+            ->getQuery();
 
 		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
