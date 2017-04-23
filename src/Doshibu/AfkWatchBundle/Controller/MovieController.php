@@ -24,14 +24,37 @@ class MovieController extends Controller
 {
 	public function indexAction(Request $request)
 	{
-		$contact = new Newsletter();
-		$form = $this->get('form.factory')->create(NewsletterType::class, $contact);
-
 		$movieRepo = $this->getDoctrine()
 						->getManager()
 						->getRepository('DoshibuAfkWatchBundle:Movie');
 		$listMovie = $movieRepo->getAllWithGenres();
 		$listPopular = $movieRepo->findMostPopular(35);
+
+		$contact = new Newsletter();
+		$form = $this->get('form.factory')->create(NewsletterType::class, $contact);
+		if($form->handleRequest($request)->isValid())
+		{
+			$newsletterRepo = $this->getDoctrine()->getManager()->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$alert = array('class' => '', 'message' => '');
+
+			if($newsletterRepo->findOneBy(array('email' => $request->request->get('email'))))
+			{
+				$alert['class'] = 'danger';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';				
+			}
+			else
+			{
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', array(
+				'alert'			=> $alert,
+				'form'			=> $form->createView(),
+				'listMovie' 	=> $listMovie,
+				'listPopular' 	=> $listPopular
+			));
+		}
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', array(
 			'form'			=> $form->createView(),

@@ -761,6 +761,17 @@ section#tables  p {
 .alert {
 	font-size: 0.85em;
 }
+.alert-fixed {
+    position:fixed; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%;
+    z-index:9999; 
+    border-radius:0px;
+    margin: 20px 25%;
+    width: 50%;
+    display: block;
+}
 h1.t-button,h2.t-button,h3.t-button,h4.t-button,h5.t-button {
 	line-height:2em;
 	margin-top:0.5em;

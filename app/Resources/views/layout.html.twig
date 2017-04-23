@@ -229,6 +229,13 @@
 		</nav>
 	</div>
 
+	{% if alert is defined %}
+		<div class="alert alert-{{ alert['class'] }} alert-dismissable alert-fixed fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			&nbsp;{{ alert['message'] }}
+		</div>
+	{% endif %}
+
 	{% block body %} {% endblock %}
 
 		<!-- footer -->
