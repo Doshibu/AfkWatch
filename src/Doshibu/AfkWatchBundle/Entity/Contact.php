@@ -3,6 +3,7 @@
 namespace Doshibu\AfkWatchBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Contact
@@ -25,6 +26,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="lastName", type="string", length=255)
+     * @Assert\NotBlank(message = "contact.lastname.not_blank")
      */
     private $lastName;
 
@@ -32,6 +34,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="firstName", type="string", length=255)
+     * @Assert\NotBlank(message = "contact.firstname.not_blank")
      */
     private $firstName;
 
@@ -39,6 +42,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255)
+     * @Assert\NotBlank(message = "contact.email.not_blank")
      */
     private $email;
 
@@ -46,6 +50,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="subject", type="string", length=255)
+     * @Assert\NotBlank(message = "contact.subject.not_blank")
      */
     private $subject;
 
@@ -53,6 +58,7 @@ class Contact
      * @var string
      *
      * @ORM\Column(name="message", type="string", length=255)
+     * @Assert\NotBlank(message = "contact.message.not_blank")
      */
     private $message;
 

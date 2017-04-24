@@ -327,10 +327,10 @@ class MovieController extends Controller
 		{
 			$data = $form->getData();
 			$mail = \Swift_Message::newInstance();
-			$mail->setSubject('<AfkWatch> Message de la part de  '.$request->request->get('firstName').' '.$request->request->get('lastName'))
-		        ->setFrom($request->request->get('email'))
+			$mail->setSubject('<AfkWatch> Message de la part de  '.$contact->getFirstName().' '.$contact->getLastName())
+		        ->setFrom($contact->getEmail())
 		        ->setTo('guiallaume.bonhommeau@gmail.com')
-		        ->setBody($request->request->get('subject')."\n".$request->request->get('message'));
+		        ->setBody($contact->getSubject().'."\n"'.$contact->getMessage());
 
         	$this->get('mailer')->send($mail);
 
