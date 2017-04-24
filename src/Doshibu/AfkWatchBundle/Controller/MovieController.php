@@ -24,26 +24,30 @@ class MovieController extends Controller
 {
 	public function indexAction(Request $request)
 	{
-		$movieRepo = $this->getDoctrine()
-						->getManager()
-						->getRepository('DoshibuAfkWatchBundle:Movie');
+		$em = $this->getDoctrine()->getManager();
+		$movieRepo = $em->getRepository('DoshibuAfkWatchBundle:Movie');
 		$listMovie = $movieRepo->getAllWithGenres();
 		$listPopular = $movieRepo->findMostPopular(35);
 
-		$contact = new Newsletter();
-		$form = $this->get('form.factory')->create(NewsletterType::class, $contact);
+		$newsletter = new Newsletter();
+		$form = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 		if($form->handleRequest($request)->isValid())
 		{
-			$newsletterRepo = $this->getDoctrine()->getManager()->getRepository('DoshibuAfkWatchBundle:Newsletter');
-			$alert = array('class' => '', 'message' => '');
+			$data = $form->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
 
-			if($newsletterRepo->findOneBy(array('email' => $request->request->get('email'))))
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
 			{
-				$alert['class'] = 'danger';
-				$alert['message'] = 'Cette adresse email a déjà été renseignée.';				
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
 			}
 			else
 			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
 				$alert['class'] = 'success';
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
