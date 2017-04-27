@@ -413,18 +413,18 @@ p.fexi_header_para1 a i {
 }
 
 .w3ls_footer_grid_left1_pos input[type="email"]{
-	outline: none;
-    padding: 10px 10px;
-    font-size: 14px;
-    color: #999;
-    width: 100%;
-    background: #fff;
-    border: none;
+  outline: none;
+  padding: 10px 10px;
+  font-size: 14px;
+  color: #999;
+  width: 74.1%;
+  background: #fff;
+  border: none;
 }
 .w3ls_footer_grid_left1_pos input[type="submit"],
 .w3ls_footer_grid_left1_pos button[type="submit"] {
 	outline: none;
-  width: 100%;
+  width: 25%;
   background:#FF8D1B;
 	font-size:14px;
 	text-transform:uppercase;
