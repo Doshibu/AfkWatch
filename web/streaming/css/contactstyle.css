@@ -131,11 +131,13 @@ li.twt {
 .contact-agile input[type="text"],
 .contact-agile input[type="email"] {
     font-size: 14px;
-    border: 1px solid #d5d3d3;
-    background: transparent;
-    outline: none;
-    padding: 10px;
-    width: 100%;
+	border: 1px solid #d5d3d3;
+	background: transparent;
+	outline: none;
+	padding: 10px;
+	width: 48.5%;
+	margin-bottom: 15px;
+	text-transform: uppercase;
 }
 
 #doshibu_afkwatchbundle_contact div {
@@ -155,6 +157,7 @@ li.twt {
     height: 150px;
     border: 1px solid #d5d3d3;
     font-size: 14px;
+    text-transform: uppercase;
 }
 .contact-agile input[type="text"]:nth-child(1), .contact-agile input[type="text"]:nth-child(3) {
     margin-right: 2.4%;
