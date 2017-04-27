@@ -170,22 +170,10 @@
 								<div class="form">
 									<h3>Connexion à votre compte</h3>
 									{{ render(controller('FOSUserBundle:Security:login')) }}
-									{#<form action="#" method="post">
-										<input type="text" name="Username" placeholder="Pseudo" required="">
-										<input type="password" name="Password" placeholder="Mot de passe" required="">
-										<input type="submit" value="Login">
-									</form>#}
 								</div>
 								<div class="form">
 									<h3>Rejoignez nous</h3>
 									{{ render(controller('FOSUserBundle:Registration:register')) }}
-									{#<form action="#" method="post">
-										<input type="text" name="Username" placeholder="Pseudo" required="">
-										<input type="password" name="Password" placeholder="Mot de passe" required="">
-										<input type="email" name="Email" placeholder="Adresse Email" required="">
-										<input type="text" name="Phone" placeholder="Téléphone" required="">
-										<input type="submit" value="Register">
-									</form>#}
 								</div>
 								<div class="cta"><a href="#">Mot de passe perdu ?</a></div>
 							</div>
@@ -238,6 +226,9 @@
 				&nbsp;{{ alert['message'] }}
 			</div>
 		{% endif %}
+
+		{% block fos_user_content %}
+		{% endblock fos_user_content %}
 
 		{% block body %} {% endblock %}
 	</div>

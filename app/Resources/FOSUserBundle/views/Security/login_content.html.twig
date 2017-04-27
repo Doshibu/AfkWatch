@@ -1,35 +1,26 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-	{#{% form_theme form ":FormTemplate:bootstrap.html.twig" %}#}
+{#{% form_theme form ":FormTemplate:bootstrap.html.twig" %}#}
 
-	{% if error %}
-		<div class="alert alert-danger">
-			{{ error.messageKey|trans(error.messageData, 'security') }}
-		</div>
+{% if error %}
+	<div class="alert alert-danger">
+		{{ error.messageKey|trans(error.messageData, 'security') }}
+	</div>
+{% endif %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post">
+	{% if csrf_token %}
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 	{% endif %}
 
-	aaaa
+	{#<label for="username">{{ 'security.login.username'|trans }}</label>#}
+	<input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur" required="required" />
 
-	<form action="{{ path("fos_user_security_check") }}" method="post">
-		{% if csrf_token %}
-			<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-		{% endif %}
+	{#<label for="password">{{ 'security.login.password'|trans }}</label>#}
+	<input type="password" id="password" name="_password" placeholder="Mot de passe" required="required" />
 
-		{#<label for="username">{{ 'security.login.username'|trans }}</label>#}
-		<input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Nom d'utilisateur" required="required" />
+	{#<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+	<label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>#}
 
-		{#<label for="password">{{ 'security.login.password'|trans }}</label>#}
-		<input type="password" id="password" name="_password" placeholder="Mot de passe" required="required" />
-
-		{#<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-		<label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>#}
-
-		<input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-	</form>
-
-
-	<!--<form action="#" method="post">
-		<input name="Username" placeholder="Username" required="" type="text">
-		<input name="Password" placeholder="Password" required="" style="background-color: rgb(255, 255, 204);" type="password">
-		<input value="Login" type="submit">
-	</form>-->
+	<input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+</form>
