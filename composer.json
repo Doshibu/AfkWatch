@@ -19,6 +19,7 @@
         "doctrine/orm": "^2.4.8",
         "friendsofsymfony/user-bundle": "dev-master",
         "incenteev/composer-parameter-handler": "~2.0",
+        "sami/sami": "3.3",
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "stof/doctrine-extensions-bundle": "~1.1",
@@ -27,6 +28,7 @@
         "symfony/monolog-bundle": "^3.0.2",
         "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
         "symfony/symfony": "2.8.*",
+        "symfony/translation": "^3.2",
         "symfony/validator": "^3.2",
         "twig/extensions": "^1.4",
         "twig/twig": "^1.0||^2.0"

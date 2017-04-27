@@ -1,0 +1,10 @@
+form:
+    firstName: 'Prénom'
+    lastName: 'Nom'
+    email: 'Adresse e-mail'
+    news:
+        submit: 'Envoyer'
+    contact:
+        subject: 'Sujet'
+        message: 'Message'
+        submit: 'Envoyer votre message'

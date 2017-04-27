@@ -18,12 +18,12 @@ class ContactType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('firstName',  TextType::class,  array('attr' => array('placeholder' => 'PRENOM'), 'label' => false, 'required' => true))
-                ->add('lastName',   TextType::class,  array('attr' => array('placeholder' => 'NOM'), 'label' => false, 'required' => true))
-                ->add('email',      TextType::class,  array('attr' => array('placeholder' => 'EMAIL'), 'label' => false, 'required' => true))
-                ->add('subject',    TextType::class,  array('attr' => array('placeholder' => 'SUJET'), 'label' => false, 'required' => true))
-                ->add('message',    TextareaType::class,  array('attr' => array('placeholder' => 'VOTRE MESSAGE'), 'label' => false, 'required' => true))
-                ->add('Envoyer votre message', SubmitType::class);
+        $builder->add('firstName',  TextType::class,  array('attr' => array('placeholder' => 'form.firstName'), 'label' => 'form.firstName', 'required' => true))
+                ->add('lastName',   TextType::class,  array('attr' => array('placeholder' => 'form.lastName'), 'label' => 'form.lastName', 'required' => true))
+                ->add('email',      TextType::class,  array('attr' => array('placeholder' => 'form.email'), 'label' => 'form.email', 'required' => true))
+                ->add('subject',    TextType::class,  array('attr' => array('placeholder' => 'form.contact.subject'), 'label' => 'form.contact.subject', 'required' => true))
+                ->add('message',    TextareaType::class,  array('attr' => array('placeholder' => 'form.contact.message'), 'label' => 'form.contact.message', 'required' => true))
+                ->add('Envoyer votre message', SubmitType::class, array('label' => 'form.contact.submit'));
     }
     
     /**
