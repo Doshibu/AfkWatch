@@ -43,6 +43,4 @@ class ContactType extends AbstractType
     {
         return 'doshibu_afkwatchbundle_contact';
     }
-
-
 }

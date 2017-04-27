@@ -287,7 +287,7 @@ class MovieController extends Controller
 						->getManager()
 						->getRepository('DoshibuAfkWatchBundle:Movie');
 
-		$nbPerPage = 25;
+		$nbPerPage = 10;
 		$listMovie = $movieRepo->findByPrefix($prefix, $page, $nbPerPage);
 		$count = count($listMovie);
 		$nbPages = ceil($count/$nbPerPage);
@@ -301,6 +301,8 @@ class MovieController extends Controller
 
 		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', array(
 			'prefix' 	=> $prefix,
+			'page'		=> $page,
+			'nbPages'	=> $nbPages,
 			'count' 	=> $count,
 			'listMovie' => $listMovie
 		));

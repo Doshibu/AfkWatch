@@ -169,7 +169,7 @@
 								</div>
 								<div class="form">
 									<h3>Connexion à votre compte</h3>
-									<!--{{ render(controller("DoshibuUserBundle:Security:login")) }}-->
+									{#{{ render("DoshibuUserBundle:Security:login") }}#}
 									<!--<form action="#" method="post">
 										<input type="text" name="Username" placeholder="Pseudo" required="">
 										<input type="password" name="Password" placeholder="Mot de passe" required="">
@@ -230,14 +230,16 @@
 		</nav>
 	</div>
 
-	{% if alert is defined %}
-		<div class="alert alert-{{ alert['class'] }} alert-dismissable alert-fixed fade in">
-			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			&nbsp;{{ alert['message'] }}
-		</div>
-	{% endif %}
+	<div id="content">
+		{% if alert is defined %}
+			<div class="alert alert-{{ alert['class'] }} alert-dismissable alert-fixed fade in">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				&nbsp;{{ alert['message'] }}
+			</div>
+		{% endif %}
 
-	{% block body %} {% endblock %}
+		{% block body %} {% endblock %}
+	</div>
 
 		<!-- footer -->
 		<div class="footer">

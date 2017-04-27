@@ -148,25 +148,27 @@ class MovieRepository extends EntityRepository
 
 	public function findByPrefix($prefix, $page, $nbPerPage)
 	{
-		$qb = $this->createQueryBuilder('m');
+		$qb = $this->createQueryBuilder('m')
+			->leftJoin('m.countries', 'pays')
+			->addSelect('pays');
 
 		if($prefix === 'int')
 		{
 			$qb->where('m.name LIKE :int0')
-				->setParameter('int0', 0);
+				->setParameter('int0', (strval(0).'%'));
 			
 			for($i=1; $i<=9; $i++)
 			{
 				$qb->orWhere('m.name LIKE :int'.$i)
-					->setParameter('int'.$i, $i);
+					->setParameter('int'.$i, (strval($i).'%'));
 			}
 		}
 		else
 		{
-			$qb->where('m.name LIKE :letterMin')
-				->setParameter('letterMin', strtolower($prefix))
-				->orWhere('m.name LIKE :letterMaj')
-				->setParameter('letterMaj', strtoupper($prefix));
+			$qb->where("m.name LIKE :letterMin")
+				->setParameter('letterMin', strtolower($prefix).'%')
+				->orWhere("m.name LIKE :letterMaj")
+				->setParameter('letterMaj', strtoupper($prefix).'%');
 		}
 		
 		$qb->orderBy('m.name', 'ASC')

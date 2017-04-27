@@ -1,8 +1,16 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+{% form_theme form ":FormTemplate:bootstrap.html.twig" %}
+
+{% if error %}
+	<div class="alert alert-danger">
+		{{ error.messageKey|trans(error.messageData, 'security') }}
+	</div>
+{% endif %}
+
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_widget(form) }}
-    <div>
+    	{{ form_widget(form) }}
+   		{#{{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}#}
         <input type="submit" value="{{ 'registration.submit'|trans }}" />
     </div>
 {{ form_end(form) }}
