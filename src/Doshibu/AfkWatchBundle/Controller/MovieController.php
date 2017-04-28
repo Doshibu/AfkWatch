@@ -32,7 +32,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'listMovie' 		=> $listMovie,
 			'listPopular' 		=> $listPopular
@@ -59,11 +59,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', $viewParam);
 	}
 
 	public function movieAction(Request $request, $slug)
@@ -85,7 +85,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'		=> $newsletterForm->createView(),
 			'movie' 				=> $movie,
 			'movieGenders'			=> $movieGenders,
@@ -115,11 +115,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', $viewParam);
 	}
 
 	public function genreAction(Request $request, $slug, $page=1)
@@ -154,7 +154,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'genre'			=> $genre,
 			'listMovie' 	=> $listMovie,
@@ -184,11 +184,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig', $viewParam);
 	}
 
 	public function paysAction(Request $request, $slug, $page=1)
@@ -223,7 +223,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'pays'			=> $pays,
 			'listMovie' 	=> $listMovie,
@@ -253,11 +253,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', $viewParam);
 	}
 
 	public function seriesAction(Request $request)
@@ -272,7 +272,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'listPopular'	=> $listPopular,
 			'listRated'		=> $listRated,
@@ -300,11 +300,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig', $viewParam);
 	}
 
 	public function serieAction(Request $request, $slug)
@@ -327,7 +327,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'serie' 				=> $serie,
 			'serieGenders'			=> $serieGenders,
@@ -357,11 +357,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig', $viewParam);
 	}
 
 	public function newsAction(Request $request, $media, $page=1)
@@ -396,7 +396,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'media'				=> $media,
 			'listNews'			=> $listNews,
@@ -427,11 +427,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig', $viewParam);
 	}
 
 	public function newsSingleAction(Request $request, $media, $slug)
@@ -454,7 +454,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'media' 		=> $media,
 			'news' 			=> $news,
@@ -483,11 +483,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:news-single.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:news-single.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:news-single.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:news-single.html.twig', $viewParam);
 	}
 
 	public function listAction(Request $request, $prefix, $page=1)
@@ -517,7 +517,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'prefix' 	=> $prefix,
 			'page'		=> $page,
@@ -547,11 +547,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', $viewParam);
 	}
 
 	public function faqAction(Request $request)
@@ -564,7 +564,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'listQuestion' 	=> $listQuestion
 		);
@@ -590,11 +590,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig', $viewParam);
 	}
 
 	public function contactAction(Request $request)
@@ -620,7 +620,7 @@ class MovieController extends Controller
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
-		$return = array(
+		$viewParam = array(
 			'newsletterForm'	=> $newsletterForm->createView(),
 			'form' => $form->createView()
 		);
@@ -646,11 +646,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			$return['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig', $return);
+			$viewParam['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig', $return);
+		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig', $viewParam);
 	}
 
 	public function mainMenuAction($activeMenu)
