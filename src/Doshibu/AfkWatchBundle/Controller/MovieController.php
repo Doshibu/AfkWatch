@@ -30,10 +30,17 @@ class MovieController extends Controller
 		$listPopular = $movieRepo->findMostPopular(35);
 
 		$newsletter = new Newsletter();
-		$form = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
-		if($form->handleRequest($request)->isValid())
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
+			'listMovie' 		=> $listMovie,
+			'listPopular' 		=> $listPopular
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
 		{
-			$data = $form->getData();
+			$data = $newsletterForm->getData();
 			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
 			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
 
@@ -52,19 +59,11 @@ class MovieController extends Controller
 				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
 			}
 
-			return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', array(
-				'alert'			=> $alert,
-				'form'			=> $form->createView(),
-				'listMovie' 	=> $listMovie,
-				'listPopular' 	=> $listPopular
-			));
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', $return);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', array(
-			'form'			=> $form->createView(),
-			'listMovie' 	=> $listMovie,
-			'listPopular' 	=> $listPopular
-		));
+		return $this->render('DoshibuAfkWatchBundle:Movie:index.html.twig', $return);
 	}
 
 	public function movieAction(Request $request, $slug)
@@ -80,17 +79,47 @@ class MovieController extends Controller
 
 		$movieGenders = $movie->getGenders();
 		$listPopular = $movieRepo->findMostPopularByGenres($movieGenders);
-
 		$listProposedByGenre = $movieRepo->findMostPopularByGenre($movieGenders->first()->getSlug(), 3);
 		$listProposedByPays = $movieRepo->findMostPopularByPays($movie->getCountries()->first()->getSlug(), 3);
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'		=> $newsletterForm->createView(),
 			'movie' 				=> $movie,
 			'movieGenders'			=> $movieGenders,
 			'listProposedByGenre' 	=> $listProposedByGenre,
 			'listProposedByPays' 	=> $listProposedByPays,
 			'listPopular' 			=> $listPopular
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', $return);
 	}
 
 	public function genreAction(Request $request, $slug, $page=1)
@@ -122,13 +151,44 @@ class MovieController extends Controller
 
 		$listPopular = $movieRepo->findMostPopularByGenre($slug);
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
 			'genre'			=> $genre,
 			'listMovie' 	=> $listMovie,
 			'nbPages'		=> $nbPages,
 			'page' 			=> $page,
 			'listPopular'	=> $listPopular
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:genre.html.twig', $return);
 	}
 
 	public function paysAction(Request $request, $slug, $page=1)
@@ -160,13 +220,44 @@ class MovieController extends Controller
 
 		$listPopular = $movieRepo->findMostPopularByPays($slug);
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
 			'pays'			=> $pays,
 			'listMovie' 	=> $listMovie,
 			'nbPages'		=> $nbPages,
 			'page' 			=> $page,
 			'listPopular'	=> $listPopular
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', $return);
 	}
 
 	public function seriesAction(Request $request)
@@ -178,11 +269,42 @@ class MovieController extends Controller
 		$listRated = $serieRepo->findMostRated();
 		$listRecent = $serieRepo->findMostRecent();
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
 			'listPopular'	=> $listPopular,
 			'listRated'		=> $listRated,
 			'listRecent' 	=> $listRecent
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:series.html.twig', $return);
 	}
 
 	public function serieAction(Request $request, $slug)
@@ -202,13 +324,44 @@ class MovieController extends Controller
 		$listProposedByGenre = $serieRepo->findMostPopularByGenre($serieGenders->first()->getSlug(), 3);
 		$listProposedByPays = $serieRepo->findMostPopularByPays($serie->getCountries()->first()->getSlug(), 3);
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
 			'serie' 				=> $serie,
 			'serieGenders'			=> $serieGenders,
 			'listProposedByGenre' 	=> $listProposedByGenre,
 			'listProposedByPays' 	=> $listProposedByPays,
 			'listPopular' 			=> $listPopular
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:serie.html.twig', $return);
 	}
 
 	public function newsAction(Request $request, $media, $page=1)
@@ -240,14 +393,45 @@ class MovieController extends Controller
 		$listMostViewed = $newsRepo->findMostViewed(15);
 		$listMostRecent = $newsRepo->findMostRecent(5);
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
 			'media'				=> $media,
 			'listNews'			=> $listNews,
 			'nbPages'			=> $nbPages,
 			'page'				=> $page,
 			'listMostViewed'	=> $listMostViewed,
 			'listMostRecent'	=> $listMostRecent
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:news.html.twig', $return);
 	}
 
 	public function newsSingleAction(Request $request, $media, $slug)
@@ -267,12 +451,43 @@ class MovieController extends Controller
 		$listPopular = $newsRepo->findMostViewedByGender($media, $newsMediaGenders, 15);
 		$listRecent = $newsRepo->findMostRecentByGender($media, $newsMediaGenders, 5);
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:news-single.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
 			'media' 		=> $media,
 			'news' 			=> $news,
 			'listPopular'	=> $listPopular,
 			'listRecent'	=> $listRecent
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:news-single.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:news-single.html.twig', $return);
 	}
 
 	public function listAction(Request $request, $prefix, $page=1)
@@ -299,13 +514,44 @@ class MovieController extends Controller
 			}
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
 			'prefix' 	=> $prefix,
 			'page'		=> $page,
 			'nbPages'	=> $nbPages,
 			'count' 	=> $count,
 			'listMovie' => $listMovie
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:list.html.twig', $return);
 	}
 
 	public function faqAction(Request $request)
@@ -315,9 +561,40 @@ class MovieController extends Controller
 						->getRepository('DoshibuAfkWatchBundle:Question');
 		$listQuestion = $questionRepo->findAll();
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
 			'listQuestion' 	=> $listQuestion
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:faq.html.twig', $return);
 	}
 
 	public function contactAction(Request $request)
@@ -340,9 +617,40 @@ class MovieController extends Controller
 			return $this->redirect($this->generateUrl('doshibu_aw_contact'));
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig', array(
+		$newsletter = new Newsletter();
+		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
+
+		$return = array(
+			'newsletterForm'	=> $newsletterForm->createView(),
 			'form' => $form->createView()
-		));
+		);
+		
+		if($newsletterForm->handleRequest($request)->isValid())
+		{
+			$data = $newsletterForm->getData();
+			$newsletterRepo = $em->getRepository('DoshibuAfkWatchBundle:Newsletter');
+			$isKnown = null !== $newsletterRepo->findOneByEmail($newsletter->getEmail());
+
+			$alert = array('class' => '', 'message' => '');
+			if($isKnown)
+			{
+				$alert['class'] = 'warning';
+				$alert['message'] = 'Cette adresse email a déjà été renseignée.';	
+			}
+			else
+			{
+		    	$em->persist($newsletter);
+		    	$em->flush();
+
+				$alert['class'] = 'success';
+				$alert['message'] = 'Votre adresse mail a bien été renseignée. Vous serez avertis des dernières nouveautés.';	
+			}
+
+			$return['alert'] = $alert;
+			return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig', $return);
+		}
+
+		return $this->render('DoshibuAfkWatchBundle:Movie:contact.html.twig', $return);
 	}
 
 	public function mainMenuAction($activeMenu)
