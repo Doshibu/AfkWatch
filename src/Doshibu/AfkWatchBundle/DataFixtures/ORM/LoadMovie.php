@@ -1794,7 +1794,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 						->setDescription($movie['description'])
 						->setFilmMaker($movie['filmMaker'])
 						->setDateRelease(new \DateTime($movie['dateRelease']['year'].'-'.$movie['dateRelease']['month'].'-'.$movie['dateRelease']['day']))
-						->setRating($movie['rating'])
+						->setRating(mt_rand(10, 50))
 						->setUrlTrailer($movie['urlTrailer'])
 						->setUrl($movie['url'])
 						->setNbViews(mt_rand(1, 500000))

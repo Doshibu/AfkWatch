@@ -17,8 +17,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 	public function load(ObjectManager $manager)
 	{
 		// Liste des films à ajouter
-		//$listMovie = getListMovie();
-		$listMovie = array(
+		$listSerie = array(
 			array(
 				'name' => 'The Last Kingdom',
 				'tinyDescription' => 'Au IXème siècle, l\'Angleterre, séparée en de nombreux royaumes, est envahie par les Vikings menés par le Roi Alfred.',
@@ -2125,32 +2124,32 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 		$imageRepo = $manager->getRepository('DoshibuAfkWatchBundle:Image');
 		$paysRepo = $manager->getRepository('DoshibuAfkWatchBundle:Pays');
 
-		foreach($listMovie as $movie)
+		foreach($listSerie as $serie)
 		{
 			$imageLarge = new Image();
-			$imageLarge->setUrl($movie['imageLarge']['url'])
-					->setAlt($movie['imageLarge']['alt']);
+			$imageLarge->setUrl($serie['imageLarge']['url'])
+					->setAlt($serie['imageLarge']['alt']);
 			$imageSmall = new Image();
-			$imageSmall->setUrl($movie['imageSmall']['url'])
-					->setAlt($movie['imageSmall']['alt']);
+			$imageSmall->setUrl($serie['imageSmall']['url'])
+					->setAlt($serie['imageSmall']['alt']);
 			$manager->persist($imageLarge);
 			$manager->persist($imageSmall);
 
 			$serieEntity = new Serie();
-			$serieEntity->setName($movie['name'])
-						->setTinyDescription($movie['tinyDescription'])
-						->setDescription($movie['description'])
-						->setFilmMaker($movie['filmMaker'])
-						->setDateRelease(new \DateTime($movie['dateRelease']['year'].'-'.$movie['dateRelease']['month'].'-'.$movie['dateRelease']['day']))
-						->setRating($movie['rating'])
-						->setUrlTrailer($movie['urlTrailer'])
-						->setUrl($movie['url'])
+			$serieEntity->setName($serie['name'])
+						->setTinyDescription($serie['tinyDescription'])
+						->setDescription($serie['description'])
+						->setFilmMaker($serie['filmMaker'])
+						->setDateRelease(new \DateTime($serie['dateRelease']['year'].'-'.$serie['dateRelease']['month'].'-'.$serie['dateRelease']['day']))
+						->setRating(mt_rand(10, 50))
+						->setUrlTrailer($serie['urlTrailer'])
+						->setUrl($serie['url'])
 						->setNbViews(mt_rand(1, 500000))
 						->setImageLarge($imageLarge)
 						->setImageSmall($imageSmall);
 			$manager->persist($serieEntity);
 
-			foreach ($movie['genders'] as $genre) 
+			foreach ($serie['genders'] as $genre) 
 			{
 				$genreEntity = $genreRepo->findOneBy(array('name' => $genre));
 				$genreEntity->addSerie($serieEntity);
@@ -2160,7 +2159,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				$manager->persist($serieEntity);
 			}
 
-			foreach ($movie['countries'] as $pays) 
+			foreach ($serie['countries'] as $pays) 
 			{
 				$paysEntity = $paysRepo->findOneBy(array('name' => $pays));
 				$paysEntity->addSerie($serieEntity);
