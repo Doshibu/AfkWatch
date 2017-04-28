@@ -201,9 +201,11 @@
 											<div class="clearfix"></div>
 										</div>
 									</div>
-									<div class="ribben">
-										<p>NEW</p>
-									</div>
+									{% if date(movie.addedAt) >= date('-30days') %}
+										<div class="ribben">
+											<p>NEW</p>
+										</div>
+									{% endif %}
 								</div>
 							</div>
 						{% endfor %}

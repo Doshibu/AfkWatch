@@ -45,9 +45,11 @@
 												<div class="clearfix"></div>
 											</div>
 										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
+										{% if date(serie.addedAt) >= date('-30days') %}
+											<div class="ribben">
+												<p>NEW</p>
+											</div>
+										{% endif %}
 									</div>
 								{% endfor %}
 								<div class="clearfix"> </div>
@@ -75,9 +77,11 @@
 												<div class="clearfix"></div>
 											</div>
 										</div>
-										<div class="ribben">
-											<p>NEW</p>
-										</div>
+										{% if date(serie.addedAt) >= date('-30days') %}
+											<div class="ribben">
+												<p>NEW</p>
+											</div>
+										{% endif %}
 									</div>
 								{% endfor %}
 							<div class="clearfix"> </div>
@@ -103,9 +107,11 @@
 											<div class="clearfix"></div>
 										</div>
 									</div>
-									<div class="ribben">
-										<p>NEW</p>
-									</div>
+									{% if date(serie.addedAt) >= date('-30days') %}
+										<div class="ribben">
+											<p>NEW</p>
+										</div>
+									{% endif %}
 								</div>
 							{% endfor %}
 							<div class="clearfix"> </div>
@@ -141,9 +147,11 @@
 											<div class="clearfix"></div>
 										</div>
 									</div>
-									<div class="ribben">
-										<p>NEW</p>
-									</div>
+									{% if date(serie.addedAt) >= date('-30days') %}
+										<div class="ribben">
+											<p>NEW</p>
+										</div>
+									{% endif %}
 								</div>
 							</div>
 						{% endfor %}
