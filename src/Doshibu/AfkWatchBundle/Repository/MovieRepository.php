@@ -23,13 +23,19 @@ class MovieRepository extends EntityRepository
 		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function getAllWithGenres($asArray=false)
+	public function getAllWithGenres($limit=20, $asArray=false)
 	{
 		$qb = $this
 			->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
 			->addSelect('genres')
-			->getQuery();
+			->join('m.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->join('m.imageSmall', 'imageS')		
+			->addSelect('imageS')
+			->orderBy('m.addedAt', 'DESC')
+			->getQuery()
+			->setMaxResults($limit);
 
 		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
@@ -66,9 +72,13 @@ class MovieRepository extends EntityRepository
 		return new Paginator($qb, true);
 	}
 
-	public function findMostPopular($limit, $asArray=false)
+	public function findMostPopular($limit=35, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('m')
+			->leftJoin('m.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('m.imageSmall', 'imageS')
+			->addSelect('imageS')
 			->orderBy('m.nbViews', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
