@@ -130,15 +130,38 @@ class MovieRepository extends EntityRepository
 		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
 
-	public function findOneById($id)
+	public function getOneById($id)
 	{
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
 			->addSelect('genres')
 			->leftJoin('m.countries', 'pays')
 			->addSelect('pays')
+			->leftJoin('m.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('m.imageSmall', 'imageS')
+			->addSelect('imageS')
 			->where('m.id = :id')
 			->setParameter('id', $id)
+			->getQuery()
+			->getResult();
+
+		return $qb;
+	}
+
+	public function getOneBySlug($slug)
+	{
+		$qb = $this->createQueryBuilder('m')
+			->leftJoin('m.genders', 'genres')
+			->addSelect('genres')
+			->leftJoin('m.countries', 'pays')
+			->addSelect('pays')
+			->leftJoin('m.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('m.imageSmall', 'imageS')
+			->addSelect('imageS')
+			->where('m.slug = :slug')
+			->setParameter('slug', $slug)
 			->getQuery()
 			->getResult();
 
@@ -149,7 +172,11 @@ class MovieRepository extends EntityRepository
 	{
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
-			->addSelect('genres');
+			->addSelect('genres')
+			->leftJoin('m.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('m.imageSmall', 'imageS')
+			->addSelect('imageS');
 
 		$i=0;
 		foreach($genres as $genre)
