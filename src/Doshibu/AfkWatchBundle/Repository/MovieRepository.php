@@ -202,8 +202,14 @@ class MovieRepository extends EntityRepository
 	public function findByPrefix($prefix, $page, $nbPerPage)
 	{
 		$qb = $this->createQueryBuilder('m')
+			->leftJoin('m.genders', 'genres')
+			->addSelect('genres')
 			->leftJoin('m.countries', 'pays')
-			->addSelect('pays');
+			->addSelect('pays')
+			->leftJoin('m.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('m.imageSmall', 'imageS')
+			->addSelect('imageS');
 
 		if($prefix === 'int')
 		{

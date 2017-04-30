@@ -374,7 +374,7 @@ class MovieController extends Controller
 		$em = $this->getDoctrine()->getManager();
 		$newsRepo = $em->getRepository('DoshibuAfkWatchBundle:News');
 
-		$nbPerPage = 24;
+		$nbPerPage = 16;
 		$listNews = $newsRepo->findRecentsPage($media, $page, $nbPerPage, true);
 
 		$nbPages = ceil(count($listNews)/$nbPerPage);
