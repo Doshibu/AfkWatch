@@ -17,6 +17,10 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 	{
 		$qb = $this->createQueryBuilder('s')
 			->orderBy('s.nbViews', 'DESC')
+			->leftJoin('s.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('s.imageSmall', 'imageS')
+			->addSelect('imageS')
 			->getQuery()
 			->setMaxResults($limit);
 
@@ -26,6 +30,10 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 	public function findMostRated($limit=12, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('s')
+			->leftJoin('s.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('s.imageSmall', 'imageS')
+			->addSelect('imageS')
 			->orderBy('s.rating', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
@@ -36,6 +44,10 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 	public function findMostRecent($limit=12, $asArray=false)
 	{
 		$qb = $this->createQueryBuilder('s')
+			->leftJoin('s.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('s.imageSmall', 'imageS')
+			->addSelect('imageS')
 			->orderBy('s.addedAt', 'DESC')
 			->getQuery()
 			->setMaxResults($limit);
@@ -48,6 +60,10 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
 			->addSelect('genres')
+			->leftJoin('s.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('s.imageSmall', 'imageS')
+			->addSelect('imageS')
 			->where('genres.slug = :slug')
 			->setParameter('slug', $slug)
 			->orderBy('m.nbViews', 'DESC')
@@ -62,6 +78,10 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.countries', 'pays')
 			->addSelect('pays')
+			->leftJoin('s.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('s.imageSmall', 'imageS')
+			->addSelect('imageS')
 			->where('pays.slug = :slug')
 			->setParameter('slug', $slug)
 			->orderBy('m.nbViews', 'DESC')
@@ -75,7 +95,11 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 	{
 		$qb = $this->createQueryBuilder('m')
 			->leftJoin('m.genders', 'genres')
-			->addSelect('genres');
+			->addSelect('genres')
+			->leftJoin('s.imageLarge', 'imageL')
+			->addSelect('imageL')
+			->leftJoin('s.imageSmall', 'imageS')
+			->addSelect('imageS');
 
 		$i=0;
 		foreach($genres as $genre)
