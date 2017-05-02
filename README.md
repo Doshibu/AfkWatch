@@ -1,5 +1,4 @@
-AfkWatch
-========
+#  :tv: AfkWatch
 
 First project using Symfony2.8.
 The goal is to simulate a streaming web site presenting Movies & Series data.
