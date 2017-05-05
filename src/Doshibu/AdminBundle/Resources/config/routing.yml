@@ -8,20 +8,68 @@ doshibu_admin_management:
     defaults:
         _controller: DoshibuAdminBundle:Admin:management
 
+#### MOVIES ####
 doshibu_admin_movies:
     path :   /films
     defaults:
         _controller: DoshibuAdminBundle:Admin:movies
 
+doshibu_admin_movies_add:
+    path :   /films/add
+    defaults:
+        _controller: DoshibuAdminBundle:Movies:add
+
+doshibu_admin_movies_update:
+    path :   /films/update
+    defaults:
+        _controller: DoshibuAdminBundle:Movies:update
+
+doshibu_admin_movies_delete:
+    path :   /films/delete
+    defaults:
+        _controller: DoshibuAdminBundle:Movies:delete
+
+#### SERIES ####
 doshibu_admin_series:
     path :   /series
     defaults:
         _controller: DoshibuAdminBundle:Admin:series
 
+doshibu_admin_series_add:
+    path :   /series/add
+    defaults:
+        _controller: DoshibuAdminBundle:Series:add
+
+doshibu_admin_series_update:
+    path :   /series/update
+    defaults:
+        _controller: DoshibuAdminBundle:Series:update
+
+doshibu_admin_series_delete:
+    path :   /series/delete
+    defaults:
+        _controller: DoshibuAdminBundle:Series:delete
+
+#### NEWS ####
 doshibu_admin_news:
     path :   /news
     defaults:
         _controller: DoshibuAdminBundle:Admin:news
+
+doshibu_admin_news_add:
+    path :   /news/add
+    defaults:
+        _controller: DoshibuAdminBundle:News:add
+
+doshibu_admin_news_update:
+    path :   /news/update
+    defaults:
+        _controller: DoshibuAdminBundle:News:update
+
+doshibu_admin_news_delete:
+    path :   /news/delete
+    defaults:
+        _controller: DoshibuAdminBundle:News:delete
 
 doshibu_admin_more:
     path :   /autres

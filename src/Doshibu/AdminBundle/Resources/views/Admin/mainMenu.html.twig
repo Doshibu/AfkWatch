@@ -21,14 +21,50 @@
 						<li {% if activeMenu == 'Gestion' %}class="active"{% endif %}>
 							<a href="{{ path('doshibu_admin_management') }}">Gestion</a>
 						</li>
-						<li {% if activeMenu == 'Films' %}class="active"{% endif %}>
-							<a href="{{ path('doshibu_admin_movies') }}">Films</a>
+						<li class="dropdown{% if activeMenu == 'Films' %} active{% endif %}">
+							<a href="{{ path('doshibu_admin_movies') }}" class="dropdown-toggle" data-toggle="dropdown">Films&nbsp;<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-3" style="width: 175px;">
+								<li>
+									<div class="col-sm-12">
+										<ul class="multi-column-dropdown">
+											<li><a href="{{ path('doshibu_admin_movies_add') }}">Ajout</a></li>
+											<li><a href="{{ path('doshibu_admin_movies_update') }}">Modification</a></li>
+											<li><a href="{{ path('doshibu_admin_movies_delete') }}">Suppression</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"></div>
+								</li>
+							</ul>
 						</li>
-						<li {% if activeMenu == 'Series' %}class="active"{% endif %}>
-							<a href="{{ path('doshibu_admin_series') }}">Series</a>
+						<li class="dropdown{% if activeMenu == 'Series' %} active{% endif %}">
+							<a href="{{ path('doshibu_admin_series') }}" class="dropdown-toggle" data-toggle="dropdown">Series&nbsp;<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-3" style="width: 175px;">
+								<li>
+									<div class="col-sm-12">
+										<ul class="multi-column-dropdown">
+											<li><a href="{{ path('doshibu_admin_series_add') }}">Ajout</a></li>
+											<li><a href="{{ path('doshibu_admin_series_update') }}">Modification</a></li>
+											<li><a href="{{ path('doshibu_admin_series_delete') }}">Suppression</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"></div>
+								</li>
+							</ul>
 						</li>
-						<li {% if activeMenu == 'News' %}class="active"{% endif %}>
-							<a href="{{ path('doshibu_admin_news') }}">News</a>
+						<li class="dropdown{% if activeMenu == 'News' %} active{% endif %}">
+							<a href="{{ path('doshibu_admin_news') }}" class="dropdown-toggle" data-toggle="dropdown">News&nbsp;<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-3" style="width: 175px;">
+								<li>
+									<div class="col-sm-12">
+										<ul class="multi-column-dropdown">
+											<li><a href="{{ path('doshibu_admin_news_add') }}">Ajout</a></li>
+											<li><a href="{{ path('doshibu_admin_news_update') }}">Modification</a></li>
+											<li><a href="{{ path('doshibu_admin_news_delete') }}">Suppression</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"></div>
+								</li>
+							</ul>
 						</li>
 						<li {% if activeMenu == 'Autres' %}class="active"{% endif %}>
 							<a href="{{ path('doshibu_admin_more') }}">Autres</a>
