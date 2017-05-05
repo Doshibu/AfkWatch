@@ -3,5 +3,19 @@
 {% set activeMenu = 'News' %}
 
 {% block body %}
-	Hello World!
+	<div class="faq">
+		<div class="tittle-head">
+			<h4 class="latest-text">Gestion des articles&nbsp;:&nbsp;
+				<a href="{{ path('doshibu_admin_news_update') }}">Modification</a>
+			</h4>
+			<div class="container">
+				<div class="agileits-single-top">
+					<ol class="breadcrumb">
+						<li><a href="{{ path('doshibu_admin_home') }}">Accueil</a></li>
+						<li class="active">Modification d'article</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

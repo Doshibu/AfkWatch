@@ -3,5 +3,19 @@
 {% set activeMenu = 'Series' %}
 
 {% block body %}
-	Hello World!
+	<div class="faq">
+		<div class="tittle-head">
+			<h4 class="latest-text">Gestion des séries&nbsp;:&nbsp;
+				<a href="{{ path('doshibu_admin_series_delete') }}">Suppression</a>
+			</h4>
+			<div class="container">
+				<div class="agileits-single-top">
+					<ol class="breadcrumb">
+						<li><a href="{{ path('doshibu_admin_home') }}">Accueil</a></li>
+						<li class="active">Suppression de séries</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

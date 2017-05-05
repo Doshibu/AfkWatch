@@ -3,5 +3,19 @@
 {% set activeMenu = 'Films' %}
 
 {% block body %}
-	Hello World!
+	<div class="faq">
+		<div class="tittle-head">
+			<h4 class="latest-text">Gestion des films&nbsp;:&nbsp;
+				<a href="{{ path('doshibu_admin_movies_add') }}">Suppression</a>
+			</h4>
+			<div class="container">
+				<div class="agileits-single-top">
+					<ol class="breadcrumb">
+						<li><a href="{{ path('doshibu_admin_home') }}">Accueil</a></li>
+						<li class="active">Suppression de films</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

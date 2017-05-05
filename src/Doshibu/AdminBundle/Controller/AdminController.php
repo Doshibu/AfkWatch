@@ -16,22 +16,7 @@ class AdminController extends Controller
     {
         return $this->render('DoshibuAdminBundle:Admin:management.html.twig');
     }
-
-    public function moviesAction()
-    {
-        return $this->render('DoshibuAdminBundle:Admin:movies.html.twig');
-    }
-
-    public function seriesAction()
-    {
-        return $this->render('DoshibuAdminBundle:Admin:series.html.twig');
-    }
-
-    public function newsAction()
-    {
-        return $this->render('DoshibuAdminBundle:Admin:news.html.twig');
-    }
-
+    
     public function moreAction()
     {
         return $this->render('DoshibuAdminBundle:Admin:more.html.twig');
