@@ -1,0 +1,41 @@
+<!-- nav -->
+
+<div class="movies_nav">
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header navbar-left">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+				<nav>
+					<ul class="nav navbar-nav">
+						<li {% if activeMenu  ==  'Accueil' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_aw_home') }}">Accueil</a>
+						</li>
+						<li {% if activeMenu == 'Gestion' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_aw_list') }}">Gestion</a>
+						</li>
+						<li {% if activeMenu == 'Film' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_aw_series') }}">Film</a>
+						</li>
+						<li class="dropdown{% if activeMenu == 'Series' %} active{% endif %}">
+							<a href="{{ path('doshibu_aw_news', {'media': 'movie'}) }}" class="dropdown-toggle" data-toggle="dropdown">Série</a>
+						</li>
+						<li class="dropdown{% if activeMenu == 'News' %} active{% endif %}">
+							<a href="{{ path('doshibu_aw_pays') }}" class="dropdown-toggle" data-toggle="dropdown">News</a>
+						</li>
+						<li class="dropdown{% if activeMenu == 'Autres' %} active{% endif %}">
+							<a href="{{ path('doshibu_aw_genre') }}" class="dropdown-toggle" data-toggle="dropdown">Autres</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</nav>	
+	</div>
+</div>

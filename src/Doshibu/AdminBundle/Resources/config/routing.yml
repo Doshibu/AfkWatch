@@ -1,0 +1,4 @@
+doshibu_admin_home:
+    path :   /
+    defaults:
+        _controller: DoshibuAdminBundle:Admin:index

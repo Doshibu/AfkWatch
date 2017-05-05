@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Doshibu\AfkWatchBundle\DoshibuAfkWatchBundle(),
             new Doshibu\UserBundle\DoshibuUserBundle(),
+            new Doshibu\AdminBundle\DoshibuAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

@@ -138,9 +138,14 @@
 			<div class="w3l_sign_in_register">
 				<ul>
 				{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-				    Connecté en tant que {{ app.user.username }}
-				    -
-				    <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
+				    {#Connecté en tant que {{ app.user.username }}
+				    -#}
+				    <li class="profile">
+				    	<a href="{{ path('fos_user_profile_show') }}">
+				    		<i class="fa fa-user" aria-hidden="true"></i>		
+				    	</a>
+				    </li>
+				    <li class="logout"><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
 				{% else %}
 					<li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
 				{% endif %}
@@ -205,7 +210,14 @@
 	</script>
 	<!-- //bootstrap-pop-up -->
 	
-	{{ render(controller("DoshibuAfkWatchBundle:Movie:mainMenu", {'activeMenu' : activeMenu})) }}
+	{% if childBundle == 'AfkWatch' %}
+		{#{{ render(controller("DoshibuAfkWatchBundle:Movie:mainMenu", {'activeMenu' : activeMenu})) }}#}
+		{{ activeMenu }}
+	{% elseif childBundle == 'Admin' %}
+		{{ render(controller("DoshibuAdminBundle:Admin:mainMenu", {'activeMenu' : activeMenu})) }}
+		{#{{ activeMenu }}#}
+	{% endif %}
+
 
 	<div class="general_social_icons">
 		<nav class="social">

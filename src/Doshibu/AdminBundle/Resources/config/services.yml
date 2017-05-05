@@ -1,0 +1,4 @@
+services:
+#    doshibu_admin.example:
+#        class: Doshibu\AdminBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

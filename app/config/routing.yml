@@ -2,9 +2,9 @@ doshibu_aw:
     resource: "@DoshibuAfkWatchBundle/Resources/config/routing.yml"
     prefix:   /
 
-#doshibu_aw_admin:
-#    resource: "@DoshibuAdminBundle/Resources/config/routing.yml"
-#    prefix:   /admin
+doshibu_admin:
+    resource: "@DoshibuAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

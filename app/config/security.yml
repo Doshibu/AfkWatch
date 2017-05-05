@@ -35,5 +35,5 @@ security:
                 key:        %secret%
 
     access_control:
-        - { path: ^/admin, ip: 127.0.0.1, requires_channel: https }
+        #- { path: ^/admin, ip: 127.0.0.1, requires_channel: https }#
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
