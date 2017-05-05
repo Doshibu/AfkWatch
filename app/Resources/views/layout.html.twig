@@ -211,11 +211,9 @@
 	<!-- //bootstrap-pop-up -->
 	
 	{% if childBundle == 'AfkWatch' %}
-		{#{{ render(controller("DoshibuAfkWatchBundle:Movie:mainMenu", {'activeMenu' : activeMenu})) }}#}
-		{{ activeMenu }}
+		{{ render(controller("DoshibuAfkWatchBundle:Movie:mainMenu", {'activeMenu' : activeMenu})) }}
 	{% elseif childBundle == 'Admin' %}
 		{{ render(controller("DoshibuAdminBundle:Admin:mainMenu", {'activeMenu' : activeMenu})) }}
-		{#{{ activeMenu }}#}
 	{% endif %}
 
 

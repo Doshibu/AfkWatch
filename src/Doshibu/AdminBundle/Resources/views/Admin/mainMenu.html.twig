@@ -16,22 +16,22 @@
 				<nav>
 					<ul class="nav navbar-nav">
 						<li {% if activeMenu  ==  'Accueil' %}class="active"{% endif %}>
-							<a href="{{ path('doshibu_aw_home') }}">Accueil</a>
+							<a href="{{ path('doshibu_admin_home') }}">Accueil</a>
 						</li>
 						<li {% if activeMenu == 'Gestion' %}class="active"{% endif %}>
-							<a href="{{ path('doshibu_aw_list') }}">Gestion</a>
+							<a href="{{ path('doshibu_admin_management') }}">Gestion</a>
 						</li>
-						<li {% if activeMenu == 'Film' %}class="active"{% endif %}>
-							<a href="{{ path('doshibu_aw_series') }}">Film</a>
+						<li {% if activeMenu == 'Films' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_admin_movies') }}">Films</a>
 						</li>
-						<li class="dropdown{% if activeMenu == 'Series' %} active{% endif %}">
-							<a href="{{ path('doshibu_aw_news', {'media': 'movie'}) }}" class="dropdown-toggle" data-toggle="dropdown">Série</a>
+						<li {% if activeMenu == 'Series' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_admin_series') }}">Series</a>
 						</li>
-						<li class="dropdown{% if activeMenu == 'News' %} active{% endif %}">
-							<a href="{{ path('doshibu_aw_pays') }}" class="dropdown-toggle" data-toggle="dropdown">News</a>
+						<li {% if activeMenu == 'News' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_admin_news') }}">News</a>
 						</li>
-						<li class="dropdown{% if activeMenu == 'Autres' %} active{% endif %}">
-							<a href="{{ path('doshibu_aw_genre') }}" class="dropdown-toggle" data-toggle="dropdown">Autres</a>
+						<li {% if activeMenu == 'Autres' %}class="active"{% endif %}>
+							<a href="{{ path('doshibu_admin_more') }}">Autres</a>
 						</li>
 					</ul>
 				</nav>

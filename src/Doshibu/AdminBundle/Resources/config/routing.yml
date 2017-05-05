@@ -2,3 +2,28 @@ doshibu_admin_home:
     path :   /
     defaults:
         _controller: DoshibuAdminBundle:Admin:index
+
+doshibu_admin_management:
+    path :   /gestion
+    defaults:
+        _controller: DoshibuAdminBundle:Admin:management
+
+doshibu_admin_movies:
+    path :   /films
+    defaults:
+        _controller: DoshibuAdminBundle:Admin:movies
+
+doshibu_admin_series:
+    path :   /series
+    defaults:
+        _controller: DoshibuAdminBundle:Admin:series
+
+doshibu_admin_news:
+    path :   /news
+    defaults:
+        _controller: DoshibuAdminBundle:Admin:news
+
+doshibu_admin_more:
+    path :   /autres
+    defaults:
+        _controller: DoshibuAdminBundle:Admin:more
