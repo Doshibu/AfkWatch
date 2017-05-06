@@ -6,6 +6,10 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
 class NewsType extends AbstractType
 {
     /**
@@ -13,7 +17,13 @@ class NewsType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title')->add('tinyDescription')->add('description')->add('nbViews')->add('slug')->add('addedAt')->add('updatedAt')->add('movie')->add('serie');
+        $builder->add('title',              TextType::class,
+                        array('attr' => array('placeholder' => 'form.movie.name'), 'label' => 'form.movie.name', 'required' => true))
+                ->add('tinyDescription',    TextareaType::class,    
+                        array('attr' => array('placeholder' => 'form.movie.tinyDescription'), 'label' => 'form.movie.tinyDescription', 'required' => true))
+                ->add('description',        TextareaType::class,    
+                        array('attr' => array('placeholder' => 'form.movie.description'), 'label' => 'form.movie.description', 'required' => true))
+                ->add('save', SubmitType::class, array('label' => 'form.movie.submit'));;
     }
     
     /**

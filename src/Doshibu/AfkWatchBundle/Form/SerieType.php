@@ -14,8 +14,6 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Doshibu\AfkWatchBundle\Form\ImageType;
-use Doshibu\AfkWatchBundle\Form\GenreType;
-use Doshibu\AfkWatchBundle\Form\PaysType;
 
 class SerieType extends AbstractType
 {
