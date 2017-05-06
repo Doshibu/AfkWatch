@@ -1,3 +1,127 @@
 {{ form_start(form) }}
+	{# Les erreurs générales du formulaire. #}
+	{{ form_errors(form) }}
+
+	<div class="form-group col-md-12">
+		{# Génération du label. #}
+		{{ form_label(form.name, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+
+		{# Affichage des erreurs pour ce champ précis. #}
+		{{ form_errors(form.name) }}
+		<div class="col-sm-4">
+			{# Génération de l'input. #}
+			{{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.tinyDescription, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.tinyDescription) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.tinyDescription, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.description, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.description) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.filmMaker, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.filmMaker) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.filmMaker, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.rating, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.rating) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.rating, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.dateRelease, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.dateRelease) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.dateRelease, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.urlTrailer, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.urlTrailer) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.urlTrailer, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.url, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.url) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.url, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.genders, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.genders) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.genders, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.countries, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.countries) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.countries, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<h4>{{ form_label(form.imageLarge) }}</h4><hr />
+	<div class="form-group col-md-12">
+		{{ form_label(form.imageLarge.url, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.imageLarge.url) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.imageLarge.url, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.imageLarge.alt, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.imageLarge.alt) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.imageLarge.alt, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<h4>{{ form_label(form.imageSmall) }}</h4><hr />
+	<div class="form-group col-md-12">
+		{{ form_label(form.imageSmall.url, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.imageSmall.url) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.imageSmall.url, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+
+	<div class="form-group col-md-12">
+		{{ form_label(form.imageSmall.alt, null, {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		{{ form_errors(form.imageSmall.alt) }}
+		<div class="col-sm-4">
+			{{ form_widget(form.imageSmall.alt, {'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+	
+	{{ form_widget(form.save, {'attr': {'class': 'col-sm-offset-3 btn btn-primary'}}) }}
+
 	{{form_widget(form) }}
+
 {{ form_end(form) }}

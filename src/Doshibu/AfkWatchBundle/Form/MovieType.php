@@ -49,7 +49,7 @@ class MovieType extends AbstractType
                 'multiple'      => true,
                 'attr' => array('placeholder' => 'form.movie.countries'), 
                 'label' => 'form.movie.countries', 'required' => true))
-                ->add('send', SubmitType::class, array('label' => 'form.movie.submit'));;
+                ->add('save', SubmitType::class, array('label' => 'form.movie.submit'));;
     }
     
     /**

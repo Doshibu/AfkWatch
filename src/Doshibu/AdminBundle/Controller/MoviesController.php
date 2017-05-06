@@ -18,6 +18,9 @@ class MoviesController extends Controller
 
         if($form->handleRequest($request)->isValid())
         {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($movie);
+            $em->flush();
             return $this->redirect($this->generateUrl('doshibu_admin_movies_add'));
         }
 
