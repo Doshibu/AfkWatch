@@ -224,6 +224,26 @@ ul.dropdown-menu.multi-column ul li a:hover{
 .general,.Latest-tv-series,.faq{
 	padding: 3em 0;
 }
+.faq-admin .container .btn {
+	width: 100%;
+	font-size: 1em;
+	display: block;
+	margin: auto;
+	height: calc(100%/3);
+	border-radius: 0;
+}
+.faq-admin .panel-default > .panel-heading {
+	color: #c99534;
+	background-color: #171414;
+    text-align: center;
+}
+.faq-admin .panel-default > .panel-heading h4 {
+	text-transform: uppercase;
+}
+.faq-admin .panel-body {
+	padding: 0;
+}
+
 .w3_latest_text {
 	margin-left: 3em;
 }
