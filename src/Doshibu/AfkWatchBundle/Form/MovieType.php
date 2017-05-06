@@ -13,6 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Doshibu\AfkWatchBundle\Form\ImageType;
 
 class MovieType extends AbstractType
 {
@@ -37,19 +38,19 @@ class MovieType extends AbstractType
                         array('attr' => array('placeholder' => 'form.movie.urlTrailer'), 'label' => 'form.movie.urlTrailer', 'required' => true))
                 ->add('url',                TextType::class,        
                         array('attr' => array('placeholder' => 'form.movie.url'), 'label' => 'form.movie.url', 'required' => true))
-                ->add('imageLarge',         new ImageType(),        
+                ->add('imageLarge',         ImageType::class,        
                         array('attr' => array('placeholder' => 'form.movie.imageLarge'), 'label' => 'form.movie.imageLarge', 'required' => true))
-                ->add('imageSmall',         new ImageType(),        
+                ->add('imageSmall',         ImageType::class,        
                         array('attr' => array('placeholder' => 'form.movie.imageSmall'), 'label' => 'form.movie.imageSmall', 'required' => true))
-                ->add('genders',            'entity', array(
+                ->add('genders',       'Symfony\Bridge\Doctrine\Form\Type\EntityType', array(
                     'class'         => 'DoshibuAfkWatchBundle:Genre',
-                    'property'      => 'name',
+                    'choice_label' => 'name',
                     'multiple'      => true,
                     'attr' => array('placeholder' => 'form.movie.genders'), 
                     'label' => 'form.movie.genders', 'required' => true))
-                ->add('countries',          'entity', array(
+                ->add('countries',      'Symfony\Bridge\Doctrine\Form\Type\EntityType', array(
                     'class'         => 'DoshibuAfkWatchBundle:Pays',
-                    'property'      => 'name',
+                    'choice_label' => 'name',
                     'multiple'      => true,
                     'attr' => array('placeholder' => 'form.movie.countries'), 
                     'label' => 'form.movie.countries', 'required' => true))

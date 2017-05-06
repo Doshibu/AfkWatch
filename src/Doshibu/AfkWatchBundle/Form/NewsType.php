@@ -33,6 +33,4 @@ class NewsType extends AbstractType
     {
         return 'doshibu_afkwatchbundle_news';
     }
-
-
 }
