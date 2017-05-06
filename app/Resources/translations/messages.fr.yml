@@ -8,3 +8,24 @@ form:
         subject: 'Sujet'
         message: 'Message'
         submit: 'Envoyer votre message'
+    movie:
+        name: 'Titre'
+        tinyDescription: 'Courte description'
+        description: 'Description'
+        filmMaker: 'Réalisateur'
+        rating: 'Note'
+        dateRelease: 'Date de sortie'
+        urlTrailer: 'URL - Bande annonce'
+        url: 'URL'
+        imageLarge: 'Large affiche'
+        imageSmall: 'Petite affiche'
+        genders: 'Genres'
+        countries: "Pays d'origine"
+        submit: 'Soumettre'
+    gender:
+        name: 'Titre'
+    country:
+        name: 'Nom'
+    image:
+        url: 'URL'
+        alt: 'Texte alternatif'
