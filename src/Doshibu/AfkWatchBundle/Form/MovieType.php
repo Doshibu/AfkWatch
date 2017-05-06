@@ -6,8 +6,12 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormEvents;
+
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class MovieType extends AbstractType
@@ -27,8 +31,8 @@ class MovieType extends AbstractType
                         array('attr' => array('placeholder' => 'form.movie.filmMaker'), 'label' => 'form.movie.filmMaker', 'required' => true))
                 ->add('rating',             TextType::class,        
                         array('attr' => array('placeholder' => 'form.movie.rating'), 'label' => 'form.movie.rating', 'required' => true))
-                ->add('dateRelease',        TextType::class,        
-                        array('attr' => array('placeholder' => 'form.movie.dateRelease'), 'label' => 'form.movie.dateRelease', 'required' => true))
+                ->add('dateRelease',        DateType::class,        
+                        array('attr' => array('placeholder' => 'form.movie.dateRelease'), 'label' => 'form.movie.dateRelease', 'required' => true, 'widget' => 'single_text', 'format' => 'dd-MM-yyyy'))
                 ->add('urlTrailer',         TextType::class,        
                         array('attr' => array('placeholder' => 'form.movie.urlTrailer'), 'label' => 'form.movie.urlTrailer', 'required' => true))
                 ->add('url',                TextType::class,        
@@ -38,18 +42,34 @@ class MovieType extends AbstractType
                 ->add('imageSmall',         new ImageType(),        
                         array('attr' => array('placeholder' => 'form.movie.imageSmall'), 'label' => 'form.movie.imageSmall', 'required' => true))
                 ->add('genders',            'entity', array(
-                'class'         => 'DoshibuAfkWatchBundle:Genre',
-                'property'      => 'name',
-                'multiple'      => true,
-                'attr' => array('placeholder' => 'form.movie.genders'), 
-                'label' => 'form.movie.genders', 'required' => true))
+                    'class'         => 'DoshibuAfkWatchBundle:Genre',
+                    'property'      => 'name',
+                    'multiple'      => true,
+                    'attr' => array('placeholder' => 'form.movie.genders'), 
+                    'label' => 'form.movie.genders', 'required' => true))
                 ->add('countries',          'entity', array(
-                'class'         => 'DoshibuAfkWatchBundle:Pays',
-                'property'      => 'name',
-                'multiple'      => true,
-                'attr' => array('placeholder' => 'form.movie.countries'), 
-                'label' => 'form.movie.countries', 'required' => true))
-                ->add('save', SubmitType::class, array('label' => 'form.movie.submit'));;
+                    'class'         => 'DoshibuAfkWatchBundle:Pays',
+                    'property'      => 'name',
+                    'multiple'      => true,
+                    'attr' => array('placeholder' => 'form.movie.countries'), 
+                    'label' => 'form.movie.countries', 'required' => true))
+                ->add('save', SubmitType::class, array('label' => 'form.movie.submit'));
+
+        /*$builder->addEventListener(FormEvents::POST_SET_DATA, function(FormEvent $event) { 
+            // On récupère notre objet Advert sous-jacent
+            $movie = $event->getData();
+        
+            // Cette condition est importante, on en reparle plus loin
+            if ($movie === null) 
+            {
+                return; // On sort de la fonction sans rien faire lorsque $movie vaut null
+            }
+
+            if ($movie->getId() === null) 
+            {
+                $movie->setAddedAt()
+            } 
+        }*/
     }
     
     /**
