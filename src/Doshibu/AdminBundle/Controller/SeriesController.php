@@ -28,6 +28,7 @@ class SeriesController extends Controller
             'form' => $form->createView()
         ));
     }
+    
     public function updateAction()
     {
         return $this->render('DoshibuAdminBundle:Series:update.html.twig');

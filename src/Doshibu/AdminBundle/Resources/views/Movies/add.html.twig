@@ -2,6 +2,11 @@
 
 {% set activeMenu = 'Films' %}
 
+{% block head_scripts %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('streaming/js/jquery.validate.min.js') }}"></script>
+{% endblock %}
+
 {% block body %}
 	<div class="faq">
 		<div class="tittle-head">
@@ -21,4 +26,24 @@
 			{{ include("DoshibuAdminBundle:Movies:addform.html.twig") }}
 		</div>
 	</div>
+
+	<script type="text/javascript">
+	$().ready(function() {
+		// validate the comment form when it is submitted
+		$('form[name="doshibu_afkwatchbundle_movie"]').validate();
+		/*$('form[name="doshibu_afkwatchbundle_movie"]').validate({
+			rules: {
+				doshibu_afkwatchbundle_movie_name: {
+					minlength: 15
+				}
+			},
+			messages: {
+				doshibu_afkwatchbundle_movie_name: {
+					minlength: 'Le titre doit avoir au moins un caractère',
+					//maxlength: 'Le titre ne doit pas excedé 100 caractères'
+				}
+			}
+		});*/
+	});
+	</script>
 {% endblock %}

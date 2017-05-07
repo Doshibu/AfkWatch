@@ -14,7 +14,7 @@ form:
         description: 'Description'
         filmMaker: 'Réalisateur'
         rating: 'Note'
-        dateRelease: 'Date de sortie'
+        dateRelease: 'Date de sortie (Jour-Mois-Année)'
         urlTrailer: 'URL - Bande annonce'
         url: 'URL'
         imageLarge: 'Large affiche'
@@ -29,3 +29,10 @@ form:
     image:
         url: 'URL'
         alt: 'Texte alternatif'
+
+entity:
+    movie: 'Film'
+    movies: 'Films'
+    serie: 'Série'
+    series: 'Séries'
+    news: 'Nouvelles'

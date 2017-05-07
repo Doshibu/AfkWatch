@@ -23,7 +23,19 @@ class NewsType extends AbstractType
                         array('attr' => array('placeholder' => 'form.movie.tinyDescription'), 'label' => 'form.movie.tinyDescription', 'required' => true))
                 ->add('description',        TextareaType::class,    
                         array('attr' => array('placeholder' => 'form.movie.description'), 'label' => 'form.movie.description', 'required' => true))
-                ->add('save', SubmitType::class, array('label' => 'form.movie.submit'));;
+                ->add('save', SubmitType::class, array('label' => 'form.movie.submit'))
+                ->add('movie',       'Symfony\Bridge\Doctrine\Form\Type\EntityType', array(
+                    'class'         => 'DoshibuAfkWatchBundle:Movie',
+                    'choice_label'  => 'name',
+                    'multiple'      => false,
+                    'attr' => array('placeholder' => 'entity.movie'), 
+                    'label' => 'entity.movie', 'required' => false))
+                ->add('serie',       'Symfony\Bridge\Doctrine\Form\Type\EntityType', array(
+                    'class'         => 'DoshibuAfkWatchBundle:Serie',
+                    'choice_label'  => 'name',
+                    'multiple'      => false,
+                    'attr' => array('placeholder' => 'entity.serie'), 
+                    'label' => 'entity.serie', 'required' => false));
     }
     
     /**
