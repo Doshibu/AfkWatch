@@ -121,4 +121,15 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 
 		return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
+
+	public function countByMonth($from, $to)
+	{        
+	     $query = $this->createQueryBuilder('s')
+	        ->select('count(s.id)')
+	        ->where('s.addedAt BETWEEN :from AND :to')
+	        ->setParameter('from', $from)
+	        ->setParameter('to', $to)
+	        ->getQuery()->getSingleScalarResult();
+	    return $query; 
+	}
 }

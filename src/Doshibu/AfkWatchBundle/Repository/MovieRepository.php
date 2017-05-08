@@ -238,4 +238,15 @@ class MovieRepository extends EntityRepository
 
 		return new Paginator($qb, true);
 	}
+
+	public function countByMonth($from, $to)
+	{        
+	     $query = $this->createQueryBuilder('m')
+	        ->select('count(m.id)')
+	        ->where('m.addedAt BETWEEN :from AND :to')
+	        ->setParameter('from', $from)
+	        ->setParameter('to', $to)
+	        ->getQuery()->getSingleScalarResult();
+	    return $query; 
+	}
 }

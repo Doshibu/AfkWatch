@@ -19,6 +19,7 @@ class NewsRepository extends EntityRepository
 		$qb = $this->createQueryBuilder('n')
 			->join('n.'.$media, 'media')
 			->addSelect('media')
+
 			->leftJoin('media.imageSmall', 'imgS')
 			->addSelect('imgS')
 			->leftJoin('media.imageLarge', 'imgL')
@@ -134,5 +135,16 @@ class NewsRepository extends EntityRepository
 			->setParameter('slug', $slug);
 		
 		return $qb->getQuery()->getSingleResult();;
+	}
+
+	public function countByMonth($from, $to)
+	{        
+	     $query = $this->createQueryBuilder('n')
+	        ->select('count(n.id)')
+	        ->where('n.addedAt BETWEEN :from AND :to')
+	        ->setParameter('from', $from)
+	        ->setParameter('to', $to)
+	        ->getQuery()->getSingleScalarResult();
+	    return $query; 
 	}
 }

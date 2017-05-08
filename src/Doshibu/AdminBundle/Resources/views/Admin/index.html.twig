@@ -9,11 +9,11 @@
 	        // Some raw data (not necessarily accurate)
 	        var data = google.visualization.arrayToDataTable([
 	        	['Mois', 'Films', 'Séries', 'News', 'Total'],
-	        	['2017/05',  165,      938,         522,    614.6],
-	        	['2017/04',  135,      1120,        599,    682],
-	        	['2017/03',  157,      1167,        587,    623],
-	        	['2017/02',  139,      1110,        615,    609.4],
-	        	['2017/01',  136,      691,         629,    569.6]
+	        	['2017/05',  {{ countFilm[0] }},      {{ countSerie[0] }},        {{ countNews[0] }},    {{ countFilm[0] + countSerie[0] + countNews[0] }}],
+	        	['2017/04',  {{ countFilm[1] }},      {{ countSerie[1] }},        {{ countNews[1] }},    {{ countFilm[1] + countSerie[1] + countNews[1] }}],
+	        	['2017/03',  {{ countFilm[2] }},      {{ countSerie[2] }},        {{ countNews[2] }},    {{ countFilm[2] + countSerie[2] + countNews[2] }}],
+	        	['2017/02',  {{ countFilm[3] }},      {{ countSerie[3] }},        {{ countNews[3] }},    {{ countFilm[3] + countSerie[3] + countNews[3] }}],
+	        	['2017/01',  {{ countFilm[4] }},      {{ countSerie[4] }},        {{ countNews[4] }},    {{ countFilm[4] + countSerie[4] + countNews[4] }}]
 	        	]);
 
 	        var options = {
