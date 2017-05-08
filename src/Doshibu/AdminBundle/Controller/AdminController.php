@@ -33,10 +33,24 @@ class AdminController extends Controller
             $countNews[$i] = $newsRepo->countByMonth($from, $to);
         }
 
+        $countByGenre = $movieRepo->countByGender();
+        $countByGenre_serie = $serieRepo->countByGender();
+        foreach($countByGenre as $gm)
+        {
+            foreach($countByGenre_serie as $gs)
+            {
+                if($gm['name'] === $gs['name'])
+                {
+                    $gm['c'] += $gs['c'];
+                }
+            }
+        }
+
         return $this->render('DoshibuAdminBundle:Admin:index.html.twig', array(
             'countFilm'     => $countFilm,
             'countSerie'    => $countSerie,
-            'countNews'     => $countNews
+            'countNews'     => $countNews,
+            'countByGenre'  => $countByGenre
         ));
     }
 

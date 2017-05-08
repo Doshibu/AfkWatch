@@ -32,12 +32,10 @@
 		google.charts.setOnLoadCallback(drawChart);
 		function drawChart() {
 			var data = google.visualization.arrayToDataTable([
-				['Task', 'Genres'],
-				['Action',     11],
-				['Aventure',      2],
-				['Drame',  2],
-				['Histoire', 2],
-				['Guerre',    7]
+				['Genres', 'Nombre de Films / Séries'],
+				{% for genre in countByGenre %}
+					["{{ genre['name'] }}", {{ genre['c'] }}]{% if not loop.last %},{% endif%}
+				{% endfor %}
 				]);
 
 			var options = {

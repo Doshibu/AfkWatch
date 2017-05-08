@@ -132,4 +132,15 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 	        ->getQuery()->getSingleScalarResult();
 	    return $query; 
 	}
+
+	public function countByGender($asArray=false)
+	{        
+	    $qb = $this->createQueryBuilder('s')
+	        ->select('count(s.id) c, genres.name')
+	        ->leftJoin('s.genders', 'genres')
+			->groupBy('genres.name')
+			->orderBy('c', 'DESC')
+	        ->getQuery();
+	    return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
 }

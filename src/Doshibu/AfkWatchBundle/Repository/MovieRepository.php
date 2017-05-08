@@ -249,4 +249,15 @@ class MovieRepository extends EntityRepository
 	        ->getQuery()->getSingleScalarResult();
 	    return $query; 
 	}
+
+	public function countByGender($asArray=false)
+	{        
+	    $qb = $this->createQueryBuilder('m')
+	        ->select('count(m.id) c, genres.name')
+	        ->leftJoin('m.genders', 'genres')
+			->groupBy('genres.name')
+			->orderBy('c', 'DESC')
+	        ->getQuery();
+	    return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
 }
