@@ -30,7 +30,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -44,12 +44,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -58,7 +58,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -72,7 +72,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -86,7 +86,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -100,7 +100,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -114,7 +114,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -128,7 +128,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -142,7 +142,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -156,7 +156,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -170,7 +170,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -184,12 +184,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -198,7 +198,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -212,7 +212,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -226,7 +226,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -240,7 +240,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -254,7 +254,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -268,7 +268,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -282,7 +282,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -296,7 +296,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -310,7 +310,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -324,12 +324,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -338,7 +338,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -352,7 +352,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -366,7 +366,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -380,7 +380,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -394,7 +394,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -408,7 +408,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -422,7 +422,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -436,7 +436,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -450,7 +450,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -464,12 +464,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -478,7 +478,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -492,7 +492,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -506,7 +506,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -520,7 +520,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -534,7 +534,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -548,7 +548,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -562,7 +562,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -576,7 +576,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -590,7 +590,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -604,12 +604,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -618,7 +618,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -632,7 +632,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -646,7 +646,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -660,7 +660,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -674,7 +674,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -688,7 +688,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -702,7 +702,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -716,7 +716,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -730,7 +730,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -744,12 +744,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -758,7 +758,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -772,7 +772,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -786,7 +786,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -800,7 +800,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -814,7 +814,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -828,7 +828,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -842,7 +842,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -856,7 +856,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -870,7 +870,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -884,12 +884,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -898,7 +898,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -912,7 +912,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -926,7 +926,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -940,7 +940,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -954,7 +954,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -968,7 +968,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -982,7 +982,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -996,7 +996,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -1010,7 +1010,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -1024,12 +1024,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -1038,7 +1038,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -1052,7 +1052,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -1066,7 +1066,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -1080,7 +1080,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -1094,7 +1094,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -1108,7 +1108,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -1122,7 +1122,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -1136,7 +1136,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -1150,7 +1150,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -1164,12 +1164,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -1178,7 +1178,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -1192,7 +1192,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -1206,7 +1206,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -1220,7 +1220,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -1234,7 +1234,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -1248,7 +1248,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -1262,7 +1262,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -1276,7 +1276,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -1290,7 +1290,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -1304,12 +1304,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -1318,7 +1318,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -1332,7 +1332,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -1346,7 +1346,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -1360,7 +1360,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -1374,7 +1374,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -1388,7 +1388,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -1402,7 +1402,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -1416,7 +1416,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -1430,7 +1430,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -1444,12 +1444,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -1458,7 +1458,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -1472,7 +1472,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -1486,7 +1486,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -1500,7 +1500,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -1514,7 +1514,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -1528,7 +1528,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -1542,7 +1542,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -1556,7 +1556,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -1570,7 +1570,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -1584,12 +1584,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -1598,7 +1598,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -1612,7 +1612,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -1626,7 +1626,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -1640,7 +1640,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -1654,7 +1654,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -1668,7 +1668,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -1682,7 +1682,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -1696,7 +1696,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -1710,7 +1710,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -1724,12 +1724,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -1738,7 +1738,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -1752,7 +1752,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -1766,7 +1766,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -1780,7 +1780,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -1794,7 +1794,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -1808,7 +1808,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -1822,7 +1822,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -1836,7 +1836,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -1850,7 +1850,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -1864,12 +1864,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -1878,7 +1878,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -1892,7 +1892,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -1906,7 +1906,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -1920,7 +1920,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -1934,7 +1934,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -1948,7 +1948,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -1962,7 +1962,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -1976,7 +1976,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Last Kingdom',
@@ -1990,7 +1990,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://image.tmdb.org/t/p/w1280/3AvmzewHlqKK25JOkofGvRdTUrg.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/The-Last-Kingdom-Saison-2-affiche-fs.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Histoire', 'Guerre', 'Action', 'Aventure'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Game Of Thrones',
@@ -2004,12 +2004,12 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.tvqc.com/wp-content/uploads/2014/02/Game-of-Thrones.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://pedagogeek.net/wp-content/uploads/2011/07/game-of-thrones-poster.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Supernatural',
-				'tinyDescription' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
-				'description' => 'Deux frères parcourent les Etats-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'tinyDescription' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
+				'description' => 'Deux frères parcourent les United States pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.',
 				'filmMaker' => 'McG',
 				'dateRelease' => array('year' => '2005', 'month' => '11', 'day' => '05'),
 				'rating' => 40,
@@ -2018,7 +2018,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://p7.storage.canalblog.com/70/65/1193115/101852928_o.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://imgc.allpostersimages.com/images/P-473-488-90/56/5685/YAXUG00Z/affiches/supernatural.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Epouvante-Horreur', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The Flash',
@@ -2032,7 +2032,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/2f/9e/f1/2f9ef102a0b755f3f96a89e933b05cde.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/57/3d/d8/573dd8cfd8e9ca6f18cc80374e4a374c.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique' ,'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Vikings',
@@ -2046,7 +2046,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://images.critictoo.com/wp-content/uploads/2015/01/vikings-saison-3.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/76/d9/10/76d9100dbb9ea8a7dcda963588832a5f.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Histoire', 'Guerre', 'Action'),
-				'countries' => array('Etats-Unis', 'Angleterre')
+				'countries' => array('United States', 'England')
 			),
 			array(
 				'name' => 'Sherlock',
@@ -2060,7 +2060,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://pre04.deviantart.net/ab39/th/pre/f/2011/224/3/6/bbc_sherlock_wallpaper_by_helenecolin-d46aic2.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/736x/ac/da/09/acda09df027c6cdc127505bf1516cdfa.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Policier'),
-				'countries' => array('Angleterre')
+				'countries' => array('England')
 			),
 			array(
 				'name' => 'Taboo',
@@ -2074,7 +2074,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/71/86/d7/7186d7a22a183518b89503512d3715a0.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/pictures/16/11/16/08/54/496468.jpg', 'alt' => 'iwo'),
 				'genders' => array('Drame', 'Histoire', 'Thriller'),
-				'countries' => array('Angleterre', 'Etats-Unis')
+				'countries' => array('England', 'United States')
 			),
 			array(
 				'name' => 'Frontier',
@@ -2088,7 +2088,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.bellmedia.ca/wp-content/uploads/2017/01/frontier-1280x800.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.full-serie.co/imgSerie/Frontier-Saison-1-Affiche-FULL-SERIE.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Western', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Mr. Robot',
@@ -2102,7 +2102,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://hdqwalls.com/download/mr-robot-full-hd-poster-2048x1152.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://img.actucine.com/wp-content/uploads/2015/06/289590-4.jpg', 'alt' => 'inter'),
 				'genders' => array('Drame', 'Thriller'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'The 100',
@@ -2116,7 +2116,7 @@ class LoadSerie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/af/08/c2/af08c2c192468db448b2ae095d6c251e.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/1e/82/90/1e8290860336896cc86806b4339a6cb1.jpg', 'alt' => 'inter'),
 				'genders' => array('Aventure', 'Drame', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			)
 		);
 

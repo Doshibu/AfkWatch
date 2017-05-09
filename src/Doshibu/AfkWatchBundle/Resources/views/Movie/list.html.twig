@@ -88,7 +88,7 @@
 												<tr>
 													<td>{{ loop.index + (page - 1) * 10}}</td>
 													<td class="w3-list-img">
-														<a href="single.html">
+														<a href="{{ path('doshibu_aw_movie', {'slug' : movie.slug}) }}">
 															<img src="{{ movie.imageSmall.url }}" alt="{{ movie.imageSmall.alt }}" />
 															<span>{{ movie.name }}</span>
 														</a>
@@ -98,7 +98,7 @@
 													<td class="w3-list-info">
 														{% for pays in movie.countries %}
 															<a href="{{ path('doshibu_aw_pays', {'slug' : pays.slug}) }}">
-																{{ pays.name }}{% if not loop.last %},&nbsp;{% endif %}
+																{{"country.#{pays.name}"|trans }}{% if not loop.last %},&nbsp;{% endif %}
 															</a>
 														{% endfor %}
 													</td>

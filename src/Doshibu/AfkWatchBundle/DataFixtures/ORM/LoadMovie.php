@@ -31,7 +31,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -47,7 +47,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -61,7 +61,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -76,7 +76,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -91,7 +91,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -105,7 +105,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -119,7 +119,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -135,7 +135,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -149,7 +149,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -163,7 +163,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -177,7 +177,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -193,7 +193,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -207,7 +207,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -222,7 +222,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -237,7 +237,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -251,7 +251,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -265,7 +265,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -281,7 +281,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -295,7 +295,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -309,7 +309,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -323,7 +323,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -339,7 +339,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -353,7 +353,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -368,7 +368,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -383,7 +383,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -397,7 +397,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -411,7 +411,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -427,7 +427,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -441,7 +441,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -455,7 +455,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -469,7 +469,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -485,7 +485,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -499,7 +499,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -514,7 +514,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -529,7 +529,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -543,7 +543,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -557,7 +557,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -573,7 +573,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -587,7 +587,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -601,7 +601,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -615,7 +615,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -631,7 +631,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -645,7 +645,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -660,7 +660,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -675,7 +675,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -689,7 +689,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -703,7 +703,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -719,7 +719,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -733,7 +733,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -747,7 +747,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -761,7 +761,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -777,7 +777,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -791,7 +791,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -806,7 +806,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -821,7 +821,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -835,7 +835,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -849,7 +849,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -865,7 +865,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -879,7 +879,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -893,7 +893,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -907,7 +907,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -923,7 +923,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -937,7 +937,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -952,7 +952,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -967,7 +967,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -981,7 +981,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -995,7 +995,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -1011,7 +1011,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -1025,7 +1025,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -1039,7 +1039,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -1053,7 +1053,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -1069,7 +1069,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -1083,7 +1083,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -1098,7 +1098,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -1113,7 +1113,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -1127,7 +1127,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -1141,7 +1141,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -1157,7 +1157,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -1171,7 +1171,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -1185,7 +1185,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -1199,7 +1199,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -1215,7 +1215,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -1229,7 +1229,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -1244,7 +1244,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -1259,7 +1259,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -1273,7 +1273,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -1287,7 +1287,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -1303,7 +1303,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -1317,7 +1317,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -1331,7 +1331,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -1345,7 +1345,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -1361,7 +1361,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -1375,7 +1375,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -1390,7 +1390,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -1405,7 +1405,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -1419,7 +1419,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -1433,7 +1433,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -1449,7 +1449,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -1463,7 +1463,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -1477,7 +1477,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -1491,7 +1491,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -1507,7 +1507,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -1521,7 +1521,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -1536,7 +1536,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -1551,7 +1551,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -1565,7 +1565,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -1579,7 +1579,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -1595,7 +1595,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -1609,7 +1609,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -1623,7 +1623,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Deadpool',
@@ -1637,7 +1637,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.hdwallpapers.in/walls/marvel_deadpool_movie-wide.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.breageeknews.fr/uploads/films/affiches/deadpool_116_1453219432_725.jpg', 'alt' => 'inter'),
 				'genders' => array('Comédie', 'Action', 'Fantastique'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Lettres d\'Iwo Jima',
@@ -1653,7 +1653,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i.ytimg.com/vi/BIMMBhnKVj0/maxresdefault.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://www.ma-collection.com/images/dvd/266mc_affiche-Lettres-d-Iwo-Jima-Letters-from-Iwo-Jima-2006-9.jpg', 'alt' => 'iwo'),
 				'genders' => array('Guerre'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Interstellar',
@@ -1667,7 +1667,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://www.wallpapermade.com/images/wallpapers/originals/interstellar-movie-scene-wallpaper-3326.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://papystreaming.com/fr/files/2014/11/Interstellar.jpeg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Warrior',
@@ -1682,7 +1682,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://haryantosatria.files.wordpress.com/2015/06/warrior9.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/medias/nmedia/18/83/50/33/19794371.jpg', 'alt' => 'inter'),
 				'genders' => array('Action', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Inglourious Basterds',
@@ -1697,7 +1697,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/249/thumb-1920-249742.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://cineclap.free.fr/inglourious-basterds/inglourious-basterds-a59.jpg?ks2ptg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Doctor Strange',
@@ -1711,7 +1711,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://www.cineserie.com/wp-content/uploads/2016/08/283169.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/09/doctor-strange-affiche-francaise-finale.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Assassin\'s Creed',
@@ -1725,7 +1725,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://assets2.ignimgs.com/2016/05/11/assassins-creed-film-header-1280jpg-685176_1280w.jpg', 'alt' => 'iwo'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/28/13/54/576646.jpg', 'alt' => 'iwo'),
 				'genders' => array('Action', 'Science Fiction'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Les animaux fantastiques',
@@ -1741,7 +1741,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://i2.wp.com/smallthings.fr/wp-content/uploads/2016/11/IMG_2448.jpg?fit=1920%2C1080', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img3.acsta.net/pictures/16/10/11/09/32/205295.jpg', 'alt' => 'inter'),
 				'genders' => array('Fantastique', 'Aventure'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'Free State Of Jones',
@@ -1755,7 +1755,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'http://culturebox.francetvinfo.fr/sites/default/files/assets/images/2016/09/free_state_of_jones_a.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'http://fr.web.img2.acsta.net/r_1280_720/pictures/16/08/12/10/07/279399.jpg', 'alt' => 'inter'),
 				'genders' => array('Guerre', 'Biographie', 'Drame'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			),
 			array(
 				'name' => 'La Stratégie Ender',
@@ -1769,7 +1769,7 @@ class LoadMovie implements FixtureInterface, OrderedFixtureInterface
 				'imageLarge' => array('url' => 'https://images2.alphacoders.com/436/436575.jpg', 'alt' => 'inter'),
 				'imageSmall' => array('url' => 'https://s-media-cache-ak0.pinimg.com/originals/f8/29/1a/f8291a473215faed4eda35629d1eee17.jpg', 'alt' => 'inter'),
 				'genders' => array('Science Fiction', 'Action'),
-				'countries' => array('Etats-Unis')
+				'countries' => array('United States')
 			)
 		);
 

@@ -71,21 +71,21 @@
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
 											{% for pays in listPays[0] %}
-												<li><a href="{{ path('doshibu_aw_pays', {'slug': pays.slug}) }}">{{ pays.name }}</a></li>
+												<li><a href="{{ path('doshibu_aw_pays', {'slug': pays.slug}) }}">{{"country.#{pays.name}"|trans }}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
 											{% for pays in listPays[1] %}
-												<li><a href="{{ path('doshibu_aw_pays', {'slug': pays.slug}) }}">{{ pays.name }}</a></li>
+												<li><a href="{{ path('doshibu_aw_pays', {'slug': pays.slug}) }}">{{"country.#{pays.name}"|trans }}</a></li>
 											{% endfor %}
 										</ul>
 									</div>
 									<div class="col-sm-4">
 										<ul class="multi-column-dropdown">
 											{% for pays in listPays[2] %}
-												<li><a href="{{ path('doshibu_aw_pays', {'slug': pays.slug}) }}">{{ pays.name }}</a></li>
+												<li><a href="{{ path('doshibu_aw_pays', {'slug': pays.slug}) }}">{{"country.#{pays.name}"|trans }}</a></li>
 											{% endfor %}
 										</ul>
 									</div>

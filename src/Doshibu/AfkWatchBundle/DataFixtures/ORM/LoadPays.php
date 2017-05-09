@@ -14,7 +14,6 @@ class LoadPays implements FixtureInterface, OrderedFixtureInterface
 	public function load(ObjectManager $manager)
 	{
 		// Liste des noms de catégorie à ajouter
-		/*
 		$names = array(
 			'Germany',
 			'England',
@@ -28,13 +27,12 @@ class LoadPays implements FixtureInterface, OrderedFixtureInterface
 			'Italia',
 			'Japan',
 			'Mexico',
-			//'Nigeria',
-			//'Philippines',
+			'Nigeria',
 			'Russia',
-			//'Turquie'
+			'Turkey'
 			);
-		*/
-		$names = array(
+		
+		/*$names = array(
 			'Allemagne',
 			'Angleterre',
 			'Argentine',
@@ -52,7 +50,7 @@ class LoadPays implements FixtureInterface, OrderedFixtureInterface
 			'Royaume-Uni',
 			'Russie',
 			'Turquie'
-			);
+			);*/
 
 		foreach ($names as $name) 
 		{

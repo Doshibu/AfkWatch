@@ -12,13 +12,13 @@
 				<div class="browse-agile-w3ls general-w3ls">
 					<div class="tittle-head">
 						<h4 class="latest-text">Films par Pays d'Origine&nbsp;:&nbsp;
-							<a href="{{ path('doshibu_aw_pays', {'slug' : pays.slug, 'page' : 1}) }}">{{ pays.name }}</a>
+							<a href="{{ path('doshibu_aw_pays', {'slug' : pays.slug, 'page' : 1}) }}">{{"country.#{pays.name}"|trans }}</a>
 						</h4>
 						<div class="container">
 							<div class="agileits-single-top">
 								<ol class="breadcrumb">
 									<li><a href="{{ path('doshibu_aw_home') }}">Accueil</a></li>
-									<li class="active">{{ pays.name }}</li>
+									<li class="active">{{"country.#{pays.name}"|trans }}</li>
 								</ol>
 							</div>
 						</div>
