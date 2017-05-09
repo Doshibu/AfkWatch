@@ -49,6 +49,7 @@ class AdminController extends Controller
                 $countByGenre[$gs['name']] = (int)$gs['c'];
             }
         }
+        arsort($countByGenre); // Sorts an array in reverse order and keeps indexing
 
         return $this->render('DoshibuAdminBundle:Admin:index.html.twig', array(
             'countFilm'     => $countFilm,
