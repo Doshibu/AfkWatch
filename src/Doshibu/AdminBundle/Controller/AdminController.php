@@ -33,16 +33,20 @@ class AdminController extends Controller
             $countNews[$i] = $newsRepo->countByMonth($from, $to);
         }
 
-        $countByGenre = $movieRepo->countByGender();
-        $countByGenre_serie = $serieRepo->countByGender();
-        foreach($countByGenre as $gm)
+        $countByGenre = array();
+        foreach($movieRepo->countByGender() as $gm)
         {
-            foreach($countByGenre_serie as $gs)
+            $countByGenre[$gm['name']] = (int)$gm['c'];
+        }
+        foreach($serieRepo->countByGender() as $gs)
+        {
+            if(array_key_exists($gs['name'], $countByGenre))
             {
-                if($gm['name'] === $gs['name'])
-                {
-                    $gm['c'] += $gs['c'];
-                }
+                $countByGenre[$gs['name']] += (int)$gs['c'];
+            }
+            else
+            {
+                $countByGenre[$gs['name']] = (int)$gs['c'];
             }
         }
 

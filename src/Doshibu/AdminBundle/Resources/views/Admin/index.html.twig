@@ -33,8 +33,8 @@
 		function drawChart() {
 			var data = google.visualization.arrayToDataTable([
 				['Genres', 'Nombre de Films / Séries'],
-				{% for genre in countByGenre %}
-					["{{ genre['name'] }}", {{ genre['c'] }}]{% if not loop.last %},{% endif%}
+				{% for key in countByGenre|keys %}
+					["{{ key }}", {{ countByGenre[key] }}]{% if not loop.last %},{% endif%}
 				{% endfor %}
 				]);
 
@@ -143,6 +143,7 @@
 		</div>
 		<div class="container">
 			<div id="chart_div" style="width: 100%; height: 500px;"></div>
+			{{ dump(countByGenre) }}
 			<div id="piechart_3d" style="width: 100%; height: 500px;"></div>
 			<div id="regions_div" style="width: 100%; height: 500px;"></div>
 		</div>
