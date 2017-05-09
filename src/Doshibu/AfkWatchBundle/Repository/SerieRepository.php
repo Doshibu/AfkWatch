@@ -143,4 +143,14 @@ class SerieRepository extends \Doctrine\ORM\EntityRepository
 	        ->getQuery();
 	    return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
+
+	public function countByCountry($asArray=false)
+	{        
+	    $qb = $this->createQueryBuilder('s')
+	        ->select('count(s.id) c, countries.name')
+	        ->leftJoin('s.countries', 'countries')
+			->groupBy('countries.name')
+	        ->getQuery();
+	    return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
 }

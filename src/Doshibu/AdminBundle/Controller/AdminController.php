@@ -51,11 +51,29 @@ class AdminController extends Controller
         }
         arsort($countByGenre); // Sorts an array in reverse order and keeps indexing
 
+        $countByCountry = array();
+        foreach($movieRepo->countByCountry() as $cm)
+        {
+            $countByCountry[$cm['name']] = (int)$cm['c'];
+        }
+        foreach($serieRepo->countByCountry() as $cs)
+        {
+            if(array_key_exists($cs['name'], $countByCountry))
+            {
+                $countByCountry[$cs['name']] += (int)$cs['c'];
+            }
+            else
+            {
+                $countByCountry[$cs['name']] = (int)$cs['c'];
+            }
+        }
+
         return $this->render('DoshibuAdminBundle:Admin:index.html.twig', array(
-            'countFilm'     => $countFilm,
-            'countSerie'    => $countSerie,
-            'countNews'     => $countNews,
-            'countByGenre'  => $countByGenre
+            'countFilm'         => $countFilm,
+            'countSerie'        => $countSerie,
+            'countNews'         => $countNews,
+            'countByGenre'      => $countByGenre,
+            'countByCountry'    => $countByCountry
         ));
     }
 

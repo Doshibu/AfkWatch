@@ -260,4 +260,14 @@ class MovieRepository extends EntityRepository
 	        ->getQuery();
 	    return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
 	}
+
+	public function countByCountry($asArray=false)
+	{        
+	    $qb = $this->createQueryBuilder('m')
+	        ->select('count(m.id) c, countries.name')
+	        ->leftJoin('m.countries', 'countries')
+			->groupBy('countries.name')
+	        ->getQuery();
+	    return ($asArray) ? $qb->getResult(Query::HYDRATE_ARRAY) : $qb->getResult();
+	}
 }

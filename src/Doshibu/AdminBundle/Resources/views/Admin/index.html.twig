@@ -52,13 +52,10 @@
 		function drawRegionsMap() {
 
 			var data = google.visualization.arrayToDataTable([
-				['Country', 'Popularity'],
-				['Germany', 200],
-				['United States', 300],
-				['Brazil', 400],
-				['Canada', 500],
-				['France', 600],
-				['Russia', 700]
+				['Pays', 'Production totale'],
+				{% for key in countByCountry|keys %}
+					["{{ key }}", {{ countByCountry[key] }}]{% if not loop.last %},{% endif%}
+				{% endfor %}
 				]);
 
 			var options = {};
