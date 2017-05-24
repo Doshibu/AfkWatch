@@ -14,6 +14,11 @@ doshibu_admin_movies_add:
     defaults:
         _controller: DoshibuAdminBundle:Movies:add
 
+doshibu_admin_movies_preupdate:
+    path :   /films/preupdate
+    defaults:
+        _controller: DoshibuAdminBundle:Movies:preupdate
+
 doshibu_admin_movies_update:
     path :   /films/update
     defaults:
