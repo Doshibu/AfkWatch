@@ -1,7 +1,7 @@
 doshibu_aw_home:
     path :   /
     defaults:
-        _controller: DoshibuAfkWatchBundle:Movie:index
+        _controller: DoshibuAfkWatchBundle:Platform:index
 
 doshibu_aw_movie:
     path :   /movie/{slug}
@@ -11,7 +11,7 @@ doshibu_aw_movie:
 doshibu_aw_genre:
     path :   /genre/{slug}/{page}
     defaults: 
-        _controller : DoshibuAfkWatchBundle:Movie:genre
+        _controller : DoshibuAfkWatchBundle:Gender:genre
         slug: action
         page: 1
     requirements:
@@ -20,7 +20,7 @@ doshibu_aw_genre:
 doshibu_aw_pays:
     path :   /pays/{slug}/{page}
     defaults:
-        _controller : DoshibuAfkWatchBundle:Movie:pays
+        _controller : DoshibuAfkWatchBundle:Country:pays
         slug: france
         page: 1
     requirements:
@@ -29,17 +29,17 @@ doshibu_aw_pays:
 doshibu_aw_series:
     path :   /series
     defaults:
-        _controller : DoshibuAfkWatchBundle:Movie:series
+        _controller : DoshibuAfkWatchBundle:Serie:series
         
 doshibu_aw_serie:
     path :   /serie/{slug}
     defaults: 
-        _controller : DoshibuAfkWatchBundle:Movie:serie
+        _controller : DoshibuAfkWatchBundle:Serie:serie
 
 doshibu_aw_news:
     path :   /news/{media}/{page}
     defaults:
-        _controller : DoshibuAfkWatchBundle:Movie:news
+        _controller : DoshibuAfkWatchBundle:News:news
         page: 1
     requirements:
         page: \d+
@@ -47,12 +47,12 @@ doshibu_aw_news:
 doshibu_aw_news_single:
     path :   /news-single/{media}/{slug}
     defaults: 
-        _controller : DoshibuAfkWatchBundle:Movie:newsSingle
+        _controller : DoshibuAfkWatchBundle:News:newsSingle
 
 doshibu_aw_list:
     path :   /list/{prefix}/{page}
     defaults:
-        _controller : DoshibuAfkWatchBundle:Movie:list
+        _controller : DoshibuAfkWatchBundle:Platform:list
         prefix: int
         page: 1
     requirements:
@@ -61,9 +61,9 @@ doshibu_aw_list:
 doshibu_aw_faq:
     path :   /faq
     defaults:
-        _controller : DoshibuAfkWatchBundle:Movie:faq
+        _controller : DoshibuAfkWatchBundle:Platform:faq
 
 doshibu_aw_contact:
     path :   /contact
     defaults:
-        _controller : DoshibuAfkWatchBundle:Movie:contact
+        _controller : DoshibuAfkWatchBundle:Platform:contact

@@ -91,4 +91,28 @@ class Image
     {
         return $this->alt;
     }
+
+    /**
+     * Set data
+     *
+     * @param string $data
+     *
+     * @return Image
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
+
+        return $this;
+    }
+
+    /**
+     * Get data
+     *
+     * @return string
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
 }

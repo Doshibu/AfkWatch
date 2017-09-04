@@ -20,34 +20,47 @@ use Doshibu\AfkWatchBundle\Form\NewsletterType;
 use Doshibu\AfkWatchBundle\Entity\Contact;
 use Doshibu\AfkWatchBundle\Form\ContactType;
 
-class MovieController extends Controller
+class CountryController extends Controller
 {
-	public function movieAction(Request $request, $slug)
+    public function paysAction(Request $request, $slug, $page=1)
 	{
 		$em = $this->getDoctrine()->getManager();
 		$movieRepo = $em->getRepository('DoshibuAfkWatchBundle:Movie');
+		$paysRepo = $em->getRepository('DoshibuAfkWatchBundle:Pays');
 
-		$movie = $movieRepo->findOneBy(array('slug' => $slug)); // joined full with genre & pays
-		if($movie === null)
+		$pays = $paysRepo->findOneBy(array('slug' => $slug));
+		if($pays === null)
 		{
-			throw $this->createNotFoundException('Ce film n\'existe pas ou plus.');
+			throw $this->createNotFoundException('Le pays demandé n\'existe pas ou plus.');
 		}
 
-		$movieGenders = $movie->getGenders();
-		$listPopular = $movieRepo->findMostPopularByGenres($movieGenders);
-		$listProposedByGenre = $movieRepo->findMostPopularByGenre($movieGenders->first()->getSlug(), 3);
-		$listProposedByPays = $movieRepo->findMostPopularByPays($movie->getCountries()->first()->getSlug(), 3);
+		$nbPerPage = 24;
+		$listMovie = $movieRepo->findByPays($slug, $page, $nbPerPage);
+		$nbPages = ceil(count($listMovie)/$nbPerPage);
+		if ( $page > $nbPages )
+		{
+			if($page === 1)
+			{
+				throw $this->createNotFoundException('Malheureusement aucune donnée n\'est enregistré avec ce pays en référence.');
+			}
+			else
+			{
+				throw $this->createNotFoundException('La page '. $page .' n\'existe pas ou plus.');
+			}
+		}
+
+		$listPopular = $movieRepo->findMostPopularByPays($slug);
 
 		$newsletter = new Newsletter();
 		$newsletterForm = $this->get('form.factory')->create(NewsletterType::class, $newsletter);
 
 		$viewParam = array(
-			'newsletterForm'		=> $newsletterForm->createView(),
-			'movie' 				=> $movie,
-			'movieGenders'			=> $movieGenders,
-			'listProposedByGenre' 	=> $listProposedByGenre,
-			'listProposedByPays' 	=> $listProposedByPays,
-			'listPopular' 			=> $listPopular
+			'newsletterForm'	=> $newsletterForm->createView(),
+			'pays'			=> $pays,
+			'listMovie' 	=> $listMovie,
+			'nbPages'		=> $nbPages,
+			'page' 			=> $page,
+			'listPopular'	=> $listPopular
 		);
 		
 		if($newsletterForm->handleRequest($request)->isValid())
@@ -72,9 +85,9 @@ class MovieController extends Controller
 			}
 
 			$viewParam['alert'] = $alert;
-			return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', $viewParam);
+			return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', $viewParam);
 		}
 
-		return $this->render('DoshibuAfkWatchBundle:Movie:movie.html.twig', $viewParam);
-	}	
+		return $this->render('DoshibuAfkWatchBundle:Movie:pays.html.twig', $viewParam);
+	}
 }

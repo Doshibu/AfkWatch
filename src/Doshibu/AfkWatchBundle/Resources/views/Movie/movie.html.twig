@@ -195,7 +195,7 @@
 											<p>{{ movie.dateRelease|date('Y') }}</p>
 											<div class="block-stars">
 												<ul class="w3l-ratings">
-													{{ render(controller("DoshibuAfkWatchBundle:Movie:blockStar", {'rating': movie.rating})) }}
+													{{ render(controller("DoshibuAfkWatchBundle:UserControl:blockStar", {'rating': movie.rating})) }}
 												</ul>
 											</div>
 											<div class="clearfix"></div>
