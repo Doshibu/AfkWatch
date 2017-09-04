@@ -1,7 +1,21 @@
 {
     "name": "guillaume/afkwatch",
-    "license": "proprietary",
     "type": "project",
+    "description": "Symfony2 first project. WebSite Movie & Serie Stream",
+    "authors": [
+        {
+            "name": "Guillaume Bonhommeau",
+            "email": "guillaume.bonhommeau@gmail.com",
+            "homepage": "http://www.guillaumebonhommeau.com/",
+            "role": "Developer"
+        }
+    ],
+    "keywords": ["movie", "streaming", "symfony2", "website"],
+    "license": "MIT",
+    "support": {
+        "email": "guillaume.bonhommeau@gmail.com",
+        "issues": "https://github.com/Doshibu/AfkWatch/issues"
+    },
     "autoload": {
         "psr-4": {
             "": "src/"
