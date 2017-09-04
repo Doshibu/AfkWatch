@@ -51,7 +51,7 @@ class MoviesController extends Controller
         $em = $this->getDoctrine()->getManager();
         $movieRepo = $em->getRepository('DoshibuAfkWatchBundle:Movie');
         $movie = $movieRepo->find($id);
-        if ($movie == null) 
+        if ($movie === null) 
         {
             throw $this->createNotFoundException("Le film d'id ".$id." n'existe pas.");
         }
