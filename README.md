@@ -1,5 +1,9 @@
 #  :tv: AfkWatch
 
+[![License](https://img.shields.io/packagist/l/Victoire/Victoire.svg)](https://opensource.org/licenses/MIT)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/92a98a39-8fa0-4e3c-b90d-e56d4c8f89b3/mini.png)](https://insight.sensiolabs.com/projects/92a98a39-8fa0-4e3c-b90d-e56d4c8f89b3/analyses/994)
+[![Dependency Status](https://www.versioneye.com/user/projects/59b992c46725bd0040b44fed/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59b992c46725bd0040b44fed)
+
 First project using Symfony2.8.
 The goal is to simulate a streaming web site presenting Movies & Series data.
 This project has nothing illegal and only display trailer at the moment.
