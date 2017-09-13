@@ -1,7 +1,7 @@
 #  :tv: AfkWatch
 
 [![License](https://img.shields.io/packagist/l/Victoire/Victoire.svg)](https://opensource.org/licenses/MIT)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/92a98a39-8fa0-4e3c-b90d-e56d4c8f89b3/mini.png)](https://insight.sensiolabs.com/projects/92a98a39-8fa0-4e3c-b90d-e56d4c8f89b3/analyses/994)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/92a98a39-8fa0-4e3c-b90d-e56d4c8f89b3/mini.png)](https://insight.sensiolabs.com/projects/a2edf11d-7017-440f-9fa5-18567f38ce03)
 [![Dependency Status](https://www.versioneye.com/user/projects/59b992c46725bd0040b44fed/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59b992c46725bd0040b44fed)
 
 First project using Symfony2.8.
